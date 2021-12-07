@@ -1,0 +1,6 @@
+﻿cr.nimble.svd.lansvd\_simple\_jit
+=================================
+
+.. currentmodule:: cr.nimble.svd
+
+.. autofunction:: lansvd_simple_jit

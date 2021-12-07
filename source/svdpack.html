@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cr.nimble.orth" href="_autosummary/cr.nimble.orth.html" />
-    <link rel="prev" title="cr.nimble.solve_spd_chol" href="_autosummary/cr.nimble.solve_spd_chol.html" />
+    <link rel="prev" title="cr.nimble.householder_qr" href="_autosummary/cr.nimble.householder_qr.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -58,10 +58,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Docs</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities in cr.nimble module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html">ND-Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Singular Value Decomposition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subspaces.html">Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="affine.html">Affine Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zzzreference.html">References</a></li>
@@ -73,7 +81,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.solve_spd_chol.html" title="previous chapter">cr.nimble.solve_spd_chol</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.householder_qr.html" title="previous chapter">cr.nimble.householder_qr</a></li>
       <li>Next: <a href="_autosummary/cr.nimble.orth.html" title="next chapter">cr.nimble.orth</a></li>
   </ul></li>
   </ul></li>
@@ -110,6 +118,8 @@
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#fundamental-subspaces" id="id1">Fundamental Subspaces</a></p></li>
+<li><p><a class="reference internal" href="#svd-for-bidiagonal-matrices" id="id2">SVD for Bidiagonal Matrices</a></p></li>
+<li><p><a class="reference internal" href="#truncated-svd" id="id3">Truncated SVD</a></p></li>
 </ul>
 </div>
 <section id="fundamental-subspaces">
@@ -143,6 +153,12 @@
 </tr>
 </tbody>
 </table>
+</section>
+<section id="svd-for-bidiagonal-matrices">
+<h2><a class="toc-backref" href="#id2">SVD for Bidiagonal Matrices</a><a class="headerlink" href="#svd-for-bidiagonal-matrices" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="truncated-svd">
+<h2><a class="toc-backref" href="#id3">Truncated SVD</a><a class="headerlink" href="#truncated-svd" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 

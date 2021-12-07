@@ -24,7 +24,7 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Utilities in cr.nimble module" href="util.html" />
+    <link rel="next" title="ND-Arrays" href="array.html" />
     <link rel="prev" title="Quick Start" href="../start.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -58,10 +58,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Docs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities in cr.nimble module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html">ND-Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subspaces.html">Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="affine.html">Affine Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zzzreference.html">References</a></li>
@@ -73,7 +81,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../start.html" title="previous chapter">Quick Start</a></li>
-      <li>Next: <a href="util.html" title="next chapter">Utilities in cr.nimble module</a></li>
+      <li>Next: <a href="array.html" title="next chapter">ND-Arrays</a></li>
   </ul></li>
 </ul>
 </div>
@@ -108,34 +116,61 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="util.html">Utilities in cr.nimble module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="util.html#array-data-type-utilities">Array data type utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util.html#basic-operations">Basic operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util.html#utilities-for-vectors">Utilities for vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util.html#row-wise-and-column-wise-norms-for-matrices">Row wise and column wise norms for matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">ND-Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.hermitian.html">cr.nimble.hermitian</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vector.html">Vectors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vector.html#predicates">Predicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html#unary-operations">Unary Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#matrix-multiplication">Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html#row-wise-and-column-wise-norms-for-matrices">Row wise and column wise norms for matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="linear_systems.html">Linear Systems</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="linear_systems.html#triangular-systems">Triangular Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_systems.html#special-dense-linear-systems">Special Dense Linear Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="orth.html">Orthogonalization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="orth.html#householder-reflections">Householder Reflections</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="svdpack.html#fundamental-subspaces">Fundamental Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svdpack.html#svd-for-bidiagonal-matrices">SVD for Bidiagonal Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svdpack.html#truncated-svd">Truncated SVD</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="subspaces.html">Subspaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.project_to_subspace.html">cr.nimble.subspaces.project_to_subspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.is_in_subspace.html">cr.nimble.subspaces.is_in_subspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_cos.html">cr.nimble.subspaces.principal_angles_cos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_rad.html">cr.nimble.subspaces.principal_angles_rad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_deg.html">cr.nimble.subspaces.principal_angles_deg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_cos.html">cr.nimble.subspaces.smallest_principal_angle_cos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_rad.html">cr.nimble.subspaces.smallest_principal_angle_rad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_deg.html">cr.nimble.subspaces.smallest_principal_angle_deg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_cos.html">cr.nimble.subspaces.smallest_principal_angles_cos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_rad.html">cr.nimble.subspaces.smallest_principal_angles_rad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_deg.html">cr.nimble.subspaces.smallest_principal_angles_deg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.subspaces.subspace_distance.html">cr.nimble.subspaces.subspace_distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subspaces.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subspaces.html#principal-angles">Principal Angles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="affine.html">Affine Spaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="affine.html#homogeneous-coordinate-system">Homogeneous Coordinate System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geom2d.html">2D Geometry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geom2d.html#points-and-vectors">Points and Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geom2d.html#transformations">Transformations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standard.html">Standard Matrices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.gaussian_mtx.html">cr.nimble.gaussian_mtx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Test Data Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#random-keys">Random Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#random-subspaces">Random Subspaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="util.html#data-type-management">Data Type Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html#system-information">System Information</a></li>
 </ul>
 </li>
 </ul>

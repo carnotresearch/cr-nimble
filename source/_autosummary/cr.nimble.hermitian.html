@@ -26,8 +26,8 @@
     <script src="../../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="cr.nimble.AH_v" href="cr.nimble.AH_v.html" />
-    <link rel="prev" title="cr.nimble.check_shapes_are_equal" href="cr.nimble.check_shapes_are_equal.html" />
+    <link rel="next" title="Vectors" href="../vector.html" />
+    <link rel="prev" title="ND-Arrays" href="../array.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -60,10 +60,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Docs</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../util.html">Utilities in cr.nimble module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../array.html">ND-Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linear_systems.html">Linear Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orth.html">Orthogonalization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../svdpack.html">Singular Value Decomposition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subspaces.html">Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../affine.html">Affine Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geom2d.html">2D Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../standard.html">Standard Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util.html">Utilities</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../zzzreference.html">References</a></li>
@@ -75,9 +83,9 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Docs</a><ul>
-  <li><a href="../util.html">Utilities in cr.nimble module</a><ul>
-      <li>Previous: <a href="cr.nimble.check_shapes_are_equal.html" title="previous chapter">cr.nimble.check_shapes_are_equal</a></li>
-      <li>Next: <a href="cr.nimble.AH_v.html" title="next chapter">cr.nimble.AH_v</a></li>
+  <li><a href="../array.html">ND-Arrays</a><ul>
+      <li>Previous: <a href="../array.html" title="previous chapter">ND-Arrays</a></li>
+      <li>Next: <a href="../vector.html" title="next chapter">Vectors</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -113,14 +121,14 @@
 <h1>cr.nimble.hermitian<a class="headerlink" href="#cr-nimble-hermitian" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="cr.nimble.hermitian">
-<span class="sig-prename descclassname"><span class="pre">cr.nimble.</span></span><span class="sig-name descname"><span class="pre">hermitian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cr/nimble/_src/util.html#hermitian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cr.nimble.hermitian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Hermitian transpose of a matrix</p>
+<span class="sig-prename descclassname"><span class="pre">cr.nimble.</span></span><span class="sig-name descname"><span class="pre">hermitian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cr/nimble/_src/array.html#hermitian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cr.nimble.hermitian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Hermitian transpose of an array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>A</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – A matrix</p>
+<dd class="field-odd"><p><strong>A</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – An array</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A matrix: <span class="math notranslate nohighlight">\(A^H\)</span></p>
+<dd class="field-even"><p>An array: <span class="math notranslate nohighlight">\(A^H\)</span></p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>(<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>)</p>

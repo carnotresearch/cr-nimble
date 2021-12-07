@@ -115,7 +115,8 @@
 <span class="kn">from</span> <span class="nn">jax.numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
 
 <span class="kn">from</span> <span class="nn">.svd_utils</span> <span class="kn">import</span> <span class="n">singular_values</span>
-<span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="n">hermitian</span><span class="p">,</span> <span class="n">AH_v</span>
+<span class="kn">from</span> <span class="nn">.array</span> <span class="kn">import</span> <span class="n">hermitian</span>
+<span class="kn">from</span> <span class="nn">.matrix</span> <span class="kn">import</span> <span class="n">AH_v</span>
 
 <span class="k">def</span> <span class="nf">orth_complement</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the orthogonal complement of A in B</span>

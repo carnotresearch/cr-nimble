@@ -1,0 +1,6 @@
+﻿cr.nimble.householder\_ffm\_to\_wy
+==================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: householder_ffm_to_wy

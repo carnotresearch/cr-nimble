@@ -58,10 +58,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Docs</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities in cr.nimble module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html">ND-Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="affine.html">Affine Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html">Utilities</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zzzreference.html">References</a></li>
@@ -107,6 +115,14 @@
             
   <section id="subspaces">
 <h1>Subspaces<a class="headerlink" href="#subspaces" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#projection" id="id1">Projection</a></p></li>
+<li><p><a class="reference internal" href="#principal-angles" id="id2">Principal Angles</a></p></li>
+</ul>
+</div>
+<section id="projection">
+<h2><a class="toc-backref" href="#id1">Projection</a><a class="headerlink" href="#projection" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -119,6 +135,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.is_in_subspace.html#cr.nimble.subspaces.is_in_subspace" title="cr.nimble.subspaces.is_in_subspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_in_subspace</span></code></a>(U, v)</p></td>
 <td><p>Checks whether a vector v is in the subspace spanned by an ONB U or not</p></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="principal-angles">
+<h2><a class="toc-backref" href="#id2">Principal Angles</a><a class="headerlink" href="#principal-angles" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_cos.html#cr.nimble.subspaces.principal_angles_cos" title="cr.nimble.subspaces.principal_angles_cos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">principal_angles_cos</span></code></a>(A, B)</p></td>
 <td><p>Returns the cosines of principal angles between two subspaces</p></td>
 </tr>
@@ -151,6 +178,7 @@
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 
 

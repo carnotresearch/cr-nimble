@@ -95,7 +95,20 @@
           <div class="body" role="main">
             
   <h1>Source code for cr.nimble._src.util</h1><div class="highlight"><pre>
-<span></span>
+<span></span><span class="c1"># Copyright 2021 CR-Nimble Development Team</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#     https://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
 
@@ -107,47 +120,20 @@
 <span class="n">platform</span> <span class="o">=</span> <span class="n">xla_bridge</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span><span class="o">.</span><span class="n">platform</span>
 
 
-
-<div class="viewcode-block" id="hermitian"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.hermitian.html#cr.nimble.hermitian">[docs]</a><span class="k">def</span> <span class="nf">hermitian</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the Hermitian transpose of a matrix</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        A (jax.numpy.ndarray): A matrix</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        (jax.numpy.ndarray): A matrix: :math:`A^H`</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span></div>
-
-<div class="viewcode-block" id="AH_v"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.AH_v.html#cr.nimble.AH_v">[docs]</a><span class="k">def</span> <span class="nf">AH_v</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns :math:`A^H v` for a given matrix A and a vector v</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        A (jax.numpy.ndarray): A matrix</span>
-<span class="sd">        v (jax.numpy.ndarray): A vector</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        (jax.numpy.ndarray): A vector: :math:`A^H v`</span>
-
-<span class="sd">    This is definitely faster on large matrices</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">conjugate</span><span class="p">((</span><span class="n">jnp</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">@</span> <span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span></div>
-
-
-<span class="k">def</span> <span class="nf">is_cpu</span><span class="p">():</span>
+<div class="viewcode-block" id="is_cpu"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_cpu.html#cr.nimble.is_cpu">[docs]</a><span class="k">def</span> <span class="nf">is_cpu</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Returns True if the code is running on a CPU platform</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;cpu&#39;</span>
+    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;cpu&#39;</span></div>
 
-<span class="k">def</span> <span class="nf">is_gpu</span><span class="p">():</span>
+<div class="viewcode-block" id="is_gpu"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_gpu.html#cr.nimble.is_gpu">[docs]</a><span class="k">def</span> <span class="nf">is_gpu</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Returns True if the code is running on a GPU platform</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;gpu&#39;</span>
+    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;gpu&#39;</span></div>
 
-<span class="k">def</span> <span class="nf">is_tpu</span><span class="p">():</span>
+<div class="viewcode-block" id="is_tpu"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_tpu.html#cr.nimble.is_tpu">[docs]</a><span class="k">def</span> <span class="nf">is_tpu</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Returns True if the code is running on a TPU platform</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;tpu&#39;</span>
+    <span class="k">return</span> <span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;tpu&#39;</span></div>
 
 <span class="n">KEY0</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">KEYS</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">KEY0</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
@@ -202,32 +188,23 @@
         <span class="k">return</span> <span class="n">args</span></div>
 
 
-<span class="k">def</span> <span class="nf">canonicalize_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+<div class="viewcode-block" id="canonicalize_dtype"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.canonicalize_dtype.html#cr.nimble.canonicalize_dtype">[docs]</a><span class="k">def</span> <span class="nf">canonicalize_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Wrapper function on dtypes.canonicalize_dtype with None handling</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">dtype</span>
-    <span class="k">return</span> <span class="n">dtypes</span><span class="o">.</span><span class="n">canonicalize_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dtypes</span><span class="o">.</span><span class="n">canonicalize_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="check_shapes_are_equal"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.check_shapes_are_equal.html#cr.nimble.check_shapes_are_equal">[docs]</a><span class="k">def</span> <span class="nf">check_shapes_are_equal</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Raise an error if the shapes of the two arrays do not match.</span>
-<span class="sd">    </span>
-<span class="sd">    Raises:</span>
-<span class="sd">        ValueError: if the shape of two arrays is not same</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">array1</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">array2</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input arrays must have the same shape.&#39;</span><span class="p">)</span>
-    <span class="k">return</span></div>
 
-<span class="k">def</span> <span class="nf">promote_to_complex</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+<div class="viewcode-block" id="promote_to_complex"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.promote_to_complex.html#cr.nimble.promote_to_complex">[docs]</a><span class="k">def</span> <span class="nf">promote_to_complex</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Promotes an argument to complex type&quot;&quot;&quot;</span>
     <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtypes</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">convert_element_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">convert_element_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span></div>
 
-<span class="k">def</span> <span class="nf">promote_to_real</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+<div class="viewcode-block" id="promote_to_real"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.promote_to_real.html#cr.nimble.promote_to_real">[docs]</a><span class="k">def</span> <span class="nf">promote_to_real</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Promotes an argument to real type&quot;&quot;&quot;</span>
     <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtypes</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">convert_element_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">convert_element_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span></div>
 
 
 <span class="n">integer_types</span> <span class="o">=</span> <span class="p">(</span>
@@ -259,12 +236,12 @@
 <span class="n">dtype_ranges</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">integer_ranges</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">nbytes_live_buffers</span><span class="p">():</span>
+<div class="viewcode-block" id="nbytes_live_buffers"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.nbytes_live_buffers.html#cr.nimble.nbytes_live_buffers">[docs]</a><span class="k">def</span> <span class="nf">nbytes_live_buffers</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Returns the number of bytes consumed by the live buffers</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">backend</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">xla_bridge</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
     <span class="n">nbytes</span> <span class="o">=</span> <span class="p">[</span><span class="n">buf</span><span class="o">.</span><span class="n">nbytes</span> <span class="k">for</span> <span class="n">buf</span> <span class="ow">in</span> <span class="n">backend</span><span class="o">.</span><span class="n">live_buffers</span><span class="p">()]</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">nbytes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">nbytes</span><span class="p">)</span></div>
 </pre></div>
 
           </div>

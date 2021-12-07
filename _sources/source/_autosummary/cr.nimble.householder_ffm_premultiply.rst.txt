@@ -1,0 +1,6 @@
+﻿cr.nimble.householder\_ffm\_premultiply
+=======================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: householder_ffm_premultiply

@@ -1,0 +1,6 @@
+﻿cr.nimble.vec2d
+===============
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec2d

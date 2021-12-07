@@ -1,0 +1,6 @@
+﻿cr.nimble.dtype\_ranges
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autodata:: dtype_ranges

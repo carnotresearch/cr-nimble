@@ -1,0 +1,6 @@
+﻿cr.nimble.affine.homogenize
+===========================
+
+.. currentmodule:: cr.nimble.affine
+
+.. autofunction:: homogenize
