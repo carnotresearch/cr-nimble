@@ -1,0 +1,6 @@
+﻿cr.nimble.subspaces.smallest\_principal\_angles\_cos
+====================================================
+
+.. currentmodule:: cr.nimble.subspaces
+
+.. autofunction:: smallest_principal_angles_cos

@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_unit\_jit
+========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_unit_jit

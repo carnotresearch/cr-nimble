@@ -1,0 +1,6 @@
+﻿cr.nimble.solve\_LTx\_b
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: solve_LTx_b

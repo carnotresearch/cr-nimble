@@ -1,0 +1,6 @@
+﻿cr.nimble.subspaces.project\_to\_subspace
+=========================================
+
+.. currentmodule:: cr.nimble.subspaces
+
+.. autofunction:: project_to_subspace

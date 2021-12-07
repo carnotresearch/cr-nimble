@@ -1,0 +1,6 @@
+﻿cr.nimble.effective\_rank\_from\_svd
+====================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: effective_rank_from_svd
