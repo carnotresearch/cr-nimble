@@ -127,3 +127,36 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Blocked stuff
+.vscode/
+data/videos/*.mp4
+*.avi
+*.mp3
+*.webm
+*.ogg
+*.mp4
+
+examples/junk/*
+workbook.ipynb
+test_*.ipynb
+demo_*.ipynb
+workbook_*.ipynb
+
+demo_*.py
+_autosummary
+docs/source/_autosummary/*
+
+# Data files
+record_*.csv
+
+*.mat
+
+tmp/*
+junk/*
+
+docs/gallery/
+
+# airspeed velocity benchmark results
+.asv/*
+paper/paper.pdf
