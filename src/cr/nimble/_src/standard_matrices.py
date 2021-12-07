@@ -9,7 +9,8 @@ from jax import random
 from jax import jit
 
 from .norm import normalize_l2_cw
-from .util import promote_arg_dtypes, hermitian
+from .util import promote_arg_dtypes
+from .array import hermitian
 
 def gaussian_mtx(key, N, D, normalize_atoms=True):
     """A dictionary/sensing matrix where entries are drawn independently from normal distribution.

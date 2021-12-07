@@ -1,3 +1,16 @@
+# Copyright 2021 CR-Nimble Development Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 import numpy as np
 import jax.numpy as jnp
@@ -8,33 +21,6 @@ from jax._src import dtypes
 
 from jax.lib import xla_bridge
 platform = xla_bridge.get_backend().platform
-
-
-
-def hermitian(A):
-    r"""Returns the Hermitian transpose of a matrix
-
-    Args:
-        A (jax.numpy.ndarray): A matrix
-
-    Returns:
-        (jax.numpy.ndarray): A matrix: :math:`A^H`
-    """
-    return jnp.conjugate(A.T)
-
-def AH_v(A, v):
-    r"""Returns :math:`A^H v` for a given matrix A and a vector v
-
-    Args:
-        A (jax.numpy.ndarray): A matrix
-        v (jax.numpy.ndarray): A vector
-
-    Returns:
-        (jax.numpy.ndarray): A vector: :math:`A^H v`
-
-    This is definitely faster on large matrices
-    """
-    return jnp.conjugate((jnp.conjugate(v.T) @ A).T)
 
 
 def is_cpu():
@@ -112,15 +98,6 @@ def canonicalize_dtype(dtype):
         return dtype
     return dtypes.canonicalize_dtype(dtype)
 
-def check_shapes_are_equal(array1, array2):
-    """Raise an error if the shapes of the two arrays do not match.
-    
-    Raises:
-        ValueError: if the shape of two arrays is not same
-    """
-    if not array1.shape == array2.shape:
-        raise ValueError('Input arrays must have the same shape.')
-    return
 
 def promote_to_complex(arg):
     """Promotes an argument to complex type"""

@@ -12,3 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+def hermitian(A):
+    r"""Returns the Hermitian transpose of an array
+
+    Args:
+        A (jax.numpy.ndarray): An array
+
+    Returns:
+        (jax.numpy.ndarray): An array: :math:`A^H`
+    """
+    return jnp.conjugate(A.T)
+
+def check_shapes_are_equal(array1, array2):
+    """Raise an error if the shapes of the two arrays do not match.
+    
+    Raises:
+        ValueError: if the shape of two arrays is not same
+    """
+    if not array1.shape == array2.shape:
+        raise ValueError('Input arrays must have the same shape.')
+    return

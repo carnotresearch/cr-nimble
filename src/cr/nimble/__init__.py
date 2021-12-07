@@ -17,6 +17,7 @@ Linear algebra utility functions
 """
 # pylint: disable=W0611
 
+
 from cr.nimble._src.util import (
     platform,
     is_cpu,
@@ -34,12 +35,14 @@ from cr.nimble._src.util import (
     nbytes_live_buffers,
 )
 
-from cr.nimble._src.util import (
+from cr.nimble._src.array import (
     hermitian,
-    AH_v,
     check_shapes_are_equal
 )
 
+from cr.nimble._src.matrix import (
+    AH_v,
+)
 
 from cr.nimble._src.vector import (
     is_scalar,

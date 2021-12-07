@@ -18,7 +18,8 @@ from jax import jit, lax
 from jax.numpy.linalg import norm
 
 from .svd_utils import singular_values
-from .util import hermitian, AH_v
+from .array import hermitian
+from .matrix import AH_v
 
 def orth_complement(A, B):
     """Returns the orthogonal complement of A in B
