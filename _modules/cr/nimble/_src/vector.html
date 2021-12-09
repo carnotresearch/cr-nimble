@@ -296,6 +296,62 @@
     <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">alpha</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
 <span class="n">vec_safe_divide_by_scalar_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_safe_divide_by_scalar</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">vec_repeat_at_end</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extends a vector by repeating it at the end (periodic extension)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A line vector.</span>
+<span class="sd">        p (int): Number of samples by which x will be extended.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        jax.numpy.ndarray: x extended periodically at the end. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="n">padding</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">padding</span><span class="p">))</span>
+
+<span class="n">vec_repeat_at_end_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_repeat_at_end</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+
+
+<span class="k">def</span> <span class="nf">vec_repeat_at_start</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extends a vector by repeating it at the start (periodic extension)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A line vector.</span>
+<span class="sd">        p (int): Number of samples by which x will be extended.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        jax.numpy.ndarray: x extended periodically at the start. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="n">padding</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">padding</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+
+<span class="n">vec_repeat_at_start_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_repeat_at_start</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+
+
+<span class="k">def</span> <span class="nf">vec_centered</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the central part of a vector of a specified length</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A line vector.</span>
+<span class="sd">        length (int): Length of the central part of x which will be retained.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        jax.numpy.ndarray: central part of x of the specified length. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cur_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">cur_len</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> 
+    <span class="n">start</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">length</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">length</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+
+<span class="n">vec_centered_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_centered</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+
 </pre></div>
 
           </div>
