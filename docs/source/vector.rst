@@ -19,6 +19,10 @@ Predicates
     is_line_vec
     is_row_vec
     is_col_vec
+    is_increasing_vec
+    is_decreasing_vec
+    is_nonincreasing_vec
+    is_nondecreasing_vec
 
 Unary Operations
 ----------------------------------
