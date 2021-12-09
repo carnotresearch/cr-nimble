@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_centered\_jit
+============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_centered_jit

@@ -1,0 +1,6 @@
+﻿cr.nimble.pairwise\_sqr\_l2\_distances\_rw
+==========================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: pairwise_sqr_l2_distances_rw

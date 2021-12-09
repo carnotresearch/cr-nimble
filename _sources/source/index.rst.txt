@@ -9,6 +9,7 @@ API Docs
    array
    vector
    matrix
+   metrics
    linear_systems
    orth
    svdpack

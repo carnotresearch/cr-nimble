@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_square
+====================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_square

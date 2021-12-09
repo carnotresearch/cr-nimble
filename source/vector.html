@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cr.nimble.is_scalar" href="_autosummary/cr.nimble.is_scalar.html" />
-    <link rel="prev" title="cr.nimble.hermitian" href="_autosummary/cr.nimble.hermitian.html" />
+    <link rel="prev" title="cr.nimble.check_shapes_are_equal" href="_autosummary/cr.nimble.check_shapes_are_equal.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -58,9 +58,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Docs</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="array.html">ND-Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="array.html">Arrays</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metrics.html">Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a></li>
@@ -81,7 +82,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.hermitian.html" title="previous chapter">cr.nimble.hermitian</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.check_shapes_are_equal.html" title="previous chapter">cr.nimble.check_shapes_are_equal</a></li>
       <li>Next: <a href="_autosummary/cr.nimble.is_scalar.html" title="next chapter">cr.nimble.is_scalar</a></li>
   </ul></li>
   </ul></li>
@@ -190,6 +191,27 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_unit_jit.html#cr.nimble.vec_unit_jit" title="cr.nimble.vec_unit_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_unit_jit</span></code></a>(n, i)</p></td>
 <td><p>Returns a unit vector in i-th dimension for the standard coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_end.html#cr.nimble.vec_repeat_at_end" title="cr.nimble.vec_repeat_at_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_end</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the end (periodic extension)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_start.html#cr.nimble.vec_repeat_at_start" title="cr.nimble.vec_repeat_at_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_start</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the start (periodic extension)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_centered.html#cr.nimble.vec_centered" title="cr.nimble.vec_centered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_centered</span></code></a>(x, length)</p></td>
+<td><p>Returns the central part of a vector of a specified length</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_unit_jit.html#cr.nimble.vec_unit_jit" title="cr.nimble.vec_unit_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_unit_jit</span></code></a>(n, i)</p></td>
+<td><p>Returns a unit vector in i-th dimension for the standard coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_end_jit.html#cr.nimble.vec_repeat_at_end_jit" title="cr.nimble.vec_repeat_at_end_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_end_jit</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the end (periodic extension)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_start_jit.html#cr.nimble.vec_repeat_at_start_jit" title="cr.nimble.vec_repeat_at_start_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_start_jit</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the start (periodic extension)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_centered_jit.html#cr.nimble.vec_centered_jit" title="cr.nimble.vec_centered_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_centered_jit</span></code></a>(x, length)</p></td>
+<td><p>Returns the central part of a vector of a specified length</p></td>
 </tr>
 </tbody>
 </table>

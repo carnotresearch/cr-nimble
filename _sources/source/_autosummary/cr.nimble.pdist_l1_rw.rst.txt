@@ -1,0 +1,6 @@
+﻿cr.nimble.pdist\_l1\_rw
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: pdist_l1_rw

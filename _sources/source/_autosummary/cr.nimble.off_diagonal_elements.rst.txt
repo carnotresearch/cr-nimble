@@ -1,0 +1,6 @@
+﻿cr.nimble.off\_diagonal\_elements
+=================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: off_diagonal_elements

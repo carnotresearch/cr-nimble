@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_hermitian
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_hermitian
