@@ -4,6 +4,7 @@ from functools import partial
 import numpy as np
 import scipy
 
+import jax
 import jax.numpy as jnp
 from jax import random
 from jax import jit
@@ -51,3 +52,32 @@ def gaussian_mtx(key, N, D, normalize_atoms=True):
         sigma = math.sqrt(N)
         dict = dict / sigma
     return dict
+
+
+def _pascal_lower(n):
+    A = jnp.empty((n, n), dtype=jnp.int32)
+    A = A.at[0, :].set(0)
+    A = A.at[:, 0].set(1)
+    for i in range(1, n):
+        for j in range(1, i+1):
+            A = A.at[i, j].set(A[i-1, j] + A[i-1, j-1])
+    return A
+
+def _pascal_sym(n):
+    A = jnp.empty((n, n), dtype=jnp.int32)
+    A = A.at[0, :].set(1)
+    A = A.at[:, 0].set(1)
+    for i in range(1, n):
+        for j in range(1, n):
+            A = A.at[i, j].set(A[i-1, j] + A[i, j-1])
+    return A
+
+def pascal(n, symmetric=False):
+    """Returns a pascal matrix of size n \times n
+    """
+    if symmetric:
+        return _pascal_sym(n)
+    else:
+        return _pascal_lower(n)
+
+pascal_jit = jax.jit(pascal, static_argnums=(0, 1))

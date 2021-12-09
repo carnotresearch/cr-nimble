@@ -199,3 +199,59 @@ def vec_safe_divide_by_scalar(x, alpha):
     return lax.cond(alpha == 0, lambda x : x, lambda x: x / alpha, x)
 
 vec_safe_divide_by_scalar_jit = jit(vec_safe_divide_by_scalar)
+
+
+def vec_repeat_at_end(x, p):
+    """Extends a vector by repeating it at the end (periodic extension)
+
+    Args:
+        x (jax.numpy.ndarray): A line vector.
+        p (int): Number of samples by which x will be extended.
+
+    Returns:
+        jax.numpy.ndarray: x extended periodically at the end. 
+    """
+    n = x.shape[0]
+    indices = jnp.arange(p) % n
+    padding = x[indices]
+    return jnp.concatenate((x, padding))
+
+vec_repeat_at_end_jit = jit(vec_repeat_at_end, static_argnums=(1,))
+
+
+def vec_repeat_at_start(x, p):
+    """Extends a vector by repeating it at the start (periodic extension)
+
+    Args:
+        x (jax.numpy.ndarray): A line vector.
+        p (int): Number of samples by which x will be extended.
+
+    Returns:
+        jax.numpy.ndarray: x extended periodically at the start. 
+    """
+    n = x.shape[0]
+    indices = (jnp.arange(p) + n - p) % n
+    padding = x[indices]
+    return jnp.concatenate((padding, x))
+
+vec_repeat_at_start_jit = jit(vec_repeat_at_start, static_argnums=(1,))
+
+
+def vec_centered(x, length):
+    """Returns the central part of a vector of a specified length
+
+    Args:
+        x (jax.numpy.ndarray): A line vector.
+        length (int): Length of the central part of x which will be retained.
+
+    Returns:
+        jax.numpy.ndarray: central part of x of the specified length. 
+    """
+    cur_len = len(x)
+    length = min(cur_len, length) 
+    start = (len(x) - length) // 2
+    end = start + length
+    return x[start:end]
+
+vec_centered_jit = jit(vec_centered, static_argnums=(1,))
+

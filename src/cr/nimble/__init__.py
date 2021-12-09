@@ -40,10 +40,6 @@ from cr.nimble._src.array import (
     check_shapes_are_equal
 )
 
-from cr.nimble._src.matrix import (
-    AH_v,
-)
-
 from cr.nimble._src.vector import (
     is_scalar,
     is_vec,
@@ -63,7 +59,40 @@ from cr.nimble._src.vector import (
     vec_shift_left_n, 
     vec_rotate_left_n,
     vec_safe_divide_by_scalar,   
+    vec_repeat_at_end,
+    vec_repeat_at_end_jit,
+    vec_repeat_at_start,
+    vec_repeat_at_start_jit,
+    vec_centered,
+    vec_centered_jit,
 )
+
+from cr.nimble._src.matrix import (
+    AH_v,
+    mat_transpose,
+    mat_hermitian,
+    is_matrix,
+    is_square,
+    is_symmetric,
+    is_hermitian,
+    is_positive_definite,
+    has_orthogonal_columns,
+    has_orthogonal_rows,
+    has_unitary_columns,
+    has_unitary_rows,
+    off_diagonal_elements,
+    off_diagonal_min,
+    off_diagonal_max,
+    off_diagonal_mean,
+    set_diagonal,
+    add_to_diagonal,
+    abs_max_idx_cw,
+    abs_max_idx_rw,
+    diag_premultiply,
+    diag_postmultiply
+)
+
+
 
 from cr.nimble._src.norm import (
     norm_l1,
@@ -86,6 +115,55 @@ from cr.nimble._src.norm import (
     normalize_l2_cw,
     normalize_l2_rw,
 )
+
+
+from cr.nimble._src.distance import (
+    pairwise_sqr_l2_distances_rw,
+    pairwise_sqr_l2_distances_cw,
+    pairwise_l2_distances_rw,
+    pairwise_l2_distances_cw,
+    pdist_sqr_l2_rw,
+    pdist_sqr_l2_cw,
+    pdist_l2_rw,
+    pdist_l2_cw,
+    # Manhattan distances
+    pairwise_l1_distances_rw,
+    pairwise_l1_distances_cw,
+    pdist_l1_rw,
+    pdist_l1_cw,
+
+    # Chebychev distance
+    pairwise_linf_distances_rw,
+    pairwise_linf_distances_cw,
+    pdist_linf_rw,
+    pdist_linf_cw
+)
+
+
+from cr.nimble._src.metrics import (
+    mean_squared,
+    mean_squared_error,
+    root_mean_squared,
+    root_mse,
+    normalization_factor,
+    normalized_root_mse,
+    peak_signal_noise_ratio,
+    signal_noise_ratio
+)
+
+from cr.nimble._src.ndarray import (
+    arr_largest_index,
+    arr_l1norm,
+    arr_l2norm,
+    arr_l2norm_sqr,
+    arr_vdot,
+    arr_rdot,
+    arr_rnorm_sqr,
+    arr_rnorm,
+    arr2vec,
+    log_pos,
+)
+
 
 from cr.nimble._src.linear import (
     point2d,
@@ -149,5 +227,7 @@ from cr.nimble._src.dls import (
 
 
 from cr.nimble._src.standard_matrices import (
-    gaussian_mtx
+    gaussian_mtx,
+    pascal,
+    pascal_jit
 )

@@ -15,6 +15,7 @@ Matrix multiplication
     :toctree: _autosummary
 
     AH_v
+    transpose
 
 
 Row wise and column wise norms for matrices
