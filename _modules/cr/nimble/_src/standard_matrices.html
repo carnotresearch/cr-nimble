@@ -126,20 +126,13 @@
 <span class="sd">    Example:</span>
 
 <span class="sd">        &gt;&gt;&gt; from jax import random</span>
-<span class="sd">        &gt;&gt;&gt; import cr.sparse as crs</span>
-<span class="sd">        &gt;&gt;&gt; import cr.sparse.dict</span>
+<span class="sd">        &gt;&gt;&gt; import cr.nimble as cnb</span>
 <span class="sd">        &gt;&gt;&gt; m, n = 8, 16</span>
-<span class="sd">        &gt;&gt;&gt; Phi = cr.sparse.dict.gaussian_mtx(random.PRNGKey(0), m, n)</span>
+<span class="sd">        &gt;&gt;&gt; Phi = cnb.gaussian_mtx(random.PRNGKey(0), m, n)</span>
 <span class="sd">        &gt;&gt;&gt; print(Phi.shape)</span>
 <span class="sd">        (8, 16)</span>
-<span class="sd">        &gt;&gt;&gt; print(crs.norms_l2_cw(Phi))</span>
+<span class="sd">        &gt;&gt;&gt; print(cnb.norms_l2_cw(Phi))</span>
 <span class="sd">        [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]</span>
-<span class="sd">        &gt;&gt;&gt; print(cr.sparse.dict.coherence(Phi))</span>
-<span class="sd">        [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]</span>
-<span class="sd">        &gt;&gt;&gt; print(cr.sparse.dict.babel(Phi))</span>
-<span class="sd">        [0.85866616 1.59791754 2.13943785 2.61184779 2.9912899  3.38281051</span>
-<span class="sd">        3.74641682 4.08225813 4.29701559 4.49942648 4.68680188 4.83106192</span>
-<span class="sd">        4.95656728 5.05541184 5.10697535]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
     <span class="nb">dict</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span>

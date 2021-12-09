@@ -95,7 +95,7 @@
           <div class="body" role="main">
             
   <h1>Source code for cr.nimble._src.data.subspaces</h1><div class="highlight"><pre>
-<span></span><span class="c1"># Copyright 2021 CR.Sparse Development Team</span>
+<span></span><span class="c1"># Copyright 2021 CR-Nimble Development Team</span>
 <span class="c1">#</span>
 <span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
 <span class="c1"># you may not use this file except in compliance with the License.</span>
@@ -198,7 +198,7 @@
 <span class="sd">        &gt;&gt;&gt; A, B = two_subspaces_at_angle(rkey, N, D, theta)</span>
 <span class="sd">        &gt;&gt;&gt; print(A.shape, B.shape)</span>
 <span class="sd">        (20, 4) (20, 4) (20, 4)</span>
-<span class="sd">        &gt;&gt;&gt; from cr.sparse.la.subspaces import principal_angles_deg</span>
+<span class="sd">        &gt;&gt;&gt; from cr.nimble.subspaces import principal_angles_deg</span>
 <span class="sd">        &gt;&gt;&gt; print(principal_angles_deg(A, B))</span>
 <span class="sd">        [15. 90. 90. 90.]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -251,7 +251,7 @@
 <span class="sd">        &gt;&gt;&gt; A, B, C = three_subspaces_at_angle(rkey, N, D, theta)</span>
 <span class="sd">        &gt;&gt;&gt; print(A.shape, B.shape, C.shape)</span>
 <span class="sd">        (20, 4) (20, 4) (20, 4)</span>
-<span class="sd">        &gt;&gt;&gt; from cr.sparse.la.subspaces import smallest_principal_angles_deg</span>
+<span class="sd">        &gt;&gt;&gt; from cr.nimble.subspaces import smallest_principal_angles_deg</span>
 <span class="sd">        &gt;&gt;&gt; angles = smallest_principal_angles_deg(jnp.array([A, B, C]))</span>
 <span class="sd">        &gt;&gt;&gt; print(jnp.round(angles, 2))</span>
 <span class="sd">        [[ 0. 15. 15.]</span>
