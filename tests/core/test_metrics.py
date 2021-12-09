@@ -1,4 +1,4 @@
-from core_setup import *
+from cr.nimble.test_setup import *
 
 n = 16
 
@@ -37,4 +37,4 @@ def test_peak_signal_noise_ratio():
 
 @pytest.mark.parametrize("x,expected", [(o, 168.5768), (z, 0)])
 def test_signal_noise_ratio(x, expected):
-    assert_almost_equal(cnb.signal_noise_ratio(x, x), expected)
+    assert_almost_equal(cnb.signal_noise_ratio(x, x), expected, decimal=3)

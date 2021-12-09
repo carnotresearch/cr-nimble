@@ -1,4 +1,4 @@
-from core_setup import *
+from cr.nimble.test_setup import *
 from cr.nimble import *
 
 def test_is_symmetric():

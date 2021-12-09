@@ -1,4 +1,4 @@
-from core_setup import *
+from cr.nimble.test_setup import *
 
 M = 10
 p = 3

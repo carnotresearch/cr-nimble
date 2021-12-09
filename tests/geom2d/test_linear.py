@@ -1,4 +1,4 @@
-from nb_setup import *
+from cr.nimble.test_setup import *
 
 def test_point():
     x = cnb.point2d(1, 2)

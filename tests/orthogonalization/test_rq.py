@@ -1,4 +1,6 @@
-from nb_setup import *
+from cr.nimble.test_setup import *
+
+import cr.nimble.rq as rq
 
 def test_1():
     A = jnp.eye(3)

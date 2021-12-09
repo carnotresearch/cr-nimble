@@ -1,4 +1,6 @@
-from nb_setup import *
+from cr.nimble.test_setup import *
+
+import cr.nimble.affine
 
 homogenize = jax.jit(cnb.affine.homogenize)
 homogenize_vec = jax.jit(cnb.affine.homogenize_vec)

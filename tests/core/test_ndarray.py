@@ -1,5 +1,4 @@
-from core_setup import *
-
+from cr.nimble.test_setup import *
 
 def test_arr_largest_index():
     x = jnp.array([1, -2, -3, 2])

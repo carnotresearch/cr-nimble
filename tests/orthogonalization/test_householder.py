@@ -1,4 +1,4 @@
-from nb_setup import *
+from cr.nimble.test_setup import *
 
 householder_vec  = jit(cnb.householder_vec)
 householder_matrix = jit(cnb.householder_matrix)

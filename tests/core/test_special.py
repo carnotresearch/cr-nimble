@@ -1,5 +1,4 @@
-from core_setup import *
-
+from cr.nimble.test_setup import *
 
 def test_pascal_1():
     n = 4

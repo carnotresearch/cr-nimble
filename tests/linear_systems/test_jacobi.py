@@ -1,4 +1,4 @@
-from nb_setup import *
+from ls_setup import *
 
 def test_jacobi():
     A = jnp.array([[3., 2], [2, 6]])

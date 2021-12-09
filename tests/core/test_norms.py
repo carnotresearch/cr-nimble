@@ -1,5 +1,5 @@
 from math import sqrt
-from core_setup import *
+from cr.nimble.test_setup import *
 from cr.nimble import *
 
 # Integers

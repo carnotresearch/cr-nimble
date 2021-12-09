@@ -1,5 +1,4 @@
-from core_setup import *
-
+from cr.nimble.test_setup import *
 
 def test_promote_arg_dtypes():
     res = cnb.promote_arg_dtypes(jnp.array(1), jnp.array(2))
@@ -33,7 +32,7 @@ def test_check_shapes_are_equal():
 def test_promote_to_complex():
     z = jnp.zeros(4)
     z = cnb.promote_to_complex(z)
-    assert z.dtype == np.complex64
+    assert z.dtype == np.complex128
 
 def test_promote_to_real():
     z = jnp.zeros(4, dtype=int)

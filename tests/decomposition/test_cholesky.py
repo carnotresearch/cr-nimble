@@ -1,4 +1,4 @@
-from nb_setup import *
+from cr.nimble.test_setup import *
 
 cholesky_build_factor = jit(cnb.cholesky_build_factor)
 

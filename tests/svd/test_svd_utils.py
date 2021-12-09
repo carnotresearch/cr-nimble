@@ -7,7 +7,7 @@ d = 4
 # number of subspaces
 k = 2
 
-bases = data.random_subspaces_jit(cnb.KEYS[0], n, d, k)
+bases = cnb.data.random_subspaces_jit(cnb.KEYS[0], n, d, k)
 
 
 def test_orth():
