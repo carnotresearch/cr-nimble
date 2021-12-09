@@ -38,4 +38,11 @@ Unary Operations
     vec_shift_left_n
     vec_rotate_left_n 
     vec_unit_jit
+    vec_repeat_at_end
+    vec_repeat_at_start
+    vec_centered
+    vec_unit_jit
+    vec_repeat_at_end_jit
+    vec_repeat_at_start_jit
+    vec_centered_jit
 

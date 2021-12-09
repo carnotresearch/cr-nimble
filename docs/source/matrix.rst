@@ -8,18 +8,47 @@ Matrices
 
 .. currentmodule:: cr.nimble
 
-Matrix multiplication
+Predicates
 ----------------------------------------------------------------------
 
 .. autosummary::
     :toctree: _autosummary
 
+    is_matrix
+    is_square
+    is_symmetric
+    is_hermitian
+    is_positive_definite
+    has_orthogonal_columns
+    has_orthogonal_rows
+    has_unitary_columns
+    has_unitary_rows
+
+Matrix multiplication
+----------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
     AH_v
-    transpose
+    mat_transpose
+    mat_hermitian
+
+Matrix parts
+------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    off_diagonal_elements
+    off_diagonal_min
+    off_diagonal_max
+    off_diagonal_mean
 
 
-Row wise and column wise norms for matrices
-----------------------------------------------------------------------
+
+Row wise and column wise norms
+-----------------------------------
 
 .. autosummary::
   :toctree: _autosummary
@@ -36,3 +65,28 @@ Row wise and column wise norms for matrices
     normalize_l1_rw
     normalize_l2_cw
     normalize_l2_rw
+
+
+Pairwise Distances
+-------------------------
+
+.. autosummary::
+  :toctree: _autosummary
+
+  pairwise_sqr_l2_distances_rw
+  pairwise_sqr_l2_distances_cw
+  pairwise_l2_distances_rw
+  pairwise_l2_distances_cw
+  pdist_sqr_l2_rw
+  pdist_sqr_l2_cw
+  pdist_l2_rw
+  pdist_l2_cw
+  pairwise_l1_distances_rw
+  pairwise_l1_distances_cw
+  pdist_l1_rw
+  pdist_l1_cw
+  pairwise_linf_distances_rw
+  pairwise_linf_distances_cw
+  pdist_linf_rw
+  pdist_linf_cw
+
