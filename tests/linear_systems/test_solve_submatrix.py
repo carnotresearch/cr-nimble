@@ -1,4 +1,4 @@
-from nb_setup import *
+from ls_setup import *
 
 @pytest.mark.parametrize("K", [1, 2, 4, 8])
 def test_solve1(K):

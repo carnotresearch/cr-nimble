@@ -53,18 +53,18 @@ def promote_arg_dtypes(*args):
     Example:
         Promoting a single argument::
 
-            >>> cr.sparse.promote_arg_dtypes(jnp.arange(2))
+            >>> cr.nimble.promote_arg_dtypes(jnp.arange(2))
             DeviceArray([0., 1.], dtype=float32)
             >>> from jax.config import config
             >>> config.update("jax_enable_x64", True)
-            >>> cr.sparse.promote_arg_dtypes(jnp.arange(2))
+            >>> cr.nimble.promote_arg_dtypes(jnp.arange(2))
             DeviceArray([0., 1.], dtype=float64)
 
         Promoting two arguments to common floating point type::
 
             >>> a = jnp.arange(2)
             >>> b = jnp.arange(1.5, 3.5)
-            >>> a, b = cr.sparse.promote_arg_dtypes(a, b)
+            >>> a, b = cr.nimble.promote_arg_dtypes(a, b)
             >>> print(a)
             >>> print(b)
             [0. 1.]
@@ -74,7 +74,7 @@ def promote_arg_dtypes(*args):
 
             >>> a = jnp.arange(2) + 0.j
             >>> b = jnp.arange(1.5, 3.5)
-            >>> a, b = cr.sparse.promote_arg_dtypes(a, b)
+            >>> a, b = cr.nimble.promote_arg_dtypes(a, b)
             >>> print(a)
             >>> print(b)
             [0.+0.j 1.+0.j]

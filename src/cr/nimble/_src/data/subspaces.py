@@ -1,4 +1,4 @@
-# Copyright 2021 CR.Sparse Development Team
+# Copyright 2021 CR-Nimble Development Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -101,7 +101,7 @@ def two_subspaces_at_angle(key, N, D, theta):
         >>> A, B = two_subspaces_at_angle(rkey, N, D, theta)
         >>> print(A.shape, B.shape)
         (20, 4) (20, 4) (20, 4)
-        >>> from cr.sparse.la.subspaces import principal_angles_deg
+        >>> from cr.nimble.subspaces import principal_angles_deg
         >>> print(principal_angles_deg(A, B))
         [15. 90. 90. 90.]
     """
@@ -154,7 +154,7 @@ def three_subspaces_at_angle(key, N, D, theta):
         >>> A, B, C = three_subspaces_at_angle(rkey, N, D, theta)
         >>> print(A.shape, B.shape, C.shape)
         (20, 4) (20, 4) (20, 4)
-        >>> from cr.sparse.la.subspaces import smallest_principal_angles_deg
+        >>> from cr.nimble.subspaces import smallest_principal_angles_deg
         >>> angles = smallest_principal_angles_deg(jnp.array([A, B, C]))
         >>> print(jnp.round(angles, 2))
         [[ 0. 15. 15.]

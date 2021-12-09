@@ -1,4 +1,4 @@
-from nb_setup import *
+from ls_setup import *
 
 def test_lxb():
     n = 5

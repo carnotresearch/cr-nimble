@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from jax import jit
+from jax import jit, lax
 import jax.numpy as jnp
 
 from .util import promote_arg_dtypes

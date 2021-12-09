@@ -1,4 +1,4 @@
-from nb_setup import *
+from svd_setup import *
 
 
 def test_lanbpro1():

@@ -29,20 +29,13 @@ def gaussian_mtx(key, N, D, normalize_atoms=True):
     Example:
 
         >>> from jax import random
-        >>> import cr.sparse as crs
-        >>> import cr.sparse.dict
+        >>> import cr.nimble as cnb
         >>> m, n = 8, 16
-        >>> Phi = cr.sparse.dict.gaussian_mtx(random.PRNGKey(0), m, n)
+        >>> Phi = cnb.gaussian_mtx(random.PRNGKey(0), m, n)
         >>> print(Phi.shape)
         (8, 16)
-        >>> print(crs.norms_l2_cw(Phi))
+        >>> print(cnb.norms_l2_cw(Phi))
         [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
-        >>> print(cr.sparse.dict.coherence(Phi))
-        [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
-        >>> print(cr.sparse.dict.babel(Phi))
-        [0.85866616 1.59791754 2.13943785 2.61184779 2.9912899  3.38281051
-        3.74641682 4.08225813 4.29701559 4.49942648 4.68680188 4.83106192
-        4.95656728 5.05541184 5.10697535]
     """
     shape = (N, D)
     dict = random.normal(key, shape)
