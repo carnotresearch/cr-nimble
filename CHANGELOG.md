@@ -10,10 +10,23 @@ All notable changes to this project will be documented in this file.
 [Documentation](https://cr-nimble.readthedocs.io/en/latest/)
 
 
+## [0.1.1] - 2021-12-07
+
+### Added
+
+- distance, matrix, ndarray, metrics, modules were moved from `cr-sparse` to `cr-nimble`
+- some more vector functions were moved from `cr-sparse` to `cr-nimble`
+
+### Improved
+
+- All unit tests were moved to 64-bit floating point data.
+
+
 ## [0.1.0] - 2021-12-07
 
-Initial release by refactoring code from `cr-sparse`.
+Initial release by refactoring code from `cr-nimble`.
 
 
-[Unreleased]: https://github.com/carnotresearch/cr-sparse/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/carnotresearch/cr-sparse/releases/tag/v0.1.0
+[Unreleased]: https://github.com/carnotresearch/cr-nimble/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1
+[0.1.0]: https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0
