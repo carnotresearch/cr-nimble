@@ -70,6 +70,7 @@
 <li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsp.html">Digital Signal Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="util.html">Utilities</a></li>
 </ul>
 </li>
@@ -157,9 +158,52 @@
 </section>
 <section id="svd-for-bidiagonal-matrices">
 <h2><a class="toc-backref" href="#id2">SVD for Bidiagonal Matrices</a><a class="headerlink" href="#svd-for-bidiagonal-matrices" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.bdsqr.html#cr.nimble.svd.bdsqr" title="cr.nimble.svd.bdsqr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bdsqr</span></code></a>(alpha, beta, k)</p></td>
+<td><p>Computes the SVD of the bidiagonal matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.bdsqr_jit.html#cr.nimble.svd.bdsqr_jit" title="cr.nimble.svd.bdsqr_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bdsqr_jit</span></code></a>(alpha, beta, k)</p></td>
+<td><p>Computes the SVD of the bidiagonal matrix</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="truncated-svd">
 <h2><a class="toc-backref" href="#id3">Truncated SVD</a><a class="headerlink" href="#truncated-svd" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lansvd_simple.html#cr.nimble.svd.lansvd_simple" title="cr.nimble.svd.lansvd_simple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lansvd_simple</span></code></a>(A, k, p0)</p></td>
+<td><p>Returns the k largest singular values and corresponding vectors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lansvd_simple_jit.html#cr.nimble.svd.lansvd_simple_jit" title="cr.nimble.svd.lansvd_simple_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lansvd_simple_jit</span></code></a>(A, k, p0)</p></td>
+<td><p>Returns the k largest singular values and corresponding vectors</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_init.html#cr.nimble.svd.lanbpro_init" title="cr.nimble.svd.lanbpro_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_init</span></code></a>(A, k, p0, options)</p></td>
+<td><p>Initialize the state with a starting vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_iteration.html#cr.nimble.svd.lanbpro_iteration" title="cr.nimble.svd.lanbpro_iteration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_iteration</span></code></a>(A, state, options)</p></td>
+<td><p>One single (j-th) iteration of Lanczos bidiagonalization with partial reorthogonalization algorithm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_iteration_jit.html#cr.nimble.svd.lanbpro_iteration_jit" title="cr.nimble.svd.lanbpro_iteration_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_iteration_jit</span></code></a>(A, state, options)</p></td>
+<td><p>One single (j-th) iteration of Lanczos bidiagonalization with partial reorthogonalization algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro.html#cr.nimble.svd.lanbpro" title="cr.nimble.svd.lanbpro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro</span></code></a>(A, k, p0)</p></td>
+<td><p>K steps of the  Lanczos bidiagonalization with partial reorthogonalization</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_jit.html#cr.nimble.svd.lanbpro_jit" title="cr.nimble.svd.lanbpro_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_jit</span></code></a>(A, k, p0)</p></td>
+<td><p>K steps of the  Lanczos bidiagonalization with partial reorthogonalization</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 

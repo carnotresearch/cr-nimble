@@ -1,6 +1,0 @@
-﻿cr.nimble.integer\_types
-========================
-
-.. currentmodule:: cr.nimble
-
-.. autodata:: integer_types

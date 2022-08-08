@@ -207,6 +207,7 @@
     <span class="k">return</span> <span class="n">lax</span><span class="o">.</span><span class="n">convert_element_type</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span></div>
 
 
+<span class="c1"># Integer types</span>
 <span class="n">integer_types</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">jnp</span><span class="o">.</span><span class="n">uint8</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
     <span class="n">jnp</span><span class="o">.</span><span class="n">uint16</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
@@ -218,10 +219,11 @@
     <span class="n">jnp</span><span class="o">.</span><span class="n">int64</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
 <span class="p">)</span>
 
+<span class="c1"># Ranges of values for integer types</span>
 <span class="n">integer_ranges</span> <span class="o">=</span> <span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">jnp</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">integer_types</span><span class="p">}</span>
 
-
+<span class="c1"># Ranges of values for floating point types</span>
 <span class="n">dtype_ranges</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nb">bool</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
     <span class="nb">float</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>

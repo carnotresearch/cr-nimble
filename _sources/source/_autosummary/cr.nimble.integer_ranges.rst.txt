@@ -1,6 +1,0 @@
-﻿cr.nimble.integer\_ranges
-=========================
-
-.. currentmodule:: cr.nimble
-
-.. autodata:: integer_ranges
