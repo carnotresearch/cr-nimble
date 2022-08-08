@@ -10,6 +10,10 @@ All notable changes to this project will be documented in this file.
 [Documentation](https://cr-nimble.readthedocs.io/en/latest/)
 
 
+### Added
+
+- Digital signal processing utilities moved from cr-sparse to cr-nimble
+
 ## [0.1.1] - 2021-12-07
 
 ### Added
