@@ -110,6 +110,7 @@ def promote_to_real(arg):
     return lax.convert_element_type(arg, dtype)
 
 
+# Integer types
 integer_types = (
     jnp.uint8.dtype,
     jnp.uint16.dtype,
@@ -121,10 +122,11 @@ integer_types = (
     jnp.int64.dtype,
 )
 
+# Ranges of values for integer types
 integer_ranges = {t: (jnp.iinfo(t).min, jnp.iinfo(t).max)
                    for t in integer_types}
 
-
+# Ranges of values for floating point types
 dtype_ranges = {
     bool: (False, True),
     float: (-1, 1),

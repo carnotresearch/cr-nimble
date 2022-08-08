@@ -21,9 +21,6 @@ Data Type Management
     canonicalize_dtype
     promote_to_complex
     promote_to_real
-    integer_types
-    integer_ranges
-    dtype_ranges
 
 System Information
 -----------------------------
