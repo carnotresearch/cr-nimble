@@ -1,6 +1,6 @@
 CR-Nimble
 =====================================
-Iterative algorithms for numerical linear algebra with JAX
+Fast linear algebra and signal processing utilities with JAX
 
 
 .. toctree::

@@ -18,4 +18,5 @@ API Docs
    geom2d
    standard
    data
+   dsp
    util
