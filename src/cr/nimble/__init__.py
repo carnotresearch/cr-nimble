@@ -65,6 +65,13 @@ from cr.nimble._src.vector import (
     vec_repeat_at_start_jit,
     vec_centered,
     vec_centered_jit,
+    vec_to_windows,
+    vec_to_windows_jit,
+    vec_mag_desc,
+    vec_to_pmf,
+    vec_to_cmf,
+    cmf_find_quantile_index,
+    num_largest_coeffs_for_energy_percent
 )
 
 from cr.nimble._src.matrix import (
@@ -99,6 +106,10 @@ from cr.nimble._src.norm import (
     sqr_norm_l2,
     norm_l2,
     norm_linf,
+
+    normalize_l1,
+    normalize_l2,
+    normalize_linf,
 
     norms_l1_cw,
     norms_l1_rw,

@@ -32,11 +32,11 @@ def time_values(fs, T, initial_time=0, endpoint=False):
 
             >>> fs=2 # Hz
             >>> T = 4 # Sec
-            >>> cr.sparse.dsp.time_values(fs, T)
+            >>> cr.nimble.dsp.time_values(fs, T)
             DeviceArray([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5], dtype=float32)
-            >>> cr.sparse.dsp.time_values(fs, T, endpoint=True)
+            >>> cr.nimble.dsp.time_values(fs, T, endpoint=True)
             DeviceArray([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5, 4. ], dtype=float32)
-            >>> cr.sparse.dsp.time_values(fs, T, initial_time=-2, endpoint=True)
+            >>> cr.nimble.dsp.time_values(fs, T, initial_time=-2, endpoint=True)
             DeviceArray([-2. , -1.5, -1. , -0.5,  0. ,  0.5,  1. ,  1.5,  2. ], dtype=float32)
     """
     # Number of samples

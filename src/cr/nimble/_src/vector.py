@@ -255,3 +255,98 @@ def vec_centered(x, length):
 
 vec_centered_jit = jit(vec_centered, static_argnums=(1,))
 
+########################################################
+#  Energy
+########################################################
+
+@jit
+def vec_mag_desc(a):
+    """Returns the coefficients in the descending order of magnitude
+
+    Args:
+        a (jax.numpy.ndarray): A vector of coefficients
+    """
+    return jnp.sort(jnp.abs(a))[::-1]
+
+@jit
+def vec_to_pmf(a):
+    """Computes a probability mass function from a given vector
+
+    Args:
+        a (jax.numpy.ndarray): A vector of coefficients
+    """
+    s = jnp.sum(a) * 1.
+    return a / s
+
+@jit
+def vec_to_cmf(a):
+    """Computes a cumulative mass function from a given vector
+
+    Args:
+        a (jax.numpy.ndarray): A vector of coefficients
+    """
+    s = jnp.sum(a) * 1.
+    # normalize
+    a = a / s
+    # generate the CMF
+    return jnp.cumsum(a)
+
+@jit
+def cmf_find_quantile_index(a, q):
+    """Returns the index of a given quantile in a CMF
+
+    Args:
+        a (jax.numpy.ndarray): A vector of coefficients
+    """
+    return jnp.argmax(a >= q)
+
+def num_largest_coeffs_for_energy_percent(a, p):
+    """Returns the number of largest components containing a given
+    percentage of energy
+
+    Args:
+        a (jax.numpy.ndarray): A vector of coefficients
+        p (float): percentage of energy
+    """
+    # compute energies
+    a = a ** 2
+    # sort in descending order
+    a = jnp.sort(a)[::-1]
+    # total energy
+    s = jnp.sum(a) * 1.
+    # normalize
+    a = a / s
+    # convert to a cmf
+    cmf = jnp.cumsum(a)
+    # the quantile value
+    q = p / 100.
+    # find the index
+    index =  jnp.argmax(cmf >= q)
+    return index + 1
+
+########################################################
+#  Sliding Windows
+########################################################
+
+def vec_to_windows(x, wlen):
+    """Constructs windows of a given length from the vector
+
+    Args:
+        x (jax.numpy.ndarray): A line vector
+        wlen: length of each window
+
+    Returns:
+        jax.numpy.ndarray: A matrix of shape (wlen, m) where
+        m is the number of windows
+
+    Notes:
+    - Drops extra samples from the end if the last window is not complete
+    """
+    n = len(x)
+    # number of windows
+    m = n // wlen
+    # total samples to be kept
+    s = m * wlen
+    return jnp.reshape(x[:s], (m, wlen)).T
+
+vec_to_windows_jit = jit(vec_to_windows, static_argnums=(1,))

@@ -34,3 +34,7 @@ from cr.nimble._src.dsp.wht import (
 from cr.nimble._src.dsp.synthetic_signals import (
     time_values,
 )
+
+from cr.nimble._src.dsp.util import (
+    norm_freq,
+)
