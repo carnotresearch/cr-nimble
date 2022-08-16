@@ -129,11 +129,11 @@
 
 <span class="sd">            &gt;&gt;&gt; fs=2 # Hz</span>
 <span class="sd">            &gt;&gt;&gt; T = 4 # Sec</span>
-<span class="sd">            &gt;&gt;&gt; cr.sparse.dsp.time_values(fs, T)</span>
+<span class="sd">            &gt;&gt;&gt; cr.nimble.dsp.time_values(fs, T)</span>
 <span class="sd">            DeviceArray([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5], dtype=float32)</span>
-<span class="sd">            &gt;&gt;&gt; cr.sparse.dsp.time_values(fs, T, endpoint=True)</span>
+<span class="sd">            &gt;&gt;&gt; cr.nimble.dsp.time_values(fs, T, endpoint=True)</span>
 <span class="sd">            DeviceArray([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5, 4. ], dtype=float32)</span>
-<span class="sd">            &gt;&gt;&gt; cr.sparse.dsp.time_values(fs, T, initial_time=-2, endpoint=True)</span>
+<span class="sd">            &gt;&gt;&gt; cr.nimble.dsp.time_values(fs, T, initial_time=-2, endpoint=True)</span>
 <span class="sd">            DeviceArray([-2. , -1.5, -1. , -0.5,  0. ,  0.5,  1. ,  1.5,  2. ], dtype=float32)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Number of samples</span>

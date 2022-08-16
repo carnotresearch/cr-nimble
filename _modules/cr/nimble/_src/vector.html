@@ -352,6 +352,101 @@
 
 <span class="n">vec_centered_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_centered</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 
+<span class="c1">########################################################</span>
+<span class="c1">#  Energy</span>
+<span class="c1">########################################################</span>
+
+<div class="viewcode-block" id="vec_mag_desc"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.vec_mag_desc.html#cr.nimble.vec_mag_desc">[docs]</a><span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">vec_mag_desc</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the coefficients in the descending order of magnitude</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (jax.numpy.ndarray): A vector of coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="vec_to_pmf"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.vec_to_pmf.html#cr.nimble.vec_to_pmf">[docs]</a><span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">vec_to_pmf</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Computes a probability mass function from a given vector</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (jax.numpy.ndarray): A vector of coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">s</span></div>
+
+<div class="viewcode-block" id="vec_to_cmf"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.vec_to_cmf.html#cr.nimble.vec_to_cmf">[docs]</a><span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">vec_to_cmf</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Computes a cumulative mass function from a given vector</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (jax.numpy.ndarray): A vector of coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.</span>
+    <span class="c1"># normalize</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">s</span>
+    <span class="c1"># generate the CMF</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="cmf_find_quantile_index"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.cmf_find_quantile_index.html#cr.nimble.cmf_find_quantile_index">[docs]</a><span class="nd">@jit</span>
+<span class="k">def</span> <span class="nf">cmf_find_quantile_index</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the index of a given quantile in a CMF</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (jax.numpy.ndarray): A vector of coefficients</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">q</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="num_largest_coeffs_for_energy_percent"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.num_largest_coeffs_for_energy_percent.html#cr.nimble.num_largest_coeffs_for_energy_percent">[docs]</a><span class="k">def</span> <span class="nf">num_largest_coeffs_for_energy_percent</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the number of largest components containing a given</span>
+<span class="sd">    percentage of energy</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        a (jax.numpy.ndarray): A vector of coefficients</span>
+<span class="sd">        p (float): percentage of energy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># compute energies</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="c1"># sort in descending order</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># total energy</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.</span>
+    <span class="c1"># normalize</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">s</span>
+    <span class="c1"># convert to a cmf</span>
+    <span class="n">cmf</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="c1"># the quantile value</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">p</span> <span class="o">/</span> <span class="mf">100.</span>
+    <span class="c1"># find the index</span>
+    <span class="n">index</span> <span class="o">=</span>  <span class="n">jnp</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">cmf</span> <span class="o">&gt;=</span> <span class="n">q</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span></div>
+
+<span class="c1">########################################################</span>
+<span class="c1">#  Sliding Windows</span>
+<span class="c1">########################################################</span>
+
+<span class="k">def</span> <span class="nf">vec_to_windows</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">wlen</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Constructs windows of a given length from the vector</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A line vector</span>
+<span class="sd">        wlen: length of each window</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        jax.numpy.ndarray: A matrix of shape (wlen, m) where</span>
+<span class="sd">        m is the number of windows</span>
+
+<span class="sd">    Notes:</span>
+<span class="sd">    - Drops extra samples from the end if the last window is not complete</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># number of windows</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="n">wlen</span>
+    <span class="c1"># total samples to be kept</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">wlen</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="n">s</span><span class="p">],</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">wlen</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">vec_to_windows_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">vec_to_windows</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 </pre></div>
 
           </div>

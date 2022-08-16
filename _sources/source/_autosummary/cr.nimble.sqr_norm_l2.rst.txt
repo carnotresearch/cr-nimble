@@ -1,0 +1,6 @@
+﻿cr.nimble.sqr\_norm\_l2
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: sqr_norm_l2

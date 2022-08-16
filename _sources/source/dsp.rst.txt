@@ -22,6 +22,7 @@ Utilities
     :toctree: _autosummary
 
     time_values
+    norm_freq
 
 Synthetic Signals
 -----------------------

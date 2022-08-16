@@ -1,0 +1,6 @@
+﻿cr.nimble.normalize\_linf
+=========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: normalize_linf
