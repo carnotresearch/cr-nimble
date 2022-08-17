@@ -26,8 +26,8 @@ sys.path.append(os.path.abspath('extensions'))
 # -- Project information -----------------------------------------------------
 
 project = 'cr-nimble'
-copyright = '2021, CR-Nimble Development Team'
-author = 'CR-Nimble Development Team'
+copyright = '2021, CR-Suite Development Team'
+author = 'CR-Suite Development Team'
 
 # The short X.Y version
 version = ""
@@ -142,7 +142,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "CRNimble.tex", "CR-Nimble", "CR-Nimble Development Team", "manual"),
+    (master_doc, "CRNimble.tex", "CR-Nimble", "CR-Suite Development Team", "manual"),
 ]
 
 

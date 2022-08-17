@@ -50,7 +50,7 @@ setup(
     download_url=f"https://github.com/carnotresearch/cr-nimble/archive/v{__version__}.tar.gz",
 
     # Author details
-    author='CR-Nimble Development Team',
+    author='CR-Suite Development Team',
     author_email='contact@carnotresearch.com',
 
     # Choose your license
