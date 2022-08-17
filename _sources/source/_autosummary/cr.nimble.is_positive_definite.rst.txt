@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_positive\_definite
+================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_positive_definite

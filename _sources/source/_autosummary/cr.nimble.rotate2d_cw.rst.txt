@@ -1,0 +1,6 @@
+﻿cr.nimble.rotate2d\_cw
+======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: rotate2d_cw

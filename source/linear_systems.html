@@ -20,12 +20,14 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/custom.js"></script>
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Orthogonalization" href="orth.html" />
-    <link rel="prev" title="Metrics" href="metrics.html" />
+    <link rel="next" title="cr.nimble.solve_Lx_b" href="_autosummary/cr.nimble.solve_Lx_b.html" />
+    <link rel="prev" title="cr.nimble.signal_noise_ratio" href="_autosummary/cr.nimble.signal_noise_ratio.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +85,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="metrics.html" title="previous chapter">Metrics</a></li>
-      <li>Next: <a href="orth.html" title="next chapter">Orthogonalization</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.signal_noise_ratio.html" title="previous chapter">cr.nimble.signal_noise_ratio</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.solve_Lx_b.html" title="next chapter">cr.nimble.solve_Lx_b</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -131,6 +133,21 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_Lx_b.html#cr.nimble.solve_Lx_b" title="cr.nimble.solve_Lx_b"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_Lx_b</span></code></a>(L, b)</p></td>
+<td><p>Solves the system L x = b using back substitution</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_LTx_b.html#cr.nimble.solve_LTx_b" title="cr.nimble.solve_LTx_b"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_LTx_b</span></code></a>(L, b)</p></td>
+<td><p>Solves the system L^T x = b using back substitution</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_Ux_b.html#cr.nimble.solve_Ux_b" title="cr.nimble.solve_Ux_b"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_Ux_b</span></code></a>(U, b)</p></td>
+<td><p>Solves the system U x = b using back substitution</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_UTx_b.html#cr.nimble.solve_UTx_b" title="cr.nimble.solve_UTx_b"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_UTx_b</span></code></a>(U, b)</p></td>
+<td><p>Solves the system U^T x = b using back substitution</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_spd_chol.html#cr.nimble.solve_spd_chol" title="cr.nimble.solve_spd_chol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_spd_chol</span></code></a>(L, b)</p></td>
+<td><p>Solves a symmetric positive definite system A x = b where A = L L’</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -142,6 +159,12 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.mult_with_submatrix.html#cr.nimble.mult_with_submatrix" title="cr.nimble.mult_with_submatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mult_with_submatrix</span></code></a>(A, columns, x)</p></td>
+<td><p>Computes <span class="math notranslate nohighlight">\(b = A[:, I] x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.solve_on_submatrix.html#cr.nimble.solve_on_submatrix" title="cr.nimble.solve_on_submatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_on_submatrix</span></code></a>(A, columns, b)</p></td>
+<td><p>Solves the problem <span class="math notranslate nohighlight">\(A[:, I] x = b\)</span> where I is an index set of selected columns</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -155,7 +178,7 @@
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

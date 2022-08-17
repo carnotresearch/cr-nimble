@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.transient\_sine\_wave
+===========================================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: transient_sine_wave

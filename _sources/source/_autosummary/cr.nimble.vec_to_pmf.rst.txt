@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_to\_pmf
+======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_to_pmf

@@ -1,0 +1,6 @@
+﻿cr.nimble.affine.homogenize\_cols
+=================================
+
+.. currentmodule:: cr.nimble.affine
+
+.. autofunction:: homogenize_cols

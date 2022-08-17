@@ -1,0 +1,6 @@
+﻿cr.nimble.sparse\_approximation\_cw
+===================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: sparse_approximation_cw

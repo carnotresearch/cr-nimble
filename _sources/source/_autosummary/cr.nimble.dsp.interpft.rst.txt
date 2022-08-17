@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.interpft
+======================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: interpft

@@ -1,0 +1,6 @@
+﻿cr.nimble.arr2vec
+=================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: arr2vec

@@ -1,0 +1,6 @@
+﻿cr.nimble.platform
+==================
+
+.. currentmodule:: cr.nimble
+
+.. autodata:: platform

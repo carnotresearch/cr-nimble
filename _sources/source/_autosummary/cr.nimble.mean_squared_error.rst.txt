@@ -1,0 +1,6 @@
+﻿cr.nimble.mean\_squared\_error
+==============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: mean_squared_error

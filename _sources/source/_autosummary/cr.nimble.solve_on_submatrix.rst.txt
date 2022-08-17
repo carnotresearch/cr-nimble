@@ -1,0 +1,6 @@
+﻿cr.nimble.solve\_on\_submatrix
+==============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: solve_on_submatrix

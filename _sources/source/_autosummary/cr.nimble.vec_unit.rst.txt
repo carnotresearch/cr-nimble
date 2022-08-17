@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_unit
+===================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_unit

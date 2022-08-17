@@ -24,8 +24,8 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matrices" href="matrix.html" />
-    <link rel="prev" title="Arrays" href="array.html" />
+    <link rel="next" title="cr.nimble.is_scalar" href="_autosummary/cr.nimble.is_scalar.html" />
+    <link rel="prev" title="cr.nimble.check_shapes_are_equal" href="_autosummary/cr.nimble.check_shapes_are_equal.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="array.html" title="previous chapter">Arrays</a></li>
-      <li>Next: <a href="matrix.html" title="next chapter">Matrices</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.check_shapes_are_equal.html" title="previous chapter">cr.nimble.check_shapes_are_equal</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.is_scalar.html" title="next chapter">cr.nimble.is_scalar</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -134,6 +134,21 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_scalar.html#cr.nimble.is_scalar" title="cr.nimble.is_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_scalar</span></code></a>(x)</p></td>
+<td><p>Returns if x is a scalar</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_vec.html#cr.nimble.is_vec" title="cr.nimble.is_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_vec</span></code></a>(x)</p></td>
+<td><p>Returns if x is a line vector or row vector or column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_line_vec.html#cr.nimble.is_line_vec" title="cr.nimble.is_line_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_line_vec</span></code></a>(x)</p></td>
+<td><p>Returns if x is a line vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_row_vec.html#cr.nimble.is_row_vec" title="cr.nimble.is_row_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_row_vec</span></code></a>(x)</p></td>
+<td><p>Returns if x is a row vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_col_vec.html#cr.nimble.is_col_vec" title="cr.nimble.is_col_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_col_vec</span></code></a>(x)</p></td>
+<td><p>Returns if x is a column vector</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -145,6 +160,63 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.to_row_vec.html#cr.nimble.to_row_vec" title="cr.nimble.to_row_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_row_vec</span></code></a>(x)</p></td>
+<td><p>Converts a line vector to a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.to_col_vec.html#cr.nimble.to_col_vec" title="cr.nimble.to_col_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_col_vec</span></code></a>(x)</p></td>
+<td><p>Converts a line vector to a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_unit.html#cr.nimble.vec_unit" title="cr.nimble.vec_unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_unit</span></code></a>(n, i)</p></td>
+<td><p>Returns a unit vector in i-th dimension for the standard coordinate system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_shift_right.html#cr.nimble.vec_shift_right" title="cr.nimble.vec_shift_right"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_shift_right</span></code></a>(x)</p></td>
+<td><p>Right shift the contents of the vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_rotate_right.html#cr.nimble.vec_rotate_right" title="cr.nimble.vec_rotate_right"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_rotate_right</span></code></a>(x)</p></td>
+<td><p>Circular right shift the contents of the vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_shift_left.html#cr.nimble.vec_shift_left" title="cr.nimble.vec_shift_left"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_shift_left</span></code></a>(x)</p></td>
+<td><p>Left shift the contents of the vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_rotate_left.html#cr.nimble.vec_rotate_left" title="cr.nimble.vec_rotate_left"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_rotate_left</span></code></a>(x)</p></td>
+<td><p>Circular left shift the contents of the vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_shift_right_n.html#cr.nimble.vec_shift_right_n" title="cr.nimble.vec_shift_right_n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_shift_right_n</span></code></a>(x, n)</p></td>
+<td><p>Right shift the contents of the vector by n places</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_rotate_right_n.html#cr.nimble.vec_rotate_right_n" title="cr.nimble.vec_rotate_right_n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_rotate_right_n</span></code></a>(x, n)</p></td>
+<td><p>Circular right shift the contents of the vector by n places</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_shift_left_n.html#cr.nimble.vec_shift_left_n" title="cr.nimble.vec_shift_left_n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_shift_left_n</span></code></a>(x, n)</p></td>
+<td><p>Left shift the contents of the vector by n places</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_rotate_left_n.html#cr.nimble.vec_rotate_left_n" title="cr.nimble.vec_rotate_left_n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_rotate_left_n</span></code></a>(x, n)</p></td>
+<td><p>Circular left shift the contents of the vector by n places</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_unit_jit.html#cr.nimble.vec_unit_jit" title="cr.nimble.vec_unit_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_unit_jit</span></code></a>(n, i)</p></td>
+<td><p>Returns a unit vector in i-th dimension for the standard coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_end.html#cr.nimble.vec_repeat_at_end" title="cr.nimble.vec_repeat_at_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_end</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the end (periodic extension)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_start.html#cr.nimble.vec_repeat_at_start" title="cr.nimble.vec_repeat_at_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_start</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the start (periodic extension)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_centered.html#cr.nimble.vec_centered" title="cr.nimble.vec_centered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_centered</span></code></a>(x, length)</p></td>
+<td><p>Returns the central part of a vector of a specified length</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_unit_jit.html#cr.nimble.vec_unit_jit" title="cr.nimble.vec_unit_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_unit_jit</span></code></a>(n, i)</p></td>
+<td><p>Returns a unit vector in i-th dimension for the standard coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_end_jit.html#cr.nimble.vec_repeat_at_end_jit" title="cr.nimble.vec_repeat_at_end_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_end_jit</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the end (periodic extension)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_repeat_at_start_jit.html#cr.nimble.vec_repeat_at_start_jit" title="cr.nimble.vec_repeat_at_start_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_repeat_at_start_jit</span></code></a>(x, p)</p></td>
+<td><p>Extends a vector by repeating it at the start (periodic extension)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_centered_jit.html#cr.nimble.vec_centered_jit" title="cr.nimble.vec_centered_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_centered_jit</span></code></a>(x, length)</p></td>
+<td><p>Returns the central part of a vector of a specified length</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -156,6 +228,27 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norm_l1.html#cr.nimble.norm_l1" title="cr.nimble.norm_l1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_l1</span></code></a>(x)</p></td>
+<td><p>Computes the l_1 norm of a vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norm_l2.html#cr.nimble.norm_l2" title="cr.nimble.norm_l2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_l2</span></code></a>(x)</p></td>
+<td><p>Computes the l_2 norm of a vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norm_linf.html#cr.nimble.norm_linf" title="cr.nimble.norm_linf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_linf</span></code></a>(x)</p></td>
+<td><p>Computes the l_inf norm of a vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sqr_norm_l2.html#cr.nimble.sqr_norm_l2" title="cr.nimble.sqr_norm_l2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sqr_norm_l2</span></code></a>(x)</p></td>
+<td><p>Computes the squared l_2 norm of a vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l1.html#cr.nimble.normalize_l1" title="cr.nimble.normalize_l1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l1</span></code></a>(x)</p></td>
+<td><p>Normalizes a vector by its l_1-norm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l2.html#cr.nimble.normalize_l2" title="cr.nimble.normalize_l2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l2</span></code></a>(x)</p></td>
+<td><p>Normalizes a vector by its l_2-norm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_linf.html#cr.nimble.normalize_linf" title="cr.nimble.normalize_linf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_linf</span></code></a>(x)</p></td>
+<td><p>Normalizes a vector by its l_inf-norm</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -169,6 +262,42 @@ which are known to be sparse.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nonzero_values.html#cr.nimble.nonzero_values" title="cr.nimble.nonzero_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_values</span></code></a>(x)</p></td>
+<td><p>Returns the values of non-zero entries in x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nonzero_indices.html#cr.nimble.nonzero_indices" title="cr.nimble.nonzero_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_indices</span></code></a>(x)</p></td>
+<td><p>Returns the indices of non-zero entries in x</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.support.html#cr.nimble.support" title="cr.nimble.support"><code class="xref py py-obj docutils literal notranslate"><span class="pre">support</span></code></a>(x)</p></td>
+<td><p>Returns the indices of non-zero entries in x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices.html#cr.nimble.largest_indices" title="cr.nimble.largest_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices</span></code></a>(x, K)</p></td>
+<td><p>Returns the indices of K largest entries in x by magnitude</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices_by.html#cr.nimble.largest_indices_by" title="cr.nimble.largest_indices_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_by</span></code></a>(x, t)</p></td>
+<td><p>Returns the locations of all entries in x which are larger than t in magnitude</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.hard_threshold.html#cr.nimble.hard_threshold" title="cr.nimble.hard_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold</span></code></a>(x, K)</p></td>
+<td><p>Returns the indices and corresponding values of largest K non-zero entries in a vector x</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.hard_threshold_sorted.html#cr.nimble.hard_threshold_sorted" title="cr.nimble.hard_threshold_sorted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold_sorted</span></code></a>(x, K)</p></td>
+<td><p>Returns the sorted indices and corresponding values of largest K non-zero entries in a vector x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.hard_threshold_by.html#cr.nimble.hard_threshold_by" title="cr.nimble.hard_threshold_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold_by</span></code></a>(x, t)</p></td>
+<td><p>Sets all entries in x to be zero which are less than t in magnitude</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation.html#cr.nimble.sparse_approximation" title="cr.nimble.sparse_approximation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation</span></code></a>(x, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in a vector x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.build_signal_from_indices_and_values.html#cr.nimble.build_signal_from_indices_and_values" title="cr.nimble.build_signal_from_indices_and_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_signal_from_indices_and_values</span></code></a>(length, …)</p></td>
+<td><p>Builds a sparse signal from its non-zero entries (specified by their indices and values)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dynamic_range.html#cr.nimble.dynamic_range" title="cr.nimble.dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dynamic_range</span></code></a>(x)</p></td>
+<td><p>Returns the ratio of largest and smallest values (by magnitude) in x (dB)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nonzero_dynamic_range.html#cr.nimble.nonzero_dynamic_range" title="cr.nimble.nonzero_dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_dynamic_range</span></code></a>(x)</p></td>
+<td><p>Returns the ratio of largest and smallest non-zero values (by magnitude) in x (dB)</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -180,6 +309,21 @@ which are known to be sparse.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_mag_desc.html#cr.nimble.vec_mag_desc" title="cr.nimble.vec_mag_desc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_mag_desc</span></code></a>(a)</p></td>
+<td><p>Returns the coefficients in the descending order of magnitude</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_to_pmf.html#cr.nimble.vec_to_pmf" title="cr.nimble.vec_to_pmf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_to_pmf</span></code></a>(a)</p></td>
+<td><p>Computes a probability mass function from a given vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec_to_cmf.html#cr.nimble.vec_to_cmf" title="cr.nimble.vec_to_cmf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec_to_cmf</span></code></a>(a)</p></td>
+<td><p>Computes a cumulative mass function from a given vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.cmf_find_quantile_index.html#cr.nimble.cmf_find_quantile_index" title="cr.nimble.cmf_find_quantile_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmf_find_quantile_index</span></code></a>(a, q)</p></td>
+<td><p>Returns the index of a given quantile in a CMF</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.num_largest_coeffs_for_energy_percent.html#cr.nimble.num_largest_coeffs_for_energy_percent" title="cr.nimble.num_largest_coeffs_for_energy_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_largest_coeffs_for_energy_percent</span></code></a>(a, p)</p></td>
+<td><p>Returns the number of largest components containing a given percentage of energy</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -193,7 +337,7 @@ which are known to be sparse.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

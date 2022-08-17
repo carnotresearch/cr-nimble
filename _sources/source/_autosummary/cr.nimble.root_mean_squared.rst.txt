@@ -1,0 +1,6 @@
+﻿cr.nimble.root\_mean\_squared
+=============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: root_mean_squared

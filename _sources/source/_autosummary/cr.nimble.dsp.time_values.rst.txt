@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.time\_values
+==========================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: time_values

@@ -20,12 +20,14 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/custom.js"></script>
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Metrics" href="metrics.html" />
-    <link rel="prev" title="Vectors" href="vector.html" />
+    <link rel="next" title="cr.nimble.is_matrix" href="_autosummary/cr.nimble.is_matrix.html" />
+    <link rel="prev" title="cr.nimble.num_largest_coeffs_for_energy_percent" href="_autosummary/cr.nimble.num_largest_coeffs_for_energy_percent.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +85,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="vector.html" title="previous chapter">Vectors</a></li>
-      <li>Next: <a href="metrics.html" title="next chapter">Metrics</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.num_largest_coeffs_for_energy_percent.html" title="previous chapter">cr.nimble.num_largest_coeffs_for_energy_percent</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.is_matrix.html" title="next chapter">cr.nimble.is_matrix</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -135,6 +137,33 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_matrix.html#cr.nimble.is_matrix" title="cr.nimble.is_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_matrix</span></code></a>(A)</p></td>
+<td><p>Checks if an array is a matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_square.html#cr.nimble.is_square" title="cr.nimble.is_square"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_square</span></code></a>(A)</p></td>
+<td><p>Checks if an array is a square matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_symmetric.html#cr.nimble.is_symmetric" title="cr.nimble.is_symmetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_symmetric</span></code></a>(A)</p></td>
+<td><p>Checks if an array is a symmetric matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_hermitian.html#cr.nimble.is_hermitian" title="cr.nimble.is_hermitian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_hermitian</span></code></a>(A)</p></td>
+<td><p>Checks if an array is a Hermitian matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.is_positive_definite.html#cr.nimble.is_positive_definite" title="cr.nimble.is_positive_definite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_positive_definite</span></code></a>(A)</p></td>
+<td><p>Checks if an array is a symmetric positive definite matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.has_orthogonal_columns.html#cr.nimble.has_orthogonal_columns" title="cr.nimble.has_orthogonal_columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_orthogonal_columns</span></code></a>(A[, atol])</p></td>
+<td><p>Checks if a matrix has orthogonal columns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.has_orthogonal_rows.html#cr.nimble.has_orthogonal_rows" title="cr.nimble.has_orthogonal_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_orthogonal_rows</span></code></a>(A[, atol])</p></td>
+<td><p>Checks if a matrix has orthogonal rows</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.has_unitary_columns.html#cr.nimble.has_unitary_columns" title="cr.nimble.has_unitary_columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_unitary_columns</span></code></a>(A)</p></td>
+<td><p>Checks if a matrix has unitary columns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.has_unitary_rows.html#cr.nimble.has_unitary_rows" title="cr.nimble.has_unitary_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_unitary_rows</span></code></a>(A)</p></td>
+<td><p>Checks if a matrix has unitary rows</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -146,6 +175,15 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.AH_v.html#cr.nimble.AH_v" title="cr.nimble.AH_v"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AH_v</span></code></a>(A, v)</p></td>
+<td><p>Returns <span class="math notranslate nohighlight">\(A^H v\)</span> for a given matrix A and a vector v</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.mat_transpose.html#cr.nimble.mat_transpose" title="cr.nimble.mat_transpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mat_transpose</span></code></a>(x)</p></td>
+<td><p>Returns the transpose of an array of matrices</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.mat_hermitian.html#cr.nimble.mat_hermitian" title="cr.nimble.mat_hermitian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mat_hermitian</span></code></a>(a)</p></td>
+<td><p>Returns the conjugate transpose of an array of matrices</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -157,6 +195,18 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.off_diagonal_elements.html#cr.nimble.off_diagonal_elements" title="cr.nimble.off_diagonal_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">off_diagonal_elements</span></code></a>(A)</p></td>
+<td><p>Returns the off diagonal elements of a matrix A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.off_diagonal_min.html#cr.nimble.off_diagonal_min" title="cr.nimble.off_diagonal_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">off_diagonal_min</span></code></a>(A)</p></td>
+<td><p>Returns the minimum of the off diagonal elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.off_diagonal_max.html#cr.nimble.off_diagonal_max" title="cr.nimble.off_diagonal_max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">off_diagonal_max</span></code></a>(A)</p></td>
+<td><p>Returns the maximum of the off diagonal elements</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.off_diagonal_mean.html#cr.nimble.off_diagonal_mean" title="cr.nimble.off_diagonal_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">off_diagonal_mean</span></code></a>(A)</p></td>
+<td><p>Returns the maximum of the off diagonal elements</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -168,6 +218,42 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_l1_cw.html#cr.nimble.norms_l1_cw" title="cr.nimble.norms_l1_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_l1_cw</span></code></a>(X)</p></td>
+<td><p>Computes the l_1 norm of each column of a matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_l1_rw.html#cr.nimble.norms_l1_rw" title="cr.nimble.norms_l1_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_l1_rw</span></code></a>(X)</p></td>
+<td><p>Computes the l_1 norm of each row of a matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_l2_cw.html#cr.nimble.norms_l2_cw" title="cr.nimble.norms_l2_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_l2_cw</span></code></a>(X)</p></td>
+<td><p>Computes the l_2 norm of each column of a matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_l2_rw.html#cr.nimble.norms_l2_rw" title="cr.nimble.norms_l2_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_l2_rw</span></code></a>(X)</p></td>
+<td><p>Computes the l_2 norm of each row of a matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_linf_cw.html#cr.nimble.norms_linf_cw" title="cr.nimble.norms_linf_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_linf_cw</span></code></a>(X)</p></td>
+<td><p>Computes the l_inf norm of each column of a matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.norms_linf_rw.html#cr.nimble.norms_linf_rw" title="cr.nimble.norms_linf_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norms_linf_rw</span></code></a>(X)</p></td>
+<td><p>Computes the l_inf norm of each row of a matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sqr_norms_l2_cw.html#cr.nimble.sqr_norms_l2_cw" title="cr.nimble.sqr_norms_l2_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sqr_norms_l2_cw</span></code></a>(X)</p></td>
+<td><p>Computes the squared l_2 norm of each column of a matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sqr_norms_l2_rw.html#cr.nimble.sqr_norms_l2_rw" title="cr.nimble.sqr_norms_l2_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sqr_norms_l2_rw</span></code></a>(X)</p></td>
+<td><p>Computes the l_2 norm of each row of a matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l1_cw.html#cr.nimble.normalize_l1_cw" title="cr.nimble.normalize_l1_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l1_cw</span></code></a>(X)</p></td>
+<td><p>Normalize each column of X per l_1-norm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l1_rw.html#cr.nimble.normalize_l1_rw" title="cr.nimble.normalize_l1_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l1_rw</span></code></a>(X)</p></td>
+<td><p>Normalize each row of X per l_1-norm</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l2_cw.html#cr.nimble.normalize_l2_cw" title="cr.nimble.normalize_l2_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l2_cw</span></code></a>(X)</p></td>
+<td><p>Normalize each column of X per l_2-norm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.normalize_l2_rw.html#cr.nimble.normalize_l2_rw" title="cr.nimble.normalize_l2_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_l2_rw</span></code></a>(X)</p></td>
+<td><p>Normalize each row of X per l_2-norm</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -179,6 +265,54 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_sqr_l2_distances_rw.html#cr.nimble.pairwise_sqr_l2_distances_rw" title="cr.nimble.pairwise_sqr_l2_distances_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_sqr_l2_distances_rw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise squared distances between points in A and points in B where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_sqr_l2_distances_cw.html#cr.nimble.pairwise_sqr_l2_distances_cw" title="cr.nimble.pairwise_sqr_l2_distances_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_sqr_l2_distances_cw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise squared distances between points in A and points in B where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_l2_distances_rw.html#cr.nimble.pairwise_l2_distances_rw" title="cr.nimble.pairwise_l2_distances_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_l2_distances_rw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise distances between points in A and points in B where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_l2_distances_cw.html#cr.nimble.pairwise_l2_distances_cw" title="cr.nimble.pairwise_l2_distances_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_l2_distances_cw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise distances between points in A and points in B where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_sqr_l2_rw.html#cr.nimble.pdist_sqr_l2_rw" title="cr.nimble.pdist_sqr_l2_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_sqr_l2_rw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise squared distances between points in A where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_sqr_l2_cw.html#cr.nimble.pdist_sqr_l2_cw" title="cr.nimble.pdist_sqr_l2_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_sqr_l2_cw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise squared distances between points in A where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_l2_rw.html#cr.nimble.pdist_l2_rw" title="cr.nimble.pdist_l2_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_l2_rw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise distances between points in A where ach point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_l2_cw.html#cr.nimble.pdist_l2_cw" title="cr.nimble.pdist_l2_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_l2_cw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise distances between points in A where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_l1_distances_rw.html#cr.nimble.pairwise_l1_distances_rw" title="cr.nimble.pairwise_l1_distances_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_l1_distances_rw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise city-block distances between points in A and points in B where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_l1_distances_cw.html#cr.nimble.pairwise_l1_distances_cw" title="cr.nimble.pairwise_l1_distances_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_l1_distances_cw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise city-block distances between points in A and points in B where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_l1_rw.html#cr.nimble.pdist_l1_rw" title="cr.nimble.pdist_l1_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_l1_rw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise city-block distances between points in A where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_l1_cw.html#cr.nimble.pdist_l1_cw" title="cr.nimble.pdist_l1_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_l1_cw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise city-block distances between points in A where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_linf_distances_rw.html#cr.nimble.pairwise_linf_distances_rw" title="cr.nimble.pairwise_linf_distances_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_linf_distances_rw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise Chebyshev distances between points in A and points in B where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pairwise_linf_distances_cw.html#cr.nimble.pairwise_linf_distances_cw" title="cr.nimble.pairwise_linf_distances_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pairwise_linf_distances_cw</span></code></a>(A, B)</p></td>
+<td><p>Computes the pairwise Chebyshev distances between points in A and points in B where each point is a column vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_linf_rw.html#cr.nimble.pdist_linf_rw" title="cr.nimble.pdist_linf_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_linf_rw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise Chebyshev distances between points in A where each point is a row vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.pdist_linf_cw.html#cr.nimble.pdist_linf_cw" title="cr.nimble.pdist_linf_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdist_linf_cw</span></code></a>(A)</p></td>
+<td><p>Computes the pairwise Chebyshev distances between points in A where each point is a column vector</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -192,6 +326,12 @@ which are known to be sparse.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.randomize_rows.html#cr.nimble.randomize_rows" title="cr.nimble.randomize_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_rows</span></code></a>(key, X)</p></td>
+<td><p>Randomizes the rows in X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.randomize_cols.html#cr.nimble.randomize_cols" title="cr.nimble.randomize_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_cols</span></code></a>(key, X)</p></td>
+<td><p>Randomizes the columns in X</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Sparse representation matrices (row-wise)</p>
@@ -201,6 +341,15 @@ which are known to be sparse.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices_rw.html#cr.nimble.largest_indices_rw" title="cr.nimble.largest_indices_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_rw</span></code></a>(X, K)</p></td>
+<td><p>Returns the indices of K largest entries by magnitude in each row of X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.take_along_rows.html#cr.nimble.take_along_rows" title="cr.nimble.take_along_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_rows</span></code></a>(X, indices)</p></td>
+<td><p>Picks K entries from each row of X specified by indices matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation_rw.html#cr.nimble.sparse_approximation_rw" title="cr.nimble.sparse_approximation_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_rw</span></code></a>(X, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in each row of X</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Sparse representation matrices (column-wise)</p>
@@ -210,6 +359,15 @@ which are known to be sparse.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices_cw.html#cr.nimble.largest_indices_cw" title="cr.nimble.largest_indices_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_cw</span></code></a>(X, K)</p></td>
+<td><p>Returns the indices of K largest entries by magnitude in each column of X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.take_along_cols.html#cr.nimble.take_along_cols" title="cr.nimble.take_along_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_cols</span></code></a>(X, indices)</p></td>
+<td><p>Picks K entries from each column of X specified by indices matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation_cw.html#cr.nimble.sparse_approximation_cw" title="cr.nimble.sparse_approximation_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_cw</span></code></a>(X, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in each column of X</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -223,7 +381,7 @@ which are known to be sparse.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

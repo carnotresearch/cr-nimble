@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_shift\_right\_n
+==============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_shift_right_n

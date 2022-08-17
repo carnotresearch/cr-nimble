@@ -1,0 +1,6 @@
+﻿cr.nimble.effective\_rank
+=========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: effective_rank

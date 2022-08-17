@@ -1,0 +1,6 @@
+﻿cr.nimble.largest\_indices
+==========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: largest_indices

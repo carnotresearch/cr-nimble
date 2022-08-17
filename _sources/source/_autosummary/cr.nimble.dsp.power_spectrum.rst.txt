@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.power\_spectrum
+=============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: power_spectrum

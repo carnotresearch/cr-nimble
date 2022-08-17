@@ -1,0 +1,6 @@
+﻿cr.nimble.randomize\_rows
+=========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: randomize_rows

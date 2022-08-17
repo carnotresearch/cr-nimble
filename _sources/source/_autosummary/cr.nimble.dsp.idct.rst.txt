@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.idct
+==================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: idct

@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_mag\_desc
+========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_mag_desc

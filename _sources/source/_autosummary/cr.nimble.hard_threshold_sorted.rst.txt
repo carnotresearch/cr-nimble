@@ -1,0 +1,6 @@
+﻿cr.nimble.hard\_threshold\_sorted
+=================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: hard_threshold_sorted

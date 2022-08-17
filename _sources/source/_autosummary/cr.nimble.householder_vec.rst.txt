@@ -1,0 +1,6 @@
+﻿cr.nimble.householder\_vec
+==========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: householder_vec

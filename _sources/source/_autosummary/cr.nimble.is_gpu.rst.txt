@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_gpu
+=================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_gpu

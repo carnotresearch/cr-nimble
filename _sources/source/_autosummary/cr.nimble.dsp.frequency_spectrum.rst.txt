@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.frequency\_spectrum
+=================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: frequency_spectrum

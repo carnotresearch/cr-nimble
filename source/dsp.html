@@ -24,8 +24,8 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Utilities" href="util.html" />
-    <link rel="prev" title="Test Data Generation" href="data.html" />
+    <link rel="next" title="cr.nimble.dsp.time_values" href="_autosummary/cr.nimble.dsp.time_values.html" />
+    <link rel="prev" title="cr.nimble.data.three_subspaces_at_angle_jit" href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="data.html" title="previous chapter">Test Data Generation</a></li>
-      <li>Next: <a href="util.html" title="next chapter">Utilities</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" title="previous chapter">cr.nimble.data.three_subspaces_at_angle_jit</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.dsp.time_values.html" title="next chapter">cr.nimble.dsp.time_values</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -138,6 +138,24 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.time_values.html#cr.nimble.dsp.time_values" title="cr.nimble.dsp.time_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_values</span></code></a></p></td>
+<td><p>Returns a sequence of time values sampled at a specific frequency for a specific duration</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.norm_freq.html#cr.nimble.dsp.norm_freq" title="cr.nimble.dsp.norm_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_freq</span></code></a></p></td>
+<td><p>Returns the normalized frequency</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.frequency_spectrum.html#cr.nimble.dsp.frequency_spectrum" title="cr.nimble.dsp.frequency_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frequency_spectrum</span></code></a></p></td>
+<td><p>Frequency spectrum of 1D data using FFT</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.power_spectrum.html#cr.nimble.dsp.power_spectrum" title="cr.nimble.dsp.power_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power_spectrum</span></code></a></p></td>
+<td><p>Power spectrum of 1D data using FFT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.energy.html#cr.nimble.dsp.energy" title="cr.nimble.dsp.energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy</span></code></a></p></td>
+<td><p>Computes the energy of the signal along the specified axis</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.normalize.html#cr.nimble.dsp.normalize" title="cr.nimble.dsp.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a></p></td>
+<td><p>Normalizes a data vector (data - mu) / sigma</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -149,6 +167,9 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.interpft.html#cr.nimble.dsp.interpft" title="cr.nimble.dsp.interpft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpft</span></code></a>(x, N)</p></td>
+<td><p>Interpolates x to n points in Fourier Transform domain</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -160,6 +181,9 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.awgn_at_snr.html#cr.nimble.dsp.awgn_at_snr" title="cr.nimble.dsp.awgn_at_snr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">awgn_at_snr</span></code></a>(key, signal, snr)</p></td>
+<td><p>Generates noise for the signal at the specified SNR</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -171,6 +195,24 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.pulse.html#cr.nimble.dsp.signals.pulse" title="cr.nimble.dsp.signals.pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pulse</span></code></a></p></td>
+<td><p>Generates a pulse signal which is 1 between start and end times and 0 everwhere else</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.transient_sine_wave.html#cr.nimble.dsp.signals.transient_sine_wave" title="cr.nimble.dsp.signals.transient_sine_wave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transient_sine_wave</span></code></a></p></td>
+<td><p>Generates a transient sinusoid between start and end times</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.decaying_sine_wave.html#cr.nimble.dsp.signals.decaying_sine_wave" title="cr.nimble.dsp.signals.decaying_sine_wave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decaying_sine_wave</span></code></a></p></td>
+<td><p>Generates a decaying sinusoid :param fs: Sample rate of signal in Hz.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.chirp.html#cr.nimble.dsp.signals.chirp" title="cr.nimble.dsp.signals.chirp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chirp</span></code></a></p></td>
+<td><p>Generates a frequency sweep from low to high over time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.chirp_centered.html#cr.nimble.dsp.signals.chirp_centered" title="cr.nimble.dsp.signals.chirp_centered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chirp_centered</span></code></a></p></td>
+<td><p>Generates a frequency sweep from low to high over time defined by central frequency and bandwidth.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.gaussian_pulse.html#cr.nimble.dsp.signals.gaussian_pulse" title="cr.nimble.dsp.signals.gaussian_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaussian_pulse</span></code></a></p></td>
+<td><p>Generates a Gaussian modulated sinusoid</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -182,6 +224,18 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.dct.html#cr.nimble.dsp.dct" title="cr.nimble.dsp.dct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dct</span></code></a></p></td>
+<td><p>Computes the 1D Type-II DCT transform</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.idct.html#cr.nimble.dsp.idct" title="cr.nimble.dsp.idct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idct</span></code></a></p></td>
+<td><p>Computes the 1D Type-II Inverse DCT transform</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.orthonormal_dct.html#cr.nimble.dsp.orthonormal_dct" title="cr.nimble.dsp.orthonormal_dct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormal_dct</span></code></a></p></td>
+<td><p>Computes the 1D Type-II DCT transform such that the transform is orthonormal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.orthonormal_idct.html#cr.nimble.dsp.orthonormal_idct" title="cr.nimble.dsp.orthonormal_idct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormal_idct</span></code></a></p></td>
+<td><p>Computes the 1D Type-II IDCT transform such that the transform is orthonormal</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -196,6 +250,9 @@ In other words,  <code class="docutils literal notranslate"><span class="pre">x<
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.fwht.html#cr.nimble.dsp.fwht" title="cr.nimble.dsp.fwht"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fwht</span></code></a></p></td>
+<td><p>Computes the Fast Walsh Hadamard Transform over columns</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -209,7 +266,7 @@ In other words,  <code class="docutils literal notranslate"><span class="pre">x<
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

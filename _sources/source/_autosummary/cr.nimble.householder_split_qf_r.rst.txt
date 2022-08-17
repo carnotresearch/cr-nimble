@@ -1,0 +1,6 @@
+﻿cr.nimble.householder\_split\_qf\_r
+===================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: householder_split_qf_r

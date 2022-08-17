@@ -1,0 +1,6 @@
+﻿cr.nimble.point2d
+=================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: point2d

@@ -60,8 +60,9 @@
 <li class="toctree-l1"><a class="reference internal" href="zzzreference.html">References</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Change Log</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#unreleased">Unreleased</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.1.1 - 2021-12-07</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">0.1.0 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">[0.2.4] - 2022-08-17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.1.1 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.1.0 - 2021-12-07</a></li>
 </ul>
 </li>
 </ul>
@@ -110,17 +111,35 @@
 <section id="unreleased">
 <h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.1.1...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/latest/">Documentation</a></p>
+</section>
+<section id="id1">
+<h2>[0.2.4] - 2022-08-17<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Digital signal processing utilities moved from cr-sparse to cr-nimble</p></li>
+<li><p>Moved discrete number related functions from cr-sparse.</p></li>
+<li><p>Some sparse vector and matrix processing functionality moved from cr-sparse.</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Unnecessary <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files removed.</p></li>
+</ul>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Jax 0.3.14 compatibility</p></li>
+<li><p>Aligning version numbering across sister projects.</p></li>
 </ul>
 </section>
 </section>
-<section id="id1">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <section id="id2">
-<h3>Added<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>distance, matrix, ndarray, metrics, modules were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
 <li><p>some more vector functions were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
@@ -133,8 +152,8 @@
 </ul>
 </section>
 </section>
-<section id="id3">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<section id="id4">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Initial release by refactoring code from <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code>.</p>
 </section>
 </section>
@@ -147,7 +166,7 @@
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

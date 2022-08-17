@@ -1,0 +1,6 @@
+﻿cr.nimble.data.three\_subspaces\_at\_angle
+==========================================
+
+.. currentmodule:: cr.nimble.data
+
+.. autofunction:: three_subspaces_at_angle

@@ -1,0 +1,6 @@
+﻿cr.nimble.root\_mse
+===================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: root_mse

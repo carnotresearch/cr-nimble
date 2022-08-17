@@ -24,7 +24,7 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vectors" href="vector.html" />
+    <link rel="next" title="cr.nimble.arr_vdot" href="_autosummary/cr.nimble.arr_vdot.html" />
     <link rel="prev" title="API Docs" href="index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -84,7 +84,7 @@
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">API Docs</a></li>
-      <li>Next: <a href="vector.html" title="next chapter">Vectors</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.arr_vdot.html" title="next chapter">cr.nimble.arr_vdot</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -133,6 +133,12 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_vdot.html#cr.nimble.arr_vdot" title="cr.nimble.arr_vdot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_vdot</span></code></a>(x, y)</p></td>
+<td><p>Returns the inner product of two arrays  by flattening it</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_rdot.html#cr.nimble.arr_rdot" title="cr.nimble.arr_rdot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_rdot</span></code></a>(x, y)</p></td>
+<td><p>Returns the inner product Re(x^H, y) on two arrays by flattening them</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -144,6 +150,15 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_l1norm.html#cr.nimble.arr_l1norm" title="cr.nimble.arr_l1norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_l1norm</span></code></a>(x)</p></td>
+<td><p>Returns the l1-norm of an array by flattening it</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_l2norm.html#cr.nimble.arr_l2norm" title="cr.nimble.arr_l2norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_l2norm</span></code></a>(x)</p></td>
+<td><p>Returns the l2-norm of an array by flattening it</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_l2norm_sqr.html#cr.nimble.arr_l2norm_sqr" title="cr.nimble.arr_l2norm_sqr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_l2norm_sqr</span></code></a>(x)</p></td>
+<td><p>Returns the squared l2-norm of an array by flattening it</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -155,6 +170,18 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.hermitian.html#cr.nimble.hermitian" title="cr.nimble.hermitian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hermitian</span></code></a>(A)</p></td>
+<td><p>Returns the Hermitian transpose of an array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr_largest_index.html#cr.nimble.arr_largest_index" title="cr.nimble.arr_largest_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr_largest_index</span></code></a>(x)</p></td>
+<td><p>Returns the unraveled index of the largest entry (by magnitude) in an n-d array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.arr2vec.html#cr.nimble.arr2vec" title="cr.nimble.arr2vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arr2vec</span></code></a>(x)</p></td>
+<td><p>Converts an nd array to a vector</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.check_shapes_are_equal.html#cr.nimble.check_shapes_are_equal" title="cr.nimble.check_shapes_are_equal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_shapes_are_equal</span></code></a>(array1, array2)</p></td>
+<td><p>Raise an error if the shapes of the two arrays do not match.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -168,7 +195,7 @@
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2021, CR-Nimble Development Team.
+      &copy;2021, CR-Suite Development Team.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>

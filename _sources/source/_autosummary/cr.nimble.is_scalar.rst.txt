@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_scalar
+====================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_scalar

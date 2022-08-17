@@ -1,0 +1,6 @@
+﻿cr.nimble.promote\_to\_complex
+==============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: promote_to_complex

@@ -1,0 +1,6 @@
+﻿cr.nimble.householder\_postmultiply
+===================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: householder_postmultiply

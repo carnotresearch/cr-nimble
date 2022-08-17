@@ -1,0 +1,6 @@
+﻿cr.nimble.nonzero\_indices
+==========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: nonzero_indices

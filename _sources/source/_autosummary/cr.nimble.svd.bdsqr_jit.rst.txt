@@ -1,0 +1,6 @@
+﻿cr.nimble.svd.bdsqr\_jit
+========================
+
+.. currentmodule:: cr.nimble.svd
+
+.. autofunction:: bdsqr_jit

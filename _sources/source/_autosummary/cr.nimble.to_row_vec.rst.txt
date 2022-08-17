@@ -1,0 +1,6 @@
+﻿cr.nimble.to\_row\_vec
+======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: to_row_vec

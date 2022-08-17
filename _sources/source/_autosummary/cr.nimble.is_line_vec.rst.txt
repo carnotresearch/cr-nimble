@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_line\_vec
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_line_vec
