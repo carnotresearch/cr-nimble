@@ -23,6 +23,29 @@ Utilities
 
     time_values
     norm_freq
+    frequency_spectrum
+    power_spectrum
+    energy
+    normalize
+
+Interpolation
+-------------------------------
+
+.. autosummary::
+  :toctree: _autosummary
+
+  interpft
+
+
+Artificial Noise
+-----------------------------------
+
+
+.. autosummary::
+  :toctree: _autosummary
+
+  awgn_at_snr
+
 
 Synthetic Signals
 -----------------------

@@ -19,6 +19,43 @@ Signal Processing Utilities
 # pylint: disable=W0611
 
 
+from cr.nimble._src.signal import (
+    # energy of a signal
+    energy,
+    # interpolate via fourier transform
+    interpft,
+    # statistical normalization of data
+    normalize,
+    normalize_jit,
+    # convolution
+    vec_convolve,
+    vec_convolve_jit,
+)
+
+from cr.nimble._src.signal import (
+
+    find_first_signal_with_energy_le_rw,
+    find_first_signal_with_energy_le_cw,
+)
+
+from cr.nimble._src.signal import (
+    frequency_spectrum,
+    power_spectrum
+)
+
+
+from cr.nimble._src.signalcomparison import (
+    SignalsComparison,
+    snrs_cw,
+    snrs_rw,
+    snr
+)
+
+from cr.nimble._src.noise import (
+    awgn_at_snr
+)
+
+
 from cr.nimble._src.dsp.dct import (
     dct,
     idct,

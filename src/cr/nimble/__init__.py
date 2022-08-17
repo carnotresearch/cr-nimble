@@ -35,6 +35,20 @@ from cr.nimble._src.util import (
     nbytes_live_buffers,
 )
 
+from cr.nimble._src.discrete.number import (
+    next_pow_of_2,
+    is_integer,
+    is_positive_integer,
+    is_negative_integer,
+    is_odd,
+    is_even,
+    is_odd_natural,
+    is_even_natural,
+    is_power_of_2,
+    is_perfect_square,
+    integer_factors_close_to_sqr_root
+)
+
 from cr.nimble._src.array import (
     hermitian,
     check_shapes_are_equal
@@ -241,4 +255,36 @@ from cr.nimble._src.standard_matrices import (
     gaussian_mtx,
     pascal,
     pascal_jit
+)
+
+
+########################################
+# Basic signal processing stuff
+########################################
+
+from cr.nimble._src.signal import (
+    nonzero_values,
+    nonzero_indices,
+    support,
+    randomize_rows,
+    randomize_cols,
+    largest_indices,
+    hard_threshold,
+    hard_threshold_sorted,
+    sparse_approximation,
+    build_signal_from_indices_and_values,
+    hard_threshold_by,
+    largest_indices_by,
+    dynamic_range,
+    nonzero_dynamic_range,
+
+    # row wise
+    largest_indices_rw,
+    take_along_rows,
+    sparse_approximation_rw,
+
+    # column wise
+    largest_indices_cw,
+    take_along_cols,
+    sparse_approximation_cw,
 )
