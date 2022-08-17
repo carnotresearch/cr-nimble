@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.signals.gaussian\_pulse
-=====================================
-
-.. currentmodule:: cr.nimble.dsp.signals
-
-.. autofunction:: gaussian_pulse

@@ -1,6 +1,0 @@
-﻿cr.nimble.KEY0
-==============
-
-.. currentmodule:: cr.nimble
-
-.. autodata:: KEY0

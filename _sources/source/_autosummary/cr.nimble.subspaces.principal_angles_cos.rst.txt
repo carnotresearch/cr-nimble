@@ -1,6 +1,0 @@
-﻿cr.nimble.subspaces.principal\_angles\_cos
-==========================================
-
-.. currentmodule:: cr.nimble.subspaces
-
-.. autofunction:: principal_angles_cos

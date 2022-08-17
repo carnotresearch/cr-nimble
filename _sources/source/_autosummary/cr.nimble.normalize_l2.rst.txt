@@ -1,6 +1,0 @@
-﻿cr.nimble.normalize\_l2
-=======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: normalize_l2

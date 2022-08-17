@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.norm\_freq
-========================
-
-.. currentmodule:: cr.nimble.dsp
-
-.. autofunction:: norm_freq

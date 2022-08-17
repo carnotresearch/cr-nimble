@@ -1,6 +1,0 @@
-﻿cr.nimble.arr\_largest\_index
-=============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: arr_largest_index

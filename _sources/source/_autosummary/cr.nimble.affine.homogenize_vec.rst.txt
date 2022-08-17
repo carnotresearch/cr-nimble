@@ -1,6 +1,0 @@
-﻿cr.nimble.affine.homogenize\_vec
-================================
-
-.. currentmodule:: cr.nimble.affine
-
-.. autofunction:: homogenize_vec

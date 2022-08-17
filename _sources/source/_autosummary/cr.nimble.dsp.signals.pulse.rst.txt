@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.signals.pulse
-===========================
-
-.. currentmodule:: cr.nimble.dsp.signals
-
-.. autofunction:: pulse

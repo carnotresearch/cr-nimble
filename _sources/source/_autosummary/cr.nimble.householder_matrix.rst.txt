@@ -1,6 +1,0 @@
-﻿cr.nimble.householder\_matrix
-=============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: householder_matrix

@@ -1,6 +1,0 @@
-﻿cr.nimble.off\_diagonal\_mean
-=============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: off_diagonal_mean

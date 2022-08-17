@@ -1,6 +1,0 @@
-﻿cr.nimble.mult\_with\_submatrix
-===============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: mult_with_submatrix

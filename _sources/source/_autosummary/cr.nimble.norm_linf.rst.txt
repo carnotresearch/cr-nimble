@@ -1,6 +1,0 @@
-﻿cr.nimble.norm\_linf
-====================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: norm_linf

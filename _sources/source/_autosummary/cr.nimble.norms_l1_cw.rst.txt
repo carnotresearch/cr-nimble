@@ -1,6 +1,0 @@
-﻿cr.nimble.norms\_l1\_cw
-=======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: norms_l1_cw

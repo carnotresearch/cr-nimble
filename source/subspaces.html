@@ -24,8 +24,8 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cr.nimble.subspaces.project_to_subspace" href="_autosummary/cr.nimble.subspaces.project_to_subspace.html" />
-    <link rel="prev" title="cr.nimble.svd.lanbpro_jit" href="_autosummary/cr.nimble.svd.lanbpro_jit.html" />
+    <link rel="next" title="Affine Spaces" href="affine.html" />
+    <link rel="prev" title="Singular Value Decomposition" href="svdpack.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.svd.lanbpro_jit.html" title="previous chapter">cr.nimble.svd.lanbpro_jit</a></li>
-      <li>Next: <a href="_autosummary/cr.nimble.subspaces.project_to_subspace.html" title="next chapter">cr.nimble.subspaces.project_to_subspace</a></li>
+      <li>Previous: <a href="svdpack.html" title="previous chapter">Singular Value Decomposition</a></li>
+      <li>Next: <a href="affine.html" title="next chapter">Affine Spaces</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -131,12 +131,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.project_to_subspace.html#cr.nimble.subspaces.project_to_subspace" title="cr.nimble.subspaces.project_to_subspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_to_subspace</span></code></a>(U, v)</p></td>
-<td><p>Projects a vector to a subspace</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.is_in_subspace.html#cr.nimble.subspaces.is_in_subspace" title="cr.nimble.subspaces.is_in_subspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_in_subspace</span></code></a>(U, v)</p></td>
-<td><p>Checks whether a vector v is in the subspace spanned by an ONB U or not</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -148,36 +142,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_cos.html#cr.nimble.subspaces.principal_angles_cos" title="cr.nimble.subspaces.principal_angles_cos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">principal_angles_cos</span></code></a>(A, B)</p></td>
-<td><p>Returns the cosines of principal angles between two subspaces</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_rad.html#cr.nimble.subspaces.principal_angles_rad" title="cr.nimble.subspaces.principal_angles_rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">principal_angles_rad</span></code></a>(A, B)</p></td>
-<td><p>Returns the principal angles between two subspaces in radians</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.principal_angles_deg.html#cr.nimble.subspaces.principal_angles_deg" title="cr.nimble.subspaces.principal_angles_deg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">principal_angles_deg</span></code></a>(A, B)</p></td>
-<td><p>Returns the principal angles between two subspaces in degrees</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_cos.html#cr.nimble.subspaces.smallest_principal_angle_cos" title="cr.nimble.subspaces.smallest_principal_angle_cos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angle_cos</span></code></a>(A, B)</p></td>
-<td><p>Returns the cosine of smallest principal angle between two subspaces</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_rad.html#cr.nimble.subspaces.smallest_principal_angle_rad" title="cr.nimble.subspaces.smallest_principal_angle_rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angle_rad</span></code></a>(A, B)</p></td>
-<td><p>Returns the smallest principal angle between two subspaces in radians</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angle_deg.html#cr.nimble.subspaces.smallest_principal_angle_deg" title="cr.nimble.subspaces.smallest_principal_angle_deg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angle_deg</span></code></a>(A, B)</p></td>
-<td><p>Returns the smallest principal angle between two subspaces in degrees</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_cos.html#cr.nimble.subspaces.smallest_principal_angles_cos" title="cr.nimble.subspaces.smallest_principal_angles_cos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angles_cos</span></code></a>(subspaces)</p></td>
-<td><p>Returns the smallest principal angles between each pair of subspaces</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_rad.html#cr.nimble.subspaces.smallest_principal_angles_rad" title="cr.nimble.subspaces.smallest_principal_angles_rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angles_rad</span></code></a>(subspaces)</p></td>
-<td><p>Returns the smallest principal angles between each pair of subspaces in radians</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.smallest_principal_angles_deg.html#cr.nimble.subspaces.smallest_principal_angles_deg" title="cr.nimble.subspaces.smallest_principal_angles_deg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smallest_principal_angles_deg</span></code></a>(subspaces)</p></td>
-<td><p>Returns the smallest principal angles between each pair of subspaces in degrees</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.subspaces.subspace_distance.html#cr.nimble.subspaces.subspace_distance" title="cr.nimble.subspaces.subspace_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subspace_distance</span></code></a>(A, B)</p></td>
-<td><p>Returns the Grassmannian distance between two subspaces</p></td>
-</tr>
 </tbody>
 </table>
 </section>

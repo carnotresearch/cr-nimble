@@ -1,6 +1,0 @@
-﻿cr.nimble.mat\_hermitian
-========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: mat_hermitian

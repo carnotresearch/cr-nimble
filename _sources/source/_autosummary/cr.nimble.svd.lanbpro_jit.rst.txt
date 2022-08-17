@@ -1,6 +1,0 @@
-﻿cr.nimble.svd.lanbpro\_jit
-==========================
-
-.. currentmodule:: cr.nimble.svd
-
-.. autofunction:: lanbpro_jit

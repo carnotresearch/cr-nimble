@@ -1,6 +1,0 @@
-﻿cr.nimble.vec\_repeat\_at\_end
-==============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: vec_repeat_at_end

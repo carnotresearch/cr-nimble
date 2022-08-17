@@ -1,6 +1,0 @@
-﻿cr.nimble.gaussian\_mtx
-=======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: gaussian_mtx

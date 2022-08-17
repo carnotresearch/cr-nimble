@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.orthonormal\_idct
-===============================
-
-.. currentmodule:: cr.nimble.dsp
-
-.. autofunction:: orthonormal_idct

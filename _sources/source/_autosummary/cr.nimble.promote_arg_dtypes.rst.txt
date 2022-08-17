@@ -1,6 +1,0 @@
-﻿cr.nimble.promote\_arg\_dtypes
-==============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: promote_arg_dtypes

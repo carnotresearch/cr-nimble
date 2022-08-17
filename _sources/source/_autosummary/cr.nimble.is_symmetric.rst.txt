@@ -1,6 +1,0 @@
-﻿cr.nimble.is\_symmetric
-=======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: is_symmetric

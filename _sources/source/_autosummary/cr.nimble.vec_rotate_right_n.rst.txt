@@ -1,6 +1,0 @@
-﻿cr.nimble.vec\_rotate\_right\_n
-===============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: vec_rotate_right_n

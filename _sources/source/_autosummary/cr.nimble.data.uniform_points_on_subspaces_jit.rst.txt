@@ -1,6 +1,0 @@
-﻿cr.nimble.data.uniform\_points\_on\_subspaces\_jit
-==================================================
-
-.. currentmodule:: cr.nimble.data
-
-.. autofunction:: uniform_points_on_subspaces_jit

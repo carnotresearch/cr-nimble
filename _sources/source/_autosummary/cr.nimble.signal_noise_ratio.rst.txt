@@ -1,6 +1,0 @@
-﻿cr.nimble.signal\_noise\_ratio
-==============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: signal_noise_ratio

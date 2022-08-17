@@ -1,6 +1,0 @@
-﻿cr.nimble.peak\_signal\_noise\_ratio
-====================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: peak_signal_noise_ratio

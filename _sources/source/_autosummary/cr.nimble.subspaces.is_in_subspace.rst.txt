@@ -1,6 +1,0 @@
-﻿cr.nimble.subspaces.is\_in\_subspace
-====================================
-
-.. currentmodule:: cr.nimble.subspaces
-
-.. autofunction:: is_in_subspace

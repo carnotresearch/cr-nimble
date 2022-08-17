@@ -1,6 +1,0 @@
-﻿cr.nimble.canonicalize\_dtype
-=============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: canonicalize_dtype

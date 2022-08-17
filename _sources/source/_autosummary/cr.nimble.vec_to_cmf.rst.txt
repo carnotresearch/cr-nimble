@@ -1,6 +1,0 @@
-﻿cr.nimble.vec\_to\_cmf
-======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: vec_to_cmf

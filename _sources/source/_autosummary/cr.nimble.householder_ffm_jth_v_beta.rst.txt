@@ -1,6 +1,0 @@
-﻿cr.nimble.householder\_ffm\_jth\_v\_beta
-========================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: householder_ffm_jth_v_beta

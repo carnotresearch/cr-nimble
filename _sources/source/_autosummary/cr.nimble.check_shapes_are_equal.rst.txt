@@ -1,6 +1,0 @@
-﻿cr.nimble.check\_shapes\_are\_equal
-===================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: check_shapes_are_equal

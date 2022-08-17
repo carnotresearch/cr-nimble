@@ -1,6 +1,0 @@
-﻿cr.nimble.pascal
-================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: pascal

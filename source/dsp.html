@@ -24,8 +24,8 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cr.nimble.dsp.time_values" href="_autosummary/cr.nimble.dsp.time_values.html" />
-    <link rel="prev" title="cr.nimble.data.three_subspaces_at_angle_jit" href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" />
+    <link rel="next" title="Utilities" href="util.html" />
+    <link rel="prev" title="Test Data Generation" href="data.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" title="previous chapter">cr.nimble.data.three_subspaces_at_angle_jit</a></li>
-      <li>Next: <a href="_autosummary/cr.nimble.dsp.time_values.html" title="next chapter">cr.nimble.dsp.time_values</a></li>
+      <li>Previous: <a href="data.html" title="previous chapter">Test Data Generation</a></li>
+      <li>Next: <a href="util.html" title="next chapter">Utilities</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -120,9 +120,11 @@
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#utilities" id="id1">Utilities</a></p></li>
-<li><p><a class="reference internal" href="#synthetic-signals" id="id2">Synthetic Signals</a></p></li>
-<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id3">Discrete Cosine Transform</a></p></li>
-<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id4">Fast Walsh Hadamard Transform</a></p></li>
+<li><p><a class="reference internal" href="#interpolation" id="id2">Interpolation</a></p></li>
+<li><p><a class="reference internal" href="#artificial-noise" id="id3">Artificial Noise</a></p></li>
+<li><p><a class="reference internal" href="#synthetic-signals" id="id4">Synthetic Signals</a></p></li>
+<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id5">Discrete Cosine Transform</a></p></li>
+<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id6">Fast Walsh Hadamard Transform</a></p></li>
 </ul>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">CR-Nimble</span></code> library has some handy digital signal processing routines
@@ -136,69 +138,55 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.time_values.html#cr.nimble.dsp.time_values" title="cr.nimble.dsp.time_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_values</span></code></a></p></td>
-<td><p>Returns a sequence of time values sampled at a specific frequency for a specific duration</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.norm_freq.html#cr.nimble.dsp.norm_freq" title="cr.nimble.dsp.norm_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_freq</span></code></a></p></td>
-<td><p>Returns the normalized frequency</p></td>
-</tr>
+</tbody>
+</table>
+</section>
+<section id="interpolation">
+<h2><a class="toc-backref" href="#id2">Interpolation</a><a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+</section>
+<section id="artificial-noise">
+<h2><a class="toc-backref" href="#id3">Artificial Noise</a><a class="headerlink" href="#artificial-noise" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
 </tbody>
 </table>
 </section>
 <section id="synthetic-signals">
-<h2><a class="toc-backref" href="#id2">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.pulse.html#cr.nimble.dsp.signals.pulse" title="cr.nimble.dsp.signals.pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pulse</span></code></a></p></td>
-<td><p>Generates a pulse signal which is 1 between start and end times and 0 everwhere else</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.transient_sine_wave.html#cr.nimble.dsp.signals.transient_sine_wave" title="cr.nimble.dsp.signals.transient_sine_wave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transient_sine_wave</span></code></a></p></td>
-<td><p>Generates a transient sinusoid between start and end times</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.decaying_sine_wave.html#cr.nimble.dsp.signals.decaying_sine_wave" title="cr.nimble.dsp.signals.decaying_sine_wave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decaying_sine_wave</span></code></a></p></td>
-<td><p>Generates a decaying sinusoid :param fs: Sample rate of signal in Hz.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.chirp.html#cr.nimble.dsp.signals.chirp" title="cr.nimble.dsp.signals.chirp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chirp</span></code></a></p></td>
-<td><p>Generates a frequency sweep from low to high over time.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.chirp_centered.html#cr.nimble.dsp.signals.chirp_centered" title="cr.nimble.dsp.signals.chirp_centered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chirp_centered</span></code></a></p></td>
-<td><p>Generates a frequency sweep from low to high over time defined by central frequency and bandwidth.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.signals.gaussian_pulse.html#cr.nimble.dsp.signals.gaussian_pulse" title="cr.nimble.dsp.signals.gaussian_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaussian_pulse</span></code></a></p></td>
-<td><p>Generates a Gaussian modulated sinusoid</p></td>
-</tr>
 </tbody>
 </table>
 </section>
 <section id="discrete-cosine-transform">
-<h2><a class="toc-backref" href="#id3">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.dct.html#cr.nimble.dsp.dct" title="cr.nimble.dsp.dct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dct</span></code></a></p></td>
-<td><p>Computes the 1D Type-II DCT transform</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.idct.html#cr.nimble.dsp.idct" title="cr.nimble.dsp.idct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idct</span></code></a></p></td>
-<td><p>Computes the 1D Type-II Inverse DCT transform</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.orthonormal_dct.html#cr.nimble.dsp.orthonormal_dct" title="cr.nimble.dsp.orthonormal_dct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormal_dct</span></code></a></p></td>
-<td><p>Computes the 1D Type-II DCT transform such that the transform is orthonormal</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.orthonormal_idct.html#cr.nimble.dsp.orthonormal_idct" title="cr.nimble.dsp.orthonormal_idct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orthonormal_idct</span></code></a></p></td>
-<td><p>Computes the 1D Type-II IDCT transform such that the transform is orthonormal</p></td>
-</tr>
 </tbody>
 </table>
 </section>
 <section id="fast-walsh-hadamard-transform">
-<h2><a class="toc-backref" href="#id4">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
 <p>There is no separate Inverse Fast Walsh Hadamard Transform as FWHT is the inverse of
 itself except for a normalization factor.
 In other words,  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">fwht(fwht(x))</span> <span class="pre">/</span> <span class="pre">n</span></code> where n is the length of x.</p>
@@ -208,9 +196,6 @@ In other words,  <code class="docutils literal notranslate"><span class="pre">x<
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.fwht.html#cr.nimble.dsp.fwht" title="cr.nimble.dsp.fwht"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fwht</span></code></a></p></td>
-<td><p>Computes the Fast Walsh Hadamard Transform over columns</p></td>
-</tr>
 </tbody>
 </table>
 </section>

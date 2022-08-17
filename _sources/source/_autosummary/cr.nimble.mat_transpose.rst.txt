@@ -1,6 +1,0 @@
-﻿cr.nimble.mat\_transpose
-========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: mat_transpose

@@ -1,6 +1,0 @@
-﻿cr.nimble.subspaces.subspace\_distance
-======================================
-
-.. currentmodule:: cr.nimble.subspaces
-
-.. autofunction:: subspace_distance

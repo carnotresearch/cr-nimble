@@ -1,6 +1,0 @@
-﻿cr.nimble.mean\_squared
-=======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: mean_squared

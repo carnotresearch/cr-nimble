@@ -1,6 +1,0 @@
-﻿cr.nimble.householder\_qr
-=========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: householder_qr

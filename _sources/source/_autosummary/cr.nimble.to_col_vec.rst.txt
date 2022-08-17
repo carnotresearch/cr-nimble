@@ -1,6 +1,0 @@
-﻿cr.nimble.to\_col\_vec
-======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: to_col_vec

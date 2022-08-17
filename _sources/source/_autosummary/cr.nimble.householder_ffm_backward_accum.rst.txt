@@ -1,6 +1,0 @@
-﻿cr.nimble.householder\_ffm\_backward\_accum
-===========================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: householder_ffm_backward_accum

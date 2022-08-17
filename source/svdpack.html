@@ -24,8 +24,8 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cr.nimble.orth" href="_autosummary/cr.nimble.orth.html" />
-    <link rel="prev" title="cr.nimble.householder_qr" href="_autosummary/cr.nimble.householder_qr.html" />
+    <link rel="next" title="Subspaces" href="subspaces.html" />
+    <link rel="prev" title="Orthogonalization" href="orth.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -83,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.householder_qr.html" title="previous chapter">cr.nimble.householder_qr</a></li>
-      <li>Next: <a href="_autosummary/cr.nimble.orth.html" title="next chapter">cr.nimble.orth</a></li>
+      <li>Previous: <a href="orth.html" title="previous chapter">Orthogonalization</a></li>
+      <li>Next: <a href="subspaces.html" title="next chapter">Subspaces</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -132,27 +132,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.orth.html#cr.nimble.orth" title="cr.nimble.orth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orth</span></code></a>(A[, rcond])</p></td>
-<td><p>Constructs an orthonormal basis for the range of A using SVD</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.row_space.html#cr.nimble.row_space" title="cr.nimble.row_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_space</span></code></a>(A[, rcond])</p></td>
-<td><p>Constructs an orthonormal basis for the row space of A using SVD</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.null_space.html#cr.nimble.null_space" title="cr.nimble.null_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">null_space</span></code></a>(A[, rcond])</p></td>
-<td><p>Constructs an orthonormal basis for the null space of A using SVD</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.left_null_space.html#cr.nimble.left_null_space" title="cr.nimble.left_null_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">left_null_space</span></code></a>(A[, rcond])</p></td>
-<td><p>Constructs an orthonormal basis for the left null space of A using SVD</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.effective_rank.html#cr.nimble.effective_rank" title="cr.nimble.effective_rank"><code class="xref py py-obj docutils literal notranslate"><span class="pre">effective_rank</span></code></a>(A[, rcond])</p></td>
-<td><p>Returns the effective rank of A based on its singular value decomposition</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.effective_rank_from_svd.html#cr.nimble.effective_rank_from_svd" title="cr.nimble.effective_rank_from_svd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">effective_rank_from_svd</span></code></a>(u, s, vh[, rcond])</p></td>
-<td><p>Returns the effective rank of a matrix from its SVD</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.singular_values.html#cr.nimble.singular_values" title="cr.nimble.singular_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">singular_values</span></code></a>(A)</p></td>
-<td><p>Returns the singular values of a matrix</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -164,12 +143,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.bdsqr.html#cr.nimble.svd.bdsqr" title="cr.nimble.svd.bdsqr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bdsqr</span></code></a>(alpha, beta, k)</p></td>
-<td><p>Computes the SVD of the bidiagonal matrix</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.bdsqr_jit.html#cr.nimble.svd.bdsqr_jit" title="cr.nimble.svd.bdsqr_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bdsqr_jit</span></code></a>(alpha, beta, k)</p></td>
-<td><p>Computes the SVD of the bidiagonal matrix</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -181,27 +154,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lansvd_simple.html#cr.nimble.svd.lansvd_simple" title="cr.nimble.svd.lansvd_simple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lansvd_simple</span></code></a>(A, k, p0)</p></td>
-<td><p>Returns the k largest singular values and corresponding vectors</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lansvd_simple_jit.html#cr.nimble.svd.lansvd_simple_jit" title="cr.nimble.svd.lansvd_simple_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lansvd_simple_jit</span></code></a>(A, k, p0)</p></td>
-<td><p>Returns the k largest singular values and corresponding vectors</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_init.html#cr.nimble.svd.lanbpro_init" title="cr.nimble.svd.lanbpro_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_init</span></code></a>(A, k, p0, options)</p></td>
-<td><p>Initialize the state with a starting vector</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_iteration.html#cr.nimble.svd.lanbpro_iteration" title="cr.nimble.svd.lanbpro_iteration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_iteration</span></code></a>(A, state, options)</p></td>
-<td><p>One single (j-th) iteration of Lanczos bidiagonalization with partial reorthogonalization algorithm</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_iteration_jit.html#cr.nimble.svd.lanbpro_iteration_jit" title="cr.nimble.svd.lanbpro_iteration_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_iteration_jit</span></code></a>(A, state, options)</p></td>
-<td><p>One single (j-th) iteration of Lanczos bidiagonalization with partial reorthogonalization algorithm</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro.html#cr.nimble.svd.lanbpro" title="cr.nimble.svd.lanbpro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro</span></code></a>(A, k, p0)</p></td>
-<td><p>K steps of the  Lanczos bidiagonalization with partial reorthogonalization</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.svd.lanbpro_jit.html#cr.nimble.svd.lanbpro_jit" title="cr.nimble.svd.lanbpro_jit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lanbpro_jit</span></code></a>(A, k, p0)</p></td>
-<td><p>K steps of the  Lanczos bidiagonalization with partial reorthogonalization</p></td>
-</tr>
 </tbody>
 </table>
 </section>

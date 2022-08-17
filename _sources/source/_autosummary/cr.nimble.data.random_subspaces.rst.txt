@@ -1,6 +1,0 @@
-﻿cr.nimble.data.random\_subspaces
-================================
-
-.. currentmodule:: cr.nimble.data
-
-.. autofunction:: random_subspaces

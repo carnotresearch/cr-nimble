@@ -1,6 +1,0 @@
-﻿cr.nimble.sqr\_norms\_l2\_rw
-============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: sqr_norms_l2_rw

@@ -1,6 +1,0 @@
-﻿cr.nimble.null\_space
-=====================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: null_space

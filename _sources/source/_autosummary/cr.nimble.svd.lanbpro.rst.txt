@@ -1,6 +1,0 @@
-﻿cr.nimble.svd.lanbpro
-=====================
-
-.. currentmodule:: cr.nimble.svd
-
-.. autofunction:: lanbpro

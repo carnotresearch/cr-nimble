@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.signals.decaying\_sine\_wave
-==========================================
-
-.. currentmodule:: cr.nimble.dsp.signals
-
-.. autofunction:: decaying_sine_wave

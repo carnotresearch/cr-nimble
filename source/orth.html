@@ -20,14 +20,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/custom.js"></script>
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cr.nimble.householder_vec" href="_autosummary/cr.nimble.householder_vec.html" />
-    <link rel="prev" title="cr.nimble.solve_on_submatrix" href="_autosummary/cr.nimble.solve_on_submatrix.html" />
+    <link rel="next" title="Singular Value Decomposition" href="svdpack.html" />
+    <link rel="prev" title="Linear Systems" href="linear_systems.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -85,8 +83,8 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.solve_on_submatrix.html" title="previous chapter">cr.nimble.solve_on_submatrix</a></li>
-      <li>Next: <a href="_autosummary/cr.nimble.householder_vec.html" title="next chapter">cr.nimble.householder_vec</a></li>
+      <li>Previous: <a href="linear_systems.html" title="previous chapter">Linear Systems</a></li>
+      <li>Next: <a href="svdpack.html" title="next chapter">Singular Value Decomposition</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -132,39 +130,6 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_vec.html#cr.nimble.householder_vec" title="cr.nimble.householder_vec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_vec</span></code></a>(x)</p></td>
-<td><p>Computes a Householder vector for <span class="math notranslate nohighlight">\(x\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_matrix.html#cr.nimble.householder_matrix" title="cr.nimble.householder_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_matrix</span></code></a>(x)</p></td>
-<td><p>Computes a Householder refection matrix for <span class="math notranslate nohighlight">\(x\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_premultiply.html#cr.nimble.householder_premultiply" title="cr.nimble.householder_premultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_premultiply</span></code></a>(v, beta, A)</p></td>
-<td><p>Pre-multiplies a Householder reflection defined by <span class="math notranslate nohighlight">\(v, beta\)</span> to a matrix A, PA</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_postmultiply.html#cr.nimble.householder_postmultiply" title="cr.nimble.householder_postmultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_postmultiply</span></code></a>(v, beta, A)</p></td>
-<td><p>Post-multiplies a Householder reflection defined by <span class="math notranslate nohighlight">\(v, beta\)</span> to a matrix A, AP</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_ffm_jth_v_beta.html#cr.nimble.householder_ffm_jth_v_beta" title="cr.nimble.householder_ffm_jth_v_beta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_ffm_jth_v_beta</span></code></a>(A, j)</p></td>
-<td><p>GVL4 EQ 5.1.4 v, beta calculation</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_ffm_premultiply.html#cr.nimble.householder_ffm_premultiply" title="cr.nimble.householder_ffm_premultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_ffm_premultiply</span></code></a>(A, C)</p></td>
-<td><p>Computes Q^T C where Q is stored in its factored form in A.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_ffm_backward_accum.html#cr.nimble.householder_ffm_backward_accum" title="cr.nimble.householder_ffm_backward_accum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_ffm_backward_accum</span></code></a>(A, k)</p></td>
-<td><p>Computes k columns of Q from the factored form representation of Q stored in A.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_ffm_to_wy.html#cr.nimble.householder_ffm_to_wy" title="cr.nimble.householder_ffm_to_wy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_ffm_to_wy</span></code></a>(A)</p></td>
-<td><p>Computes the WY representation of Q such that Q = I_m - W Y^T from the factored form representation</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_qr_packed.html#cr.nimble.householder_qr_packed" title="cr.nimble.householder_qr_packed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_qr_packed</span></code></a>(A)</p></td>
-<td><p>Computes the QR = A factorization of A using Householder reflections.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_split_qf_r.html#cr.nimble.householder_split_qf_r" title="cr.nimble.householder_split_qf_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_split_qf_r</span></code></a>(A)</p></td>
-<td><p>Splits a packed QR factorization into QF and R</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.householder_qr.html#cr.nimble.householder_qr" title="cr.nimble.householder_qr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">householder_qr</span></code></a>(A)</p></td>
-<td><p>Computes the QR = A factorization of A using Householder reflections</p></td>
-</tr>
 </tbody>
 </table>
 </section>

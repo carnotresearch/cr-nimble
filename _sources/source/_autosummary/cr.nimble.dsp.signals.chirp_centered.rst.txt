@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.signals.chirp\_centered
-=====================================
-
-.. currentmodule:: cr.nimble.dsp.signals
-
-.. autofunction:: chirp_centered

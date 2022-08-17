@@ -1,6 +1,0 @@
-﻿cr.nimble.pdist\_sqr\_l2\_cw
-============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: pdist_sqr_l2_cw

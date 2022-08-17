@@ -1,6 +1,0 @@
-﻿cr.nimble.num\_largest\_coeffs\_for\_energy\_percent
-====================================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: num_largest_coeffs_for_energy_percent

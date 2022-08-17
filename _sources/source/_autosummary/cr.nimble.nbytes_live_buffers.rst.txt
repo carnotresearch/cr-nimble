@@ -1,6 +1,0 @@
-﻿cr.nimble.nbytes\_live\_buffers
-===============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: nbytes_live_buffers

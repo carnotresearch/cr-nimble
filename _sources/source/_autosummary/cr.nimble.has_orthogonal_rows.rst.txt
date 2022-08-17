@@ -1,6 +1,0 @@
-﻿cr.nimble.has\_orthogonal\_rows
-===============================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: has_orthogonal_rows

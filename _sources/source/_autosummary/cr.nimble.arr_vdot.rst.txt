@@ -1,6 +1,0 @@
-﻿cr.nimble.arr\_vdot
-===================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: arr_vdot

@@ -1,6 +1,0 @@
-﻿cr.nimble.cmf\_find\_quantile\_index
-====================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: cmf_find_quantile_index

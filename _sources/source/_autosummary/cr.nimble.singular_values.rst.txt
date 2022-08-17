@@ -1,6 +1,0 @@
-﻿cr.nimble.singular\_values
-==========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: singular_values

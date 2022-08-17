@@ -1,6 +1,0 @@
-﻿cr.nimble.solve\_Ux\_b
-======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: solve_Ux_b

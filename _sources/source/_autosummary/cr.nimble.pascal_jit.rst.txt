@@ -1,6 +1,0 @@
-﻿cr.nimble.pascal\_jit
-=====================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: pascal_jit

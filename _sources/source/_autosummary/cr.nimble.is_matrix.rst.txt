@@ -1,6 +1,0 @@
-﻿cr.nimble.is\_matrix
-====================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: is_matrix

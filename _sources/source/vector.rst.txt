@@ -61,6 +61,29 @@ Norm
     normalize_linf
 
 
+
+Sparse Vectors
+------------------------------------
+
+Following functions analyze, transform, or construct vectors
+which are known to be sparse.
+
+.. autosummary::
+  :toctree: _autosummary
+
+    nonzero_values
+    nonzero_indices
+    support
+    largest_indices
+    largest_indices_by
+    hard_threshold
+    hard_threshold_sorted
+    hard_threshold_by
+    sparse_approximation
+    build_signal_from_indices_and_values
+    dynamic_range
+    nonzero_dynamic_range
+
 Miscellaneous
 -------------------------
 

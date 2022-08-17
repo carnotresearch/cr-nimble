@@ -1,6 +1,0 @@
-﻿cr.nimble.is\_cpu
-=================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: is_cpu

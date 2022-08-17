@@ -1,6 +1,0 @@
-﻿cr.nimble.solve\_Lx\_b
-======================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: solve_Lx_b

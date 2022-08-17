@@ -1,6 +1,0 @@
-﻿cr.nimble.pairwise\_linf\_distances\_cw
-=======================================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: pairwise_linf_distances_cw

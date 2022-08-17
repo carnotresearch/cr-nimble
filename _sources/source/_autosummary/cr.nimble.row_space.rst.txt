@@ -1,6 +1,0 @@
-﻿cr.nimble.row\_space
-====================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: row_space

@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.fwht
-==================
-
-.. currentmodule:: cr.nimble.dsp
-
-.. autofunction:: fwht

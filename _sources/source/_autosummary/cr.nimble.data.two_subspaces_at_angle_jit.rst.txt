@@ -1,6 +1,0 @@
-﻿cr.nimble.data.two\_subspaces\_at\_angle\_jit
-=============================================
-
-.. currentmodule:: cr.nimble.data
-
-.. autofunction:: two_subspaces_at_angle_jit
