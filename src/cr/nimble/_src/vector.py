@@ -63,6 +63,51 @@ def is_col_vec(x):
     """
     return x.ndim == 1 or (x.ndim == 2 and x.shape[1] == 1)
 
+def is_increasing_vec(x):
+    """Returns if x is a vector with (strictly) increasing values
+    
+    Args:
+        x (jax.numpy.ndarray): A JAX array.
+
+    Returns:
+        True if x is an increasing vector.
+    """
+    return jnp.all(jnp.diff(x) > 0)
+
+def is_decreasing_vec(x):
+    """Returns if x is a vector with (strictly) decreasing values
+    
+    Args:
+        x (jax.numpy.ndarray): A JAX array.
+
+    Returns:
+        True if x is a decreasing vector.
+    """
+    return jnp.all(jnp.diff(x) < 0)
+
+def is_nonincreasing_vec(x):
+    """Returns if x is a vector with non-increasing values
+    
+    Args:
+        x (jax.numpy.ndarray): A JAX array.
+
+    Returns:
+        True if x is a non-increasing vector.
+    """
+    return jnp.all(jnp.diff(x) <= 0)
+
+def is_nondecreasing_vec(x):
+    """Returns if x is a vector with non-decreasing values
+    
+    Args:
+        x (jax.numpy.ndarray): A JAX array.
+
+    Returns:
+        True if x is a non-decreasing vector.
+    """
+    return jnp.all(jnp.diff(x) >= 0)
+
+
 def to_row_vec(x):
     """Converts a line vector to a row vector
 
