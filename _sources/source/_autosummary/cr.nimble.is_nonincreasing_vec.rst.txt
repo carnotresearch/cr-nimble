@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_nonincreasing\_vec
+================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_nonincreasing_vec

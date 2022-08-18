@@ -160,6 +160,51 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="is_increasing_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_increasing_vec.html#cr.nimble.is_increasing_vec">[docs]</a><span class="k">def</span> <span class="nf">is_increasing_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns if x is a vector with (strictly) increasing values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A JAX array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if x is an increasing vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="is_decreasing_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_decreasing_vec.html#cr.nimble.is_decreasing_vec">[docs]</a><span class="k">def</span> <span class="nf">is_decreasing_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns if x is a vector with (strictly) decreasing values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A JAX array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if x is a decreasing vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="is_nonincreasing_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_nonincreasing_vec.html#cr.nimble.is_nonincreasing_vec">[docs]</a><span class="k">def</span> <span class="nf">is_nonincreasing_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns if x is a vector with non-increasing values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A JAX array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if x is a non-increasing vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="is_nondecreasing_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.is_nondecreasing_vec.html#cr.nimble.is_nondecreasing_vec">[docs]</a><span class="k">def</span> <span class="nf">is_nondecreasing_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns if x is a vector with non-decreasing values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A JAX array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if x is a non-decreasing vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="to_row_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.to_row_vec.html#cr.nimble.to_row_vec">[docs]</a><span class="k">def</span> <span class="nf">to_row_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Converts a line vector to a row vector</span>
 
