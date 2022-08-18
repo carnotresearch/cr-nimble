@@ -30,6 +30,7 @@ SVD for Bidiagonal Matrices
 
 .. autosummary::
     :toctree: _autosummary
+
     bdsqr
     bdsqr_jit
 
@@ -40,6 +41,7 @@ Truncated SVD
 
 .. autosummary::
     :toctree: _autosummary
+    
     lansvd_simple
     lansvd_simple_jit
     lanbpro_init

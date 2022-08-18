@@ -50,3 +50,53 @@ Unary Operations
     vec_repeat_at_start_jit
     vec_centered_jit
 
+Norm
+----------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    norm_l1
+    norm_l2
+    norm_linf
+    sqr_norm_l2
+    normalize_l1
+    normalize_l2
+    normalize_linf
+
+
+
+Sparse Vectors
+------------------------------------
+
+Following functions analyze, transform, or construct vectors
+which are known to be sparse.
+
+.. autosummary::
+  :toctree: _autosummary
+
+    nonzero_values
+    nonzero_indices
+    support
+    largest_indices
+    largest_indices_by
+    hard_threshold
+    hard_threshold_sorted
+    hard_threshold_by
+    sparse_approximation
+    build_signal_from_indices_and_values
+    dynamic_range
+    nonzero_dynamic_range
+
+Miscellaneous
+-------------------------
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    vec_mag_desc
+    vec_to_pmf
+    vec_to_cmf
+    cmf_find_quantile_index
+    num_largest_coeffs_for_energy_percent

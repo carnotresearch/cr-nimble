@@ -1,4 +1,4 @@
-# Copyright 2021 CR-Nimble Development Team
+# Copyright 2021 CR-Suite Development Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,6 +35,20 @@ from cr.nimble._src.util import (
     nbytes_live_buffers,
 )
 
+from cr.nimble._src.discrete.number import (
+    next_pow_of_2,
+    is_integer,
+    is_positive_integer,
+    is_negative_integer,
+    is_odd,
+    is_even,
+    is_odd_natural,
+    is_even_natural,
+    is_power_of_2,
+    is_perfect_square,
+    integer_factors_close_to_sqr_root
+)
+
 from cr.nimble._src.array import (
     hermitian,
     check_shapes_are_equal
@@ -69,6 +83,13 @@ from cr.nimble._src.vector import (
     vec_repeat_at_start_jit,
     vec_centered,
     vec_centered_jit,
+    vec_to_windows,
+    vec_to_windows_jit,
+    vec_mag_desc,
+    vec_to_pmf,
+    vec_to_cmf,
+    cmf_find_quantile_index,
+    num_largest_coeffs_for_energy_percent
 )
 
 from cr.nimble._src.matrix import (
@@ -103,6 +124,10 @@ from cr.nimble._src.norm import (
     sqr_norm_l2,
     norm_l2,
     norm_linf,
+
+    normalize_l1,
+    normalize_l2,
+    normalize_linf,
 
     norms_l1_cw,
     norms_l1_rw,
@@ -234,4 +259,36 @@ from cr.nimble._src.standard_matrices import (
     gaussian_mtx,
     pascal,
     pascal_jit
+)
+
+
+########################################
+# Basic signal processing stuff
+########################################
+
+from cr.nimble._src.signal import (
+    nonzero_values,
+    nonzero_indices,
+    support,
+    randomize_rows,
+    randomize_cols,
+    largest_indices,
+    hard_threshold,
+    hard_threshold_sorted,
+    sparse_approximation,
+    build_signal_from_indices_and_values,
+    hard_threshold_by,
+    largest_indices_by,
+    dynamic_range,
+    nonzero_dynamic_range,
+
+    # row wise
+    largest_indices_rw,
+    take_along_rows,
+    sparse_approximation_rw,
+
+    # column wise
+    largest_indices_cw,
+    take_along_cols,
+    sparse_approximation_cw,
 )

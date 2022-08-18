@@ -1,4 +1,4 @@
-# Copyright 2021 CR-Nimble Development Team
+# Copyright 2021 CR-Suite Development Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -103,6 +103,32 @@ def sqr_norms_l2_rw(X):
     """
     return jnp.sum(X * X, axis=1)
 
+
+######################################
+# Normalization of vectors
+######################################
+
+def normalize_l1(x):
+    """Normalizes a vector by its l_1-norm
+    """
+    x = promote_arg_dtypes(x)
+    x2 = jnp.abs(x)
+    s = jnp.sum(x) + EPS
+    return jnp.divide(x, s)
+
+def normalize_l2(x):
+    """Normalizes a vector by its l_2-norm
+    """
+    x = promote_arg_dtypes(x)
+    s = jnp.sqrt(jnp.sum(x ** 2)) + EPS
+    return jnp.divide(x, s)
+
+def normalize_linf(x):
+    """Normalizes a vector by its l_inf-norm
+    """
+    x = promote_arg_dtypes(x)
+    s = jnp.max(jnp.abs(x)) + EPS
+    return jnp.divide(x, s)
 
 ######################################
 # Normalization of rows and columns

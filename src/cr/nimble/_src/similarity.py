@@ -1,4 +1,4 @@
-# Copyright 2021 CR-Suite Development Team
+# Copyright 2021 CR.Sparse Development Team
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from jax import lax, jit, vmap, random
+"""Similarity measures
+"""
+
+from jax import jit
 import jax.numpy as jnp
-from jax.numpy.linalg import norm
 
-
-def refine_bounds(D, bnd, tol):
-    """Examins the gap structure of Ritz eigen values and refines error bounds
+def dist_to_gaussian_sim(dist, sigma):
+    """Computes the Gaussian similarities for given distances
     """
-    return bnd
+    d = dist**2 / (2 * sigma**2)
+    return jnp.exp(-d)
+
+def sqr_dist_to_gaussian_sim(sqr_dist, sigma):
+    """Computes the Gaussian similarities for given squared distances
+    """
+    d = sqr_dist / (2 * sigma**2)
+    return jnp.exp(-d)
+
+def eps_neighborhood_sim(dist, threshold):
+    """Computes the epsilon neighborhood similarity
+    """
+    return dist < threshold
