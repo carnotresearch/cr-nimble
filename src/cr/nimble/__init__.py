@@ -288,3 +288,27 @@ from cr.nimble._src.signal import (
     take_along_cols,
     sparse_approximation_cw,
 )
+
+########################################
+# Similarity
+########################################
+
+from cr.nimble._src.similarity import (
+    dist_to_gaussian_sim,
+    sqr_dist_to_gaussian_sim,
+    eps_neighborhood_sim
+)
+
+
+########################################
+# Miscellaneous stuff
+########################################
+
+
+########################################
+# Compatibility stuff (undocumented)
+########################################
+from cr.nimble._src.signal import (
+    # energy of a signal
+    energy,
+)
