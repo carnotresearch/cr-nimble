@@ -438,6 +438,49 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span></div>
 
+
+<div class="viewcode-block" id="energy_threshold"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.energy_threshold.html#cr.nimble.energy_threshold">[docs]</a><span class="k">def</span> <span class="nf">energy_threshold</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">fraction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Keeps only as much coefficients in signal so as to capture a fraction of signal energy </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A signal</span>
+<span class="sd">        fraction (float): The fraction of energy to be preserved</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:</span>
+<span class="sd">            * A binary mask of the indices to be kept</span>
+<span class="sd">            * Signal after thresholding</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        This function doesn&#39;t change the length of signal and can be JIT compiled</span>
+
+<span class="sd">    See Also:</span>
+<span class="sd">        :func:`hard_threshold`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># signal length</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">size</span>
+    <span class="c1"># compute energies</span>
+    <span class="n">energies</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="c1"># sort in descending order</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">energies</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">energies</span> <span class="o">=</span> <span class="n">energies</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="c1"># total energy</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">energies</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.</span>
+    <span class="c1"># normalize</span>
+    <span class="n">energies</span> <span class="o">=</span> <span class="n">energies</span> <span class="o">/</span> <span class="n">s</span>
+    <span class="c1"># convert to a cmf</span>
+    <span class="n">cmf</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">energies</span><span class="p">)</span>
+    <span class="c1"># find the index</span>
+    <span class="n">index</span> <span class="o">=</span>  <span class="n">jnp</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">cmf</span> <span class="o">&gt;=</span> <span class="n">fraction</span><span class="p">)</span>
+    <span class="c1"># build the mask</span>
+    <span class="n">idx2</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">idx2</span> <span class="o">&lt;=</span> <span class="n">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="c1"># reshuffle the mask</span>
+    <span class="n">mask2</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">*</span> <span class="n">mask2</span>
+    <span class="k">return</span> <span class="n">mask2</span><span class="p">,</span> <span class="n">signal</span></div>
+
 <div class="viewcode-block" id="dynamic_range"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.dynamic_range.html#cr.nimble.dynamic_range">[docs]</a><span class="k">def</span> <span class="nf">dynamic_range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the ratio of largest and smallest values (by magnitude) in x (dB)</span>
 

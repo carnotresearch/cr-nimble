@@ -1,0 +1,6 @@
+﻿cr.nimble.energy\_threshold
+===========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: energy_threshold

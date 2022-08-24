@@ -83,6 +83,7 @@ which are known to be sparse.
     hard_threshold
     hard_threshold_sorted
     hard_threshold_by
+    energy_threshold
     sparse_approximation
     build_signal_from_indices_and_values
     dynamic_range

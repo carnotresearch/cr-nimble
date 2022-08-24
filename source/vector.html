@@ -298,16 +298,19 @@ which are known to be sparse.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.hard_threshold_by.html#cr.nimble.hard_threshold_by" title="cr.nimble.hard_threshold_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold_by</span></code></a>(x, t)</p></td>
 <td><p>Sets all entries in x to be zero which are less than t in magnitude</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation.html#cr.nimble.sparse_approximation" title="cr.nimble.sparse_approximation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation</span></code></a>(x, K)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.energy_threshold.html#cr.nimble.energy_threshold" title="cr.nimble.energy_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy_threshold</span></code></a>(signal, fraction)</p></td>
+<td><p>Keeps only as much coefficients in signal so as to capture a fraction of signal energy</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation.html#cr.nimble.sparse_approximation" title="cr.nimble.sparse_approximation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation</span></code></a>(x, K)</p></td>
 <td><p>Keeps only largest K non-zero entries by magnitude in a vector x</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.build_signal_from_indices_and_values.html#cr.nimble.build_signal_from_indices_and_values" title="cr.nimble.build_signal_from_indices_and_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_signal_from_indices_and_values</span></code></a>(length, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.build_signal_from_indices_and_values.html#cr.nimble.build_signal_from_indices_and_values" title="cr.nimble.build_signal_from_indices_and_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_signal_from_indices_and_values</span></code></a>(length, …)</p></td>
 <td><p>Builds a sparse signal from its non-zero entries (specified by their indices and values)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dynamic_range.html#cr.nimble.dynamic_range" title="cr.nimble.dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dynamic_range</span></code></a>(x)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dynamic_range.html#cr.nimble.dynamic_range" title="cr.nimble.dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dynamic_range</span></code></a>(x)</p></td>
 <td><p>Returns the ratio of largest and smallest values (by magnitude) in x (dB)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nonzero_dynamic_range.html#cr.nimble.nonzero_dynamic_range" title="cr.nimble.nonzero_dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_dynamic_range</span></code></a>(x)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nonzero_dynamic_range.html#cr.nimble.nonzero_dynamic_range" title="cr.nimble.nonzero_dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_dynamic_range</span></code></a>(x)</p></td>
 <td><p>Returns the ratio of largest and smallest non-zero values (by magnitude) in x (dB)</p></td>
 </tr>
 </tbody>

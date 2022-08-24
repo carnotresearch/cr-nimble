@@ -19,6 +19,7 @@ Error
     root_mean_squared
     root_mse
     normalized_root_mse
+    prd
 
 
 SNR
