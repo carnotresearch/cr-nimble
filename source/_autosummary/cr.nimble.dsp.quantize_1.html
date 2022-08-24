@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>cr.nimble.hard_threshold &#8212; cr-nimble  documentation</title>
+    <title>cr.nimble.dsp.quantize_1 &#8212; cr-nimble  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -24,8 +24,8 @@
     <script src="../../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="cr.nimble.hard_threshold_sorted" href="cr.nimble.hard_threshold_sorted.html" />
-    <link rel="prev" title="cr.nimble.largest_indices_by" href="cr.nimble.largest_indices_by.html" />
+    <link rel="next" title="cr.nimble.dsp.norm_freq" href="cr.nimble.dsp.norm_freq.html" />
+    <link rel="prev" title="cr.nimble.dsp.normalize" href="cr.nimble.dsp.normalize.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -59,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Docs</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../array.html">Arrays</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../vector.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector.html">Vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../metrics.html">Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../linear_systems.html">Linear Systems</a></li>
@@ -70,7 +70,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../geom2d.html">2D Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../standard.html">Standard Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Test Data Generation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dsp.html">Digital Signal Processing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dsp.html">Digital Signal Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util.html">Utilities</a></li>
 </ul>
 </li>
@@ -83,9 +83,9 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Docs</a><ul>
-  <li><a href="../vector.html">Vectors</a><ul>
-      <li>Previous: <a href="cr.nimble.largest_indices_by.html" title="previous chapter">cr.nimble.largest_indices_by</a></li>
-      <li>Next: <a href="cr.nimble.hard_threshold_sorted.html" title="next chapter">cr.nimble.hard_threshold_sorted</a></li>
+  <li><a href="../dsp.html">Digital Signal Processing</a><ul>
+      <li>Previous: <a href="cr.nimble.dsp.normalize.html" title="previous chapter">cr.nimble.dsp.normalize</a></li>
+      <li>Next: <a href="cr.nimble.dsp.norm_freq.html" title="next chapter">cr.nimble.dsp.norm_freq</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -117,38 +117,26 @@
 
           <div class="body" role="main">
             
-  <section id="cr-nimble-hard-threshold">
-<h1>cr.nimble.hard_threshold<a class="headerlink" href="#cr-nimble-hard-threshold" title="Permalink to this headline">¶</a></h1>
+  <section id="cr-nimble-dsp-quantize-1">
+<h1>cr.nimble.dsp.quantize_1<a class="headerlink" href="#cr-nimble-dsp-quantize-1" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="cr.nimble.hard_threshold">
-<span class="sig-prename descclassname"><span class="pre">cr.nimble.</span></span><span class="sig-name descname"><span class="pre">hard_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cr/nimble/_src/signal.html#hard_threshold"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cr.nimble.hard_threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the indices and corresponding values of largest K non-zero entries in a vector x</p>
+<dt class="sig sig-object py" id="cr.nimble.dsp.quantize_1">
+<span class="sig-prename descclassname"><span class="pre">cr.nimble.dsp.</span></span><span class="sig-name descname"><span class="pre">quantize_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cr/nimble/_src/dsp/quantization.html#quantize_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cr.nimble.dsp.quantize_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quantizes a signal to n bits where signal values are bounded by 1</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – A sparse/compressible signal</p></li>
-<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The number of largest entries to be kept in x</p></li>
+<li><p><strong>x</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – A signal to be quantized</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – number of bits for quantization</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><dl class="simple">
-<dt>A tuple comprising of:</dt><dd><ul class="simple">
-<li><p>The indices of K largest entries in x</p></li>
-<li><p>Corresponding entries in x</p></li>
-</ul>
-</dd>
-</dl>
-</p>
+<dd class="field-even"><p>Quantized signal with integer values</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>(<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>, <a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>)</p>
+<dd class="field-odd"><p>(<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>)</p>
 </dd>
 </dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="cr.nimble.hard_threshold_sorted.html#cr.nimble.hard_threshold_sorted" title="cr.nimble.hard_threshold_sorted"><code class="xref py py-func docutils literal notranslate"><span class="pre">hard_threshold_sorted()</span></code></a>
-<a class="reference internal" href="cr.nimble.hard_threshold_by.html#cr.nimble.hard_threshold_by" title="cr.nimble.hard_threshold_by"><code class="xref py py-func docutils literal notranslate"><span class="pre">hard_threshold_by()</span></code></a></p>
-</div>
 </dd></dl>
 
 </section>
@@ -168,7 +156,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../../_sources/source/_autosummary/cr.nimble.hard_threshold.rst.txt"
+      <a href="../../_sources/source/_autosummary/cr.nimble.dsp.quantize_1.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

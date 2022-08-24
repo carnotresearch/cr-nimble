@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.largest\_indices\_by
+==================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: largest_indices_by

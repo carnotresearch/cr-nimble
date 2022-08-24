@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.scale\_to\_0\_1
+=============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: scale_to_0_1

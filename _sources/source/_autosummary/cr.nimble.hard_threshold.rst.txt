@@ -1,6 +1,0 @@
-﻿cr.nimble.hard\_threshold
-=========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: hard_threshold

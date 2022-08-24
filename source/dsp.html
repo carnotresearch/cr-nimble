@@ -24,7 +24,7 @@
     <script src="../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cr.nimble.dsp.time_values" href="_autosummary/cr.nimble.dsp.time_values.html" />
+    <link rel="next" title="cr.nimble.dsp.energy" href="_autosummary/cr.nimble.dsp.energy.html" />
     <link rel="prev" title="cr.nimble.data.three_subspaces_at_angle_jit" href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -84,7 +84,7 @@
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
       <li>Previous: <a href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" title="previous chapter">cr.nimble.data.three_subspaces_at_angle_jit</a></li>
-      <li>Next: <a href="_autosummary/cr.nimble.dsp.time_values.html" title="next chapter">cr.nimble.dsp.time_values</a></li>
+      <li>Next: <a href="_autosummary/cr.nimble.dsp.energy.html" title="next chapter">cr.nimble.dsp.energy</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -119,48 +119,115 @@
 <span id="api-dsp"></span><h1>Digital Signal Processing<a class="headerlink" href="#digital-signal-processing" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#utilities" id="id1">Utilities</a></p></li>
-<li><p><a class="reference internal" href="#interpolation" id="id2">Interpolation</a></p></li>
-<li><p><a class="reference internal" href="#artificial-noise" id="id3">Artificial Noise</a></p></li>
-<li><p><a class="reference internal" href="#synthetic-signals" id="id4">Synthetic Signals</a></p></li>
-<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id5">Discrete Cosine Transform</a></p></li>
-<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id6">Fast Walsh Hadamard Transform</a></p></li>
+<li><p><a class="reference internal" href="#signal-energy" id="id1">Signal Energy</a></p></li>
+<li><p><a class="reference internal" href="#thresholding" id="id2">Thresholding</a></p></li>
+<li><p><a class="reference internal" href="#scaling" id="id3">Scaling</a></p></li>
+<li><p><a class="reference internal" href="#quantization" id="id4">Quantization</a></p></li>
+<li><p><a class="reference internal" href="#spectrum-analysis" id="id5">Spectrum Analysis</a></p></li>
+<li><p><a class="reference internal" href="#interpolation" id="id6">Interpolation</a></p></li>
+<li><p><a class="reference internal" href="#artificial-noise" id="id7">Artificial Noise</a></p></li>
+<li><p><a class="reference internal" href="#synthetic-signals" id="id8">Synthetic Signals</a></p></li>
+<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id9">Discrete Cosine Transform</a></p></li>
+<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id10">Fast Walsh Hadamard Transform</a></p></li>
+<li><p><a class="reference internal" href="#utilities" id="id11">Utilities</a></p></li>
 </ul>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">CR-Nimble</span></code> library has some handy digital signal processing routines
 implemented in JAX. They are available as part of the <code class="docutils literal notranslate"><span class="pre">cr.nimble.dsp</span></code>
 package.</p>
-<section id="utilities">
-<h2><a class="toc-backref" href="#id1">Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<section id="signal-energy">
+<h2><a class="toc-backref" href="#id1">Signal Energy</a><a class="headerlink" href="#signal-energy" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.time_values.html#cr.nimble.dsp.time_values" title="cr.nimble.dsp.time_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_values</span></code></a></p></td>
-<td><p>Returns a sequence of time values sampled at a specific frequency for a specific duration</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.norm_freq.html#cr.nimble.dsp.norm_freq" title="cr.nimble.dsp.norm_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_freq</span></code></a></p></td>
-<td><p>Returns the normalized frequency</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.frequency_spectrum.html#cr.nimble.dsp.frequency_spectrum" title="cr.nimble.dsp.frequency_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frequency_spectrum</span></code></a></p></td>
-<td><p>Frequency spectrum of 1D data using FFT</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.power_spectrum.html#cr.nimble.dsp.power_spectrum" title="cr.nimble.dsp.power_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power_spectrum</span></code></a></p></td>
-<td><p>Power spectrum of 1D data using FFT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.energy.html#cr.nimble.dsp.energy" title="cr.nimble.dsp.energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.energy.html#cr.nimble.dsp.energy" title="cr.nimble.dsp.energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy</span></code></a>(data[, axis])</p></td>
 <td><p>Computes the energy of the signal along the specified axis</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.normalize.html#cr.nimble.dsp.normalize" title="cr.nimble.dsp.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a></p></td>
+</tbody>
+</table>
+</section>
+<section id="thresholding">
+<h2><a class="toc-backref" href="#id2">Thresholding</a><a class="headerlink" href="#thresholding" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.hard_threshold.html#cr.nimble.dsp.hard_threshold" title="cr.nimble.dsp.hard_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold</span></code></a>(x, K)</p></td>
+<td><p>Returns the indices and corresponding values of largest K non-zero entries in a vector x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.hard_threshold_sorted.html#cr.nimble.dsp.hard_threshold_sorted" title="cr.nimble.dsp.hard_threshold_sorted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold_sorted</span></code></a>(x, K)</p></td>
+<td><p>Returns the sorted indices and corresponding values of largest K non-zero entries in a vector x</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.hard_threshold_by.html#cr.nimble.dsp.hard_threshold_by" title="cr.nimble.dsp.hard_threshold_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hard_threshold_by</span></code></a>(x, t)</p></td>
+<td><p>Sets all entries in x to be zero which are less than t in magnitude</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.largest_indices_by.html#cr.nimble.dsp.largest_indices_by" title="cr.nimble.dsp.largest_indices_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_by</span></code></a>(x, t)</p></td>
+<td><p>Returns the locations of all entries in x which are larger than t in magnitude</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.energy_threshold.html#cr.nimble.dsp.energy_threshold" title="cr.nimble.dsp.energy_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">energy_threshold</span></code></a>(signal, fraction)</p></td>
+<td><p>Keeps only as much coefficients in signal so as to capture a fraction of signal energy</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scaling">
+<h2><a class="toc-backref" href="#id3">Scaling</a><a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.scale_to_0_1.html#cr.nimble.dsp.scale_to_0_1" title="cr.nimble.dsp.scale_to_0_1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_to_0_1</span></code></a>(x)</p></td>
+<td><p>Scales a signal to the range of 0 and 1</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.normalize.html#cr.nimble.dsp.normalize" title="cr.nimble.dsp.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>(data[, axis])</p></td>
 <td><p>Normalizes a data vector (data - mu) / sigma</p></td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="quantization">
+<h2><a class="toc-backref" href="#id4">Quantization</a><a class="headerlink" href="#quantization" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.quantize_1.html#cr.nimble.dsp.quantize_1" title="cr.nimble.dsp.quantize_1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantize_1</span></code></a>(x, n)</p></td>
+<td><p>Quantizes a signal to n bits where signal values are bounded by 1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spectrum-analysis">
+<h2><a class="toc-backref" href="#id5">Spectrum Analysis</a><a class="headerlink" href="#spectrum-analysis" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.norm_freq.html#cr.nimble.dsp.norm_freq" title="cr.nimble.dsp.norm_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">norm_freq</span></code></a>(frequency, sampling_rate)</p></td>
+<td><p>Returns the normalized frequency</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.frequency_spectrum.html#cr.nimble.dsp.frequency_spectrum" title="cr.nimble.dsp.frequency_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frequency_spectrum</span></code></a>(x[, dt])</p></td>
+<td><p>Frequency spectrum of 1D data using FFT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.power_spectrum.html#cr.nimble.dsp.power_spectrum" title="cr.nimble.dsp.power_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power_spectrum</span></code></a>(x[, dt])</p></td>
+<td><p>Power spectrum of 1D data using FFT</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="interpolation">
-<h2><a class="toc-backref" href="#id2">Interpolation</a><a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Interpolation</a><a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -174,7 +241,7 @@ package.</p>
 </table>
 </section>
 <section id="artificial-noise">
-<h2><a class="toc-backref" href="#id3">Artificial Noise</a><a class="headerlink" href="#artificial-noise" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Artificial Noise</a><a class="headerlink" href="#artificial-noise" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -188,7 +255,7 @@ package.</p>
 </table>
 </section>
 <section id="synthetic-signals">
-<h2><a class="toc-backref" href="#id4">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -217,7 +284,7 @@ package.</p>
 </table>
 </section>
 <section id="discrete-cosine-transform">
-<h2><a class="toc-backref" href="#id5">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -240,7 +307,7 @@ package.</p>
 </table>
 </section>
 <section id="fast-walsh-hadamard-transform">
-<h2><a class="toc-backref" href="#id6">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
 <p>There is no separate Inverse Fast Walsh Hadamard Transform as FWHT is the inverse of
 itself except for a normalization factor.
 In other words,  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">fwht(fwht(x))</span> <span class="pre">/</span> <span class="pre">n</span></code> where n is the length of x.</p>
@@ -252,6 +319,20 @@ In other words,  <code class="docutils literal notranslate"><span class="pre">x<
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.fwht.html#cr.nimble.dsp.fwht" title="cr.nimble.dsp.fwht"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fwht</span></code></a></p></td>
 <td><p>Computes the Fast Walsh Hadamard Transform over columns</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="utilities">
+<h2><a class="toc-backref" href="#id11">Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.time_values.html#cr.nimble.dsp.time_values" title="cr.nimble.dsp.time_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_values</span></code></a></p></td>
+<td><p>Returns a sequence of time values sampled at a specific frequency for a specific duration</p></td>
 </tr>
 </tbody>
 </table>

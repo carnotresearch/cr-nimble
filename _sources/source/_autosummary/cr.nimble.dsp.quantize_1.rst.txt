@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.quantize\_1
+=========================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: quantize_1

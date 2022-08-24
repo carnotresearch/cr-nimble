@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.hard\_threshold
+=============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: hard_threshold

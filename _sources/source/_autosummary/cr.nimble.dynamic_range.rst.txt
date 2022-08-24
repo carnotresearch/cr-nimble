@@ -1,6 +1,0 @@
-﻿cr.nimble.dynamic\_range
-========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: dynamic_range
