@@ -127,3 +127,13 @@ def signal_noise_ratio(reference_arr, test_arr):
     ref_energy = lax.cond(ref_energy, lambda _ : ref_energy, lambda _ : eps, None)
     return 10 * jnp.log10(ref_energy/ err_energy)
 
+
+
+def prd(reference_arr, test_arr):
+    reference_arr, test_arr = promote_arg_dtypes(reference_arr, test_arr)
+    error = reference_arr - test_arr
+    err_energy = jnp.abs(jnp.vdot(error, error))
+    ref_energy = jnp.abs(jnp.vdot(reference_arr, reference_arr))
+    PRD = jnp.sqrt(err_energy/ref_energy)
+    return PRD
+

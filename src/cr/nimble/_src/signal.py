@@ -341,6 +341,49 @@ def largest_indices_by(x, t):
     """
     return jnp.where(jnp.abs(x) >= t)[0]
 
+
+def energy_threshold(signal, fraction):
+    """
+    Keeps only as much coefficients in signal so as to capture a fraction of signal energy 
+
+    Args:
+        x (jax.numpy.ndarray): A signal
+        fraction (float): The fraction of energy to be preserved
+
+    Returns:
+        (jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:
+            * A binary mask of the indices to be kept
+            * Signal after thresholding
+
+    Note:
+        This function doesn't change the length of signal and can be JIT compiled
+
+    See Also:
+        :func:`hard_threshold`
+    """
+    # signal length
+    n = signal.size
+    # compute energies
+    energies = signal ** 2
+    # sort in descending order
+    idx = jnp.argsort(energies)[::-1]
+    energies = energies[idx]
+    # total energy
+    s = jnp.sum(energies) * 1.
+    # normalize
+    energies = energies / s
+    # convert to a cmf
+    cmf = jnp.cumsum(energies)
+    # find the index
+    index =  jnp.argmax(cmf >= fraction)
+    # build the mask
+    idx2 = jnp.arange(n)
+    mask = jnp.where(idx2 <= index, 1, 0)
+    # reshuffle the mask
+    mask2 = mask.at[idx].set(mask)
+    signal = signal * mask2
+    return mask2, signal
+
 def dynamic_range(x):
     """Returns the ratio of largest and smallest values (by magnitude) in x (dB)
 

@@ -177,7 +177,8 @@ from cr.nimble._src.metrics import (
     normalization_factor,
     normalized_root_mse,
     peak_signal_noise_ratio,
-    signal_noise_ratio
+    signal_noise_ratio,
+    prd
 )
 
 from cr.nimble._src.ndarray import (
@@ -278,6 +279,7 @@ from cr.nimble._src.signal import (
     sparse_approximation,
     build_signal_from_indices_and_values,
     hard_threshold_by,
+    energy_threshold,
     largest_indices_by,
     dynamic_range,
     nonzero_dynamic_range,
