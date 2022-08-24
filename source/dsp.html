@@ -125,11 +125,13 @@
 <li><p><a class="reference internal" href="#quantization" id="id4">Quantization</a></p></li>
 <li><p><a class="reference internal" href="#spectrum-analysis" id="id5">Spectrum Analysis</a></p></li>
 <li><p><a class="reference internal" href="#interpolation" id="id6">Interpolation</a></p></li>
-<li><p><a class="reference internal" href="#artificial-noise" id="id7">Artificial Noise</a></p></li>
-<li><p><a class="reference internal" href="#synthetic-signals" id="id8">Synthetic Signals</a></p></li>
-<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id9">Discrete Cosine Transform</a></p></li>
-<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id10">Fast Walsh Hadamard Transform</a></p></li>
-<li><p><a class="reference internal" href="#utilities" id="id11">Utilities</a></p></li>
+<li><p><a class="reference internal" href="#sparse-signals" id="id7">Sparse Signals</a></p></li>
+<li><p><a class="reference internal" href="#matrices-of-sparse-signals" id="id8">Matrices of Sparse Signals</a></p></li>
+<li><p><a class="reference internal" href="#artificial-noise" id="id9">Artificial Noise</a></p></li>
+<li><p><a class="reference internal" href="#synthetic-signals" id="id10">Synthetic Signals</a></p></li>
+<li><p><a class="reference internal" href="#discrete-cosine-transform" id="id11">Discrete Cosine Transform</a></p></li>
+<li><p><a class="reference internal" href="#fast-walsh-hadamard-transform" id="id12">Fast Walsh Hadamard Transform</a></p></li>
+<li><p><a class="reference internal" href="#utilities" id="id13">Utilities</a></p></li>
 </ul>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">CR-Nimble</span></code> library has some handy digital signal processing routines
@@ -240,8 +242,94 @@ package.</p>
 </tbody>
 </table>
 </section>
+<section id="sparse-signals">
+<h2><a class="toc-backref" href="#id7">Sparse Signals</a><a class="headerlink" href="#sparse-signals" title="Permalink to this headline">¶</a></h2>
+<p>Following functions analyze, transform, or construct signals
+which are known to be sparse.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.nonzero_values.html#cr.nimble.dsp.nonzero_values" title="cr.nimble.dsp.nonzero_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_values</span></code></a>(x)</p></td>
+<td><p>Returns the values of non-zero entries in x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.nonzero_indices.html#cr.nimble.dsp.nonzero_indices" title="cr.nimble.dsp.nonzero_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_indices</span></code></a>(x)</p></td>
+<td><p>Returns the indices of non-zero entries in x</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.support.html#cr.nimble.dsp.support" title="cr.nimble.dsp.support"><code class="xref py py-obj docutils literal notranslate"><span class="pre">support</span></code></a>(x)</p></td>
+<td><p>Returns the indices of non-zero entries in x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.largest_indices.html#cr.nimble.dsp.largest_indices" title="cr.nimble.dsp.largest_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices</span></code></a>(x, K)</p></td>
+<td><p>Returns the indices of K largest entries in x by magnitude</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.sparse_approximation.html#cr.nimble.dsp.sparse_approximation" title="cr.nimble.dsp.sparse_approximation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation</span></code></a>(x, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in a vector x</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.build_signal_from_indices_and_values.html#cr.nimble.dsp.build_signal_from_indices_and_values" title="cr.nimble.dsp.build_signal_from_indices_and_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_signal_from_indices_and_values</span></code></a>(length, …)</p></td>
+<td><p>Builds a sparse signal from its non-zero entries (specified by their indices and values)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="matrices-of-sparse-signals">
+<h2><a class="toc-backref" href="#id8">Matrices of Sparse Signals</a><a class="headerlink" href="#matrices-of-sparse-signals" title="Permalink to this headline">¶</a></h2>
+<p>Following functions analyze, transform, or construct
+collections of sparse signals organized as matrices.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.randomize_rows.html#cr.nimble.dsp.randomize_rows" title="cr.nimble.dsp.randomize_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_rows</span></code></a>(key, X)</p></td>
+<td><p>Randomizes the rows in X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.randomize_cols.html#cr.nimble.dsp.randomize_cols" title="cr.nimble.dsp.randomize_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_cols</span></code></a>(key, X)</p></td>
+<td><p>Randomizes the columns in X</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Sparse representation matrices (row-wise)</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.take_along_rows.html#cr.nimble.dsp.take_along_rows" title="cr.nimble.dsp.take_along_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_rows</span></code></a>(X, indices)</p></td>
+<td><p>Picks K entries from each row of X specified by indices matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.largest_indices_rw.html#cr.nimble.dsp.largest_indices_rw" title="cr.nimble.dsp.largest_indices_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_rw</span></code></a>(X, K)</p></td>
+<td><p>Returns the indices of K largest entries by magnitude in each row of X</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.sparse_approximation_rw.html#cr.nimble.dsp.sparse_approximation_rw" title="cr.nimble.dsp.sparse_approximation_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_rw</span></code></a>(X, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in each row of X</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Sparse representation matrices (column-wise)</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.take_along_cols.html#cr.nimble.dsp.take_along_cols" title="cr.nimble.dsp.take_along_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_cols</span></code></a>(X, indices)</p></td>
+<td><p>Picks K entries from each column of X specified by indices matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.largest_indices_cw.html#cr.nimble.dsp.largest_indices_cw" title="cr.nimble.dsp.largest_indices_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_cw</span></code></a>(X, K)</p></td>
+<td><p>Returns the indices of K largest entries by magnitude in each column of X</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.sparse_approximation_cw.html#cr.nimble.dsp.sparse_approximation_cw" title="cr.nimble.dsp.sparse_approximation_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_cw</span></code></a>(X, K)</p></td>
+<td><p>Keeps only largest K non-zero entries by magnitude in each column of X</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="artificial-noise">
-<h2><a class="toc-backref" href="#id7">Artificial Noise</a><a class="headerlink" href="#artificial-noise" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Artificial Noise</a><a class="headerlink" href="#artificial-noise" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -255,7 +343,7 @@ package.</p>
 </table>
 </section>
 <section id="synthetic-signals">
-<h2><a class="toc-backref" href="#id8">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Synthetic Signals</a><a class="headerlink" href="#synthetic-signals" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -284,7 +372,7 @@ package.</p>
 </table>
 </section>
 <section id="discrete-cosine-transform">
-<h2><a class="toc-backref" href="#id9">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id11">Discrete Cosine Transform</a><a class="headerlink" href="#discrete-cosine-transform" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -307,7 +395,7 @@ package.</p>
 </table>
 </section>
 <section id="fast-walsh-hadamard-transform">
-<h2><a class="toc-backref" href="#id10">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Fast Walsh Hadamard Transform</a><a class="headerlink" href="#fast-walsh-hadamard-transform" title="Permalink to this headline">¶</a></h2>
 <p>There is no separate Inverse Fast Walsh Hadamard Transform as FWHT is the inverse of
 itself except for a normalization factor.
 In other words,  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">fwht(fwht(x))</span> <span class="pre">/</span> <span class="pre">n</span></code> where n is the length of x.</p>
@@ -324,7 +412,7 @@ In other words,  <code class="docutils literal notranslate"><span class="pre">x<
 </table>
 </section>
 <section id="utilities">
-<h2><a class="toc-backref" href="#id11">Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />

@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.take\_along\_cols
+===============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: take_along_cols

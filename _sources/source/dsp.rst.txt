@@ -73,6 +73,58 @@ Interpolation
   interpft
 
 
+
+Sparse Signals
+------------------------------------
+
+Following functions analyze, transform, or construct signals
+which are known to be sparse.
+
+.. autosummary::
+    :toctree: _autosummary
+
+    nonzero_values
+    nonzero_indices
+    support
+    largest_indices
+    sparse_approximation
+    build_signal_from_indices_and_values
+
+
+Matrices of Sparse Signals
+------------------------------------
+
+Following functions analyze, transform, or construct
+collections of sparse signals organized as matrices.
+
+.. autosummary::
+    :toctree: _autosummary
+
+    randomize_rows
+    randomize_cols
+
+.. rubric:: Sparse representation matrices (row-wise)
+
+.. autosummary::
+    :toctree: _autosummary
+
+    take_along_rows
+    largest_indices_rw
+    sparse_approximation_rw
+
+.. rubric:: Sparse representation matrices (column-wise)
+
+.. autosummary::
+    :toctree: _autosummary
+
+    take_along_cols
+    largest_indices_cw
+    sparse_approximation_cw
+
+
+
+
+
 Artificial Noise
 -----------------------------------
 

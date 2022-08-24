@@ -320,56 +320,6 @@
 <h2><a class="toc-backref" href="#id6">Sparse Matrices</a><a class="headerlink" href="#sparse-matrices" title="Permalink to this headline">¶</a></h2>
 <p>Following functions analyze, transform, or construct representation matrices
 which are known to be sparse.</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.randomize_rows.html#cr.nimble.randomize_rows" title="cr.nimble.randomize_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_rows</span></code></a>(key, X)</p></td>
-<td><p>Randomizes the rows in X</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.randomize_cols.html#cr.nimble.randomize_cols" title="cr.nimble.randomize_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">randomize_cols</span></code></a>(key, X)</p></td>
-<td><p>Randomizes the columns in X</p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Sparse representation matrices (row-wise)</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices_rw.html#cr.nimble.largest_indices_rw" title="cr.nimble.largest_indices_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_rw</span></code></a>(X, K)</p></td>
-<td><p>Returns the indices of K largest entries by magnitude in each row of X</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.take_along_rows.html#cr.nimble.take_along_rows" title="cr.nimble.take_along_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_rows</span></code></a>(X, indices)</p></td>
-<td><p>Picks K entries from each row of X specified by indices matrix</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation_rw.html#cr.nimble.sparse_approximation_rw" title="cr.nimble.sparse_approximation_rw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_rw</span></code></a>(X, K)</p></td>
-<td><p>Keeps only largest K non-zero entries by magnitude in each row of X</p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Sparse representation matrices (column-wise)</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.largest_indices_cw.html#cr.nimble.largest_indices_cw" title="cr.nimble.largest_indices_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_indices_cw</span></code></a>(X, K)</p></td>
-<td><p>Returns the indices of K largest entries by magnitude in each column of X</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.take_along_cols.html#cr.nimble.take_along_cols" title="cr.nimble.take_along_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">take_along_cols</span></code></a>(X, indices)</p></td>
-<td><p>Picks K entries from each column of X specified by indices matrix</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.sparse_approximation_cw.html#cr.nimble.sparse_approximation_cw" title="cr.nimble.sparse_approximation_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_approximation_cw</span></code></a>(X, K)</p></td>
-<td><p>Keeps only largest K non-zero entries by magnitude in each column of X</p></td>
-</tr>
-</tbody>
-</table>
 </section>
 </section>
 

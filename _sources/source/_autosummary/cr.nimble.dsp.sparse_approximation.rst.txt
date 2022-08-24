@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.sparse\_approximation
+===================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: sparse_approximation

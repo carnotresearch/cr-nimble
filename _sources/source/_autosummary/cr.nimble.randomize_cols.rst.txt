@@ -1,6 +1,0 @@
-﻿cr.nimble.randomize\_cols
-=========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: randomize_cols

@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.randomize\_cols
+=============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: randomize_cols

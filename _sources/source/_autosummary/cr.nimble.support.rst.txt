@@ -1,6 +1,0 @@
-﻿cr.nimble.support
-=================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: support

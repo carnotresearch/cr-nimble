@@ -1,6 +1,0 @@
-﻿cr.nimble.take\_along\_cols
-===========================
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: take_along_cols
