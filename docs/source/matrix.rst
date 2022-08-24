@@ -97,27 +97,3 @@ Sparse Matrices
 Following functions analyze, transform, or construct representation matrices
 which are known to be sparse.
 
-.. autosummary::
-    :toctree: _autosummary
-
-    randomize_rows
-    randomize_cols
-
-.. rubric:: Sparse representation matrices (row-wise)
-
-.. autosummary::
-  :toctree: _autosummary
-
-    largest_indices_rw
-    take_along_rows
-    sparse_approximation_rw
-
-.. rubric:: Sparse representation matrices (column-wise)
-
-.. autosummary::
-  :toctree: _autosummary
-
-    largest_indices_cw
-    take_along_cols
-    sparse_approximation_cw
-

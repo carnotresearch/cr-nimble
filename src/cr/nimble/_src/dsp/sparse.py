@@ -12,15 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 import jax
 import jax.numpy as jnp
 from jax import random, jit
-import jax.numpy.fft as jfft
-from jax.scipy import signal
-
-from cr.nimble import sqr_norms_l2_cw, sqr_norms_l2_rw
 from cr.nimble import is_matrix
-from .discrete.number import next_pow_of_2
+
 
 def randomize_rows(key, X):
     """Randomizes the rows in X
@@ -51,6 +48,7 @@ def randomize_cols(key, X):
     m, n = X.shape
     r = random.permutation(key, n)
     return X[:, r]
+
 
 
 def largest_indices(x, K):
@@ -117,6 +115,7 @@ def take_along_cols(X, indices):
     """
     return jnp.take_along_axis(X, indices, axis=0)
 
+
 def sparse_approximation(x, K):
     """Keeps only largest K non-zero entries by magnitude in a vector x
 
@@ -169,7 +168,6 @@ def sparse_approximation_rw(X, K):
         ind = indices[r, :-K]
         X = X.at[r, ind].set(0)
     return X
-
 
 def build_signal_from_indices_and_values(length, indices, values):
     """Builds a sparse signal from its non-zero entries (specified by their indices and values)
@@ -239,14 +237,4 @@ def support(x):
     return jnp.nonzero(x)[0]
 
 
-
-
-def vec_convolve(x, h):
-    """1D full convolution based on a hack suggested by Jake Vanderplas
-
-    See https://github.com/google/jax/discussions/7961 for details
-    """
-    return signal.convolve(x[None], h[None])[0]
-
-vec_convolve_jit = jit(vec_convolve)
 

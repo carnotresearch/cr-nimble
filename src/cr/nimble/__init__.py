@@ -264,31 +264,6 @@ from cr.nimble._src.standard_matrices import (
 
 
 ########################################
-# Basic signal processing stuff
-########################################
-
-from cr.nimble._src.signal import (
-    nonzero_values,
-    nonzero_indices,
-    support,
-    randomize_rows,
-    randomize_cols,
-    largest_indices,
-    sparse_approximation,
-    build_signal_from_indices_and_values,
-
-    # row wise
-    largest_indices_rw,
-    take_along_rows,
-    sparse_approximation_rw,
-
-    # column wise
-    largest_indices_cw,
-    take_along_cols,
-    sparse_approximation_cw,
-)
-
-########################################
 # Similarity
 ########################################
 

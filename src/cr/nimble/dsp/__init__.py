@@ -19,7 +19,7 @@ Signal Processing Utilities
 # pylint: disable=W0611
 
 
-from cr.nimble._src.signal import (
+from cr.nimble._src.dsp.convolution import (
     # convolution
     vec_convolve,
     vec_convolve_jit,
@@ -76,6 +76,31 @@ from cr.nimble._src.dsp.interpolation import (
 from cr.nimble._src.dsp.features import (
     dynamic_range,
     nonzero_dynamic_range,
+)
+
+# Sparse Signals
+from cr.nimble._src.dsp.sparse import (
+    nonzero_values,
+    nonzero_indices,
+    support,
+    largest_indices,
+    sparse_approximation,
+    build_signal_from_indices_and_values,
+)
+
+
+# Sparse Signal Matrices
+from cr.nimble._src.dsp.sparse import (
+    randomize_rows,
+    randomize_cols,
+    # row wise
+    take_along_rows,
+    largest_indices_rw,
+    sparse_approximation_rw,
+    # column wise
+    take_along_cols,
+    largest_indices_cw,
+    sparse_approximation_cw,
 )
 
 # Signal Comparison
