@@ -42,7 +42,7 @@ Scaling
 .. autosummary::
     :toctree: _autosummary
 
-    scale_to_0_1s
+    scale_to_0_1
     normalize
 
 Quantization

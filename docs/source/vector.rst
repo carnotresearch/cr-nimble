@@ -79,15 +79,8 @@ which are known to be sparse.
     nonzero_indices
     support
     largest_indices
-    largest_indices_by
-    hard_threshold
-    hard_threshold_sorted
-    hard_threshold_by
-    energy_threshold
     sparse_approximation
     build_signal_from_indices_and_values
-    dynamic_range
-    nonzero_dynamic_range
 
 Miscellaneous
 -------------------------
