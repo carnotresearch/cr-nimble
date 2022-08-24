@@ -20,30 +20,65 @@ Signal Processing Utilities
 
 
 from cr.nimble._src.signal import (
-    # energy of a signal
-    energy,
-    # interpolate via fourier transform
-    interpft,
-    # statistical normalization of data
-    normalize,
-    normalize_jit,
     # convolution
     vec_convolve,
     vec_convolve_jit,
 )
 
-from cr.nimble._src.signal import (
+# Energy
+from cr.nimble._src.dsp.energy import (
 
+    # energy of a signal
+    energy,
     find_first_signal_with_energy_le_rw,
     find_first_signal_with_energy_le_cw,
 )
 
-from cr.nimble._src.signal import (
+# Thresholding
+from cr.nimble._src.dsp.thresholding import (
+
+    hard_threshold,
+    hard_threshold_sorted,
+    hard_threshold_by,
+    largest_indices_by,
+    energy_threshold,
+)
+
+# Scaling
+from cr.nimble._src.dsp.scaling import (
+
+    scale_to_0_1,
+    # statistical normalization of data
+    normalize,
+    normalize_jit,
+)
+
+# Quantization
+from cr.nimble._src.dsp.quantization import (
+    quantize_1,
+)
+
+
+# Spectrum
+from cr.nimble._src.dsp.spectrum import (
+    norm_freq,
     frequency_spectrum,
     power_spectrum
 )
 
+# Interpolation
+from cr.nimble._src.dsp.interpolation import (
+    # interpolate via fourier transform
+    interpft,
+)
 
+# Signal Features
+from cr.nimble._src.dsp.features import (
+    dynamic_range,
+    nonzero_dynamic_range,
+)
+
+# Signal Comparison
 from cr.nimble._src.signalcomparison import (
     SignalsComparison,
     snrs_cw,
@@ -51,11 +86,12 @@ from cr.nimble._src.signalcomparison import (
     snr
 )
 
+# Noise
 from cr.nimble._src.noise import (
     awgn_at_snr
 )
 
-
+# Discrete Cosine Transform
 from cr.nimble._src.dsp.dct import (
     dct,
     idct,
@@ -64,14 +100,11 @@ from cr.nimble._src.dsp.dct import (
 )
 
 
+# Walsh Hadamard
 from cr.nimble._src.dsp.wht import (
     fwht,
 )
 
 from cr.nimble._src.dsp.synthetic_signals import (
     time_values,
-)
-
-from cr.nimble._src.dsp.util import (
-    norm_freq,
 )

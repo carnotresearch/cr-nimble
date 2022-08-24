@@ -274,15 +274,8 @@ from cr.nimble._src.signal import (
     randomize_rows,
     randomize_cols,
     largest_indices,
-    hard_threshold,
-    hard_threshold_sorted,
     sparse_approximation,
     build_signal_from_indices_and_values,
-    hard_threshold_by,
-    energy_threshold,
-    largest_indices_by,
-    dynamic_range,
-    nonzero_dynamic_range,
 
     # row wise
     largest_indices_rw,
@@ -309,12 +302,3 @@ from cr.nimble._src.similarity import (
 ########################################
 # Miscellaneous stuff
 ########################################
-
-
-########################################
-# Compatibility stuff (undocumented)
-########################################
-from cr.nimble._src.signal import (
-    # energy of a signal
-    energy,
-)

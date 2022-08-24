@@ -12,21 +12,57 @@ implemented in JAX. They are available as part of the ``cr.nimble.dsp``
 package.
 
 
-Utilities
------------------------
-
 .. currentmodule:: cr.nimble.dsp
 
+Signal Energy
+-------------------------------
+
 .. autosummary::
-    :nosignatures:
     :toctree: _autosummary
 
-    time_values
+    energy
+
+Thresholding
+-------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    hard_threshold
+    hard_threshold_sorted
+    hard_threshold_by
+    largest_indices_by
+    energy_threshold
+
+
+
+Scaling
+-------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    scale_to_0_1s
+    normalize
+
+Quantization
+-------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    quantize_1
+
+
+Spectrum Analysis
+-------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
     norm_freq
     frequency_spectrum
     power_spectrum
-    energy
-    normalize
 
 Interpolation
 -------------------------------
@@ -94,4 +130,14 @@ In other words,  ``x == fwht(fwht(x)) / n`` where n is the length of x.
     :toctree: _autosummary
 
     fwht
+
+Utilities
+-----------------------
+
+
+.. autosummary::
+    :nosignatures:
+    :toctree: _autosummary
+
+    time_values
 
