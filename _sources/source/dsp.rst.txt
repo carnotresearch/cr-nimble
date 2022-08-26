@@ -43,7 +43,7 @@ Scaling
     :toctree: _autosummary
 
     scale_to_0_1
-    normalize
+    scale_0_mean_1_var
 
 Quantization
 -------------------------------

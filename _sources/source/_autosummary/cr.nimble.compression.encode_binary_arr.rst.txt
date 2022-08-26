@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.encode\_binary\_arr
+=========================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: encode_binary_arr

@@ -24,7 +24,7 @@
     <script src="../../_static/js/mathconf.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="cr.nimble.dsp.normalize" href="cr.nimble.dsp.normalize.html" />
+    <link rel="next" title="cr.nimble.dsp.scale_0_mean_1_var" href="cr.nimble.dsp.scale_0_mean_1_var.html" />
     <link rel="prev" title="cr.nimble.dsp.energy_threshold" href="cr.nimble.dsp.energy_threshold.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -71,6 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../standard.html">Standard Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Test Data Generation</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../dsp.html">Digital Signal Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compression.html">Data Compression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util.html">Utilities</a></li>
 </ul>
 </li>
@@ -85,7 +86,7 @@
   <li><a href="../index.html">API Docs</a><ul>
   <li><a href="../dsp.html">Digital Signal Processing</a><ul>
       <li>Previous: <a href="cr.nimble.dsp.energy_threshold.html" title="previous chapter">cr.nimble.dsp.energy_threshold</a></li>
-      <li>Next: <a href="cr.nimble.dsp.normalize.html" title="next chapter">cr.nimble.dsp.normalize</a></li>
+      <li>Next: <a href="cr.nimble.dsp.scale_0_mean_1_var.html" title="next chapter">cr.nimble.dsp.scale_0_mean_1_var</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -130,16 +131,16 @@
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><dl class="simple">
 <dt>A tuple comprising of:</dt><dd><ul class="simple">
+<li><p>Scaled signal</p></li>
 <li><p>The amount of shift</p></li>
 <li><p>The scale factor</p></li>
-<li><p>Scaled signal</p></li>
 </ul>
 </dd>
 </dl>
 </p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>(<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a>, <a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>)</p>
+<dd class="field-odd"><p>(<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)">jax.numpy.ndarray</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a>)</p>
 </dd>
 </dl>
 </dd></dl>

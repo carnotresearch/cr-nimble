@@ -71,6 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../standard.html">Standard Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Test Data Generation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dsp.html">Digital Signal Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compression.html">Data Compression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../util.html">Utilities</a></li>
 </ul>
 </li>
@@ -122,7 +123,22 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cr.nimble.prd">
 <span class="sig-prename descclassname"><span class="pre">cr.nimble.</span></span><span class="sig-name descname"><span class="pre">prd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/cr/nimble/_src/metrics.html#prd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cr.nimble.prd" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the percentage root mean square difference</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reference_arr</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – Reference signal (can be ND array)</p></li>
+<li><p><strong>test_arr</strong> (<a class="reference external" href="https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.html#jax.numpy.ndarray" title="(in JAX)"><em>jax.numpy.ndarray</em></a>) – Test signal (can be ND array)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>PRD measure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a>)</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 

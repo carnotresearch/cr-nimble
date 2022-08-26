@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.binary\_compression\_ratio
+================================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: binary_compression_ratio

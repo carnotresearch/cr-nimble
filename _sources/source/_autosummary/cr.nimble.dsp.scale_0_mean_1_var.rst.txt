@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.scale\_0\_mean\_1\_var
+====================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: scale_0_mean_1_var

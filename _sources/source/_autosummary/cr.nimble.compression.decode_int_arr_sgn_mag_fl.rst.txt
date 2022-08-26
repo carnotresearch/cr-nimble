@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.decode\_int\_arr\_sgn\_mag\_fl
+====================================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: decode_int_arr_sgn_mag_fl

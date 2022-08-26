@@ -209,8 +209,8 @@
 
 <span class="sd">    Returns:</span>
 <span class="sd">        (jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:</span>
-<span class="sd">            * A binary mask of the indices to be kept</span>
 <span class="sd">            * Signal after thresholding</span>
+<span class="sd">            * A binary mask of the indices to be kept</span>
 
 <span class="sd">    Note:</span>
 <span class="sd">        This function doesn&#39;t change the length of signal and can be JIT compiled</span>
@@ -237,9 +237,9 @@
     <span class="n">idx2</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">mask</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">idx2</span> <span class="o">&lt;=</span> <span class="n">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="c1"># reshuffle the mask</span>
-    <span class="n">mask2</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-    <span class="n">signal</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">*</span> <span class="n">mask2</span>
-    <span class="k">return</span> <span class="n">mask2</span><span class="p">,</span> <span class="n">signal</span></div>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="n">signal</span> <span class="o">*</span> <span class="n">mask</span>
+    <span class="k">return</span> <span class="n">signal</span><span class="p">,</span> <span class="n">mask</span></div>
 </pre></div>
 
           </div>

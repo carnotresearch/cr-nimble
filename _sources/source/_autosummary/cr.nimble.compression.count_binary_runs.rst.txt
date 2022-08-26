@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.count\_binary\_runs
+=========================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: count_binary_runs

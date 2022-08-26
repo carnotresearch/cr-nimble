@@ -227,12 +227,21 @@
 
 
 <div class="viewcode-block" id="prd"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.prd.html#cr.nimble.prd">[docs]</a><span class="k">def</span> <span class="nf">prd</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the percentage root mean square difference</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        reference_arr (jax.numpy.ndarray): Reference signal (can be ND array)</span>
+<span class="sd">        test_arr (jax.numpy.ndarray): Test signal (can be ND array)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): PRD measure</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">)</span>
     <span class="n">error</span> <span class="o">=</span> <span class="n">reference_arr</span> <span class="o">-</span> <span class="n">test_arr</span>
     <span class="n">err_energy</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">error</span><span class="p">))</span>
     <span class="n">ref_energy</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">reference_arr</span><span class="p">))</span>
     <span class="n">PRD</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">err_energy</span><span class="o">/</span><span class="n">ref_energy</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">PRD</span></div>
+    <span class="k">return</span> <span class="n">PRD</span> <span class="o">*</span> <span class="mi">100</span></div>
 
 </pre></div>
 

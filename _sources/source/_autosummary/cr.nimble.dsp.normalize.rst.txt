@@ -1,6 +1,0 @@
-﻿cr.nimble.dsp.normalize
-=======================
-
-.. currentmodule:: cr.nimble.dsp
-
-.. autofunction:: normalize

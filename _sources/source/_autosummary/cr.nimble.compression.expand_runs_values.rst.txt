@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.expand\_runs\_values
+==========================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: expand_runs_values

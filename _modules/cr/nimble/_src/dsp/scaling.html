@@ -115,7 +115,7 @@
 <span class="kn">from</span> <span class="nn">jax</span> <span class="kn">import</span> <span class="n">jit</span>
 
 
-<div class="viewcode-block" id="normalize"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.normalize.html#cr.nimble.dsp.normalize">[docs]</a><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="scale_0_mean_1_var"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.scale_0_mean_1_var.html#cr.nimble.dsp.scale_0_mean_1_var">[docs]</a><span class="k">def</span> <span class="nf">scale_0_mean_1_var</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Normalizes a data vector (data - mu) / sigma </span>
 
 <span class="sd">    Args:</span>
@@ -123,15 +123,19 @@
 <span class="sd">        axis (int): For nd arrays, the axis along which the data normalization will be done</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        (jax.numpy.ndarray): Normalized data vector/array</span>
+<span class="sd">        (jax.numpy.ndarray, jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:</span>
+<span class="sd">            * Normalized data vector/array</span>
+<span class="sd">            * Mean value(s)</span>
+<span class="sd">            * Standard deviation value(s)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">mu</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">-</span> <span class="n">mu</span>
     <span class="n">variance</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">/</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">data</span></div>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">/</span> <span class="n">sigma</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span></div>
 
-<span class="n">normalize_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<span class="n">scale_0_mean_1_var_jit</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">scale_0_mean_1_var</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 
 
 <div class="viewcode-block" id="scale_to_0_1"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.scale_to_0_1.html#cr.nimble.dsp.scale_to_0_1">[docs]</a><span class="k">def</span> <span class="nf">scale_to_0_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -141,16 +145,31 @@
 <span class="sd">        x (jax.numpy.ndarray): A signal to be scaled</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        (float, float, jax.numpy.ndarray): A tuple comprising of:</span>
+<span class="sd">        (jax.numpy.ndarray, float, float): A tuple comprising of:</span>
+<span class="sd">            * Scaled signal</span>
 <span class="sd">            * The amount of shift</span>
 <span class="sd">            * The scale factor</span>
-<span class="sd">            * Scaled signal</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">shift</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">shift</span>
     <span class="n">scale</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">scale</span>
-    <span class="k">return</span> <span class="n">shift</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">x</span></div>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">shift</span><span class="p">,</span> <span class="n">scale</span></div>
+
+<span class="k">def</span> <span class="nf">descale_from_0_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">shift</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Reverses the scaling of a signal from the range of 0 and 1</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A signal to be scaled</span>
+<span class="sd">        shift (float): The amount of shift</span>
+<span class="sd">        scale (float): The scale factor</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        jax.numpy.ndarray: Descaled signal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">scale</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">shift</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 
           </div>

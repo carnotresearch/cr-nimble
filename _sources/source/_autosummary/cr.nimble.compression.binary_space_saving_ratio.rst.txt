@@ -1,0 +1,6 @@
+﻿cr.nimble.compression.binary\_space\_saving\_ratio
+==================================================
+
+.. currentmodule:: cr.nimble.compression
+
+.. autofunction:: binary_space_saving_ratio
