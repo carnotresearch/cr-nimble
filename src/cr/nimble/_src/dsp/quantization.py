@@ -49,5 +49,5 @@ def inv_quantize_1(x, n):
     """
     # scaling
     factor = 2**n-1
-    x = x // factor
+    x = x / factor
     return x
