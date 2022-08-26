@@ -118,6 +118,37 @@
 <span class="kn">from</span> <span class="nn">bitarray.util</span> <span class="kn">import</span> <span class="n">int2ba</span><span class="p">,</span> <span class="n">ba2int</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+
+<span class="k">def</span> <span class="nf">encode_uint_arr_fl</span><span class="p">(</span><span class="n">input_arr</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encodes an array of unsigned integers to a bit array using a fixed number of bits per sample</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">bitarray</span><span class="p">()</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bits_per_sample</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="c1"># make sure that the values are clipped</span>
+    <span class="n">input_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">input_arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">input_arr</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">int2ba</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">def</span> <span class="nf">decode_uint_arr_fl</span><span class="p">(</span><span class="n">input_bit_arr</span> <span class="p">:</span> <span class="n">bitarray</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decodes an array of unsigned integers from a bit array using a fixed number of bits per sample</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">input_bit_arr</span>
+    <span class="c1"># number of bits</span>
+    <span class="n">nbits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="c1"># number of samples</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">nbits</span> <span class="o">//</span> <span class="n">bits_per_sample</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="c1"># read the value</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">ba2int</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">idx</span><span class="p">:</span><span class="n">idx</span><span class="o">+</span><span class="n">bits_per_sample</span><span class="p">])</span>
+        <span class="n">idx</span> <span class="o">+=</span> <span class="n">bits_per_sample</span>
+        <span class="n">output</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
 <div class="viewcode-block" id="encode_int_arr_sgn_mag_fl"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.compression.encode_int_arr_sgn_mag_fl.html#cr.nimble.compression.encode_int_arr_sgn_mag_fl">[docs]</a><span class="k">def</span> <span class="nf">encode_int_arr_sgn_mag_fl</span><span class="p">(</span><span class="n">input_arr</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Encodes an array of integers to a bit array using a sign bit and a fixed number of bits per sample for magnitude</span>
 <span class="sd">    &quot;&quot;&quot;</span>
