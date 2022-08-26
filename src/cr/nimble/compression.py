@@ -23,5 +23,10 @@ from cr.nimble._src.compression.binary_arrs import (
     encode_binary_arr,
     decode_binary_arr,
     binary_compression_ratio,
-    binary_space_saving_ratio
+    binary_space_saving_ratio,
+)
+
+from cr.nimble._src.compression.fixed_length import (
+    encode_int_arr_sgn_mag_fl,
+    decode_int_arr_sgn_mag_fl
 )
