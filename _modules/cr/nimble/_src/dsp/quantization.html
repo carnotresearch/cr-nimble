@@ -132,6 +132,22 @@
     <span class="c1"># type conversion from float to int</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">x</span></div>
+
+
+<span class="k">def</span> <span class="nf">inv_quantize_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Inverse quantizes a signal from n bits</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A signal to be inverse quantized</span>
+<span class="sd">        n (int): number of bits for quantization</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (jax.numpy.ndarray): Quantized signal with integer values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># scaling</span>
+    <span class="n">factor</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="n">factor</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 
           </div>
