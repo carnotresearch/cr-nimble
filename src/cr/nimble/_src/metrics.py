@@ -130,10 +130,19 @@ def signal_noise_ratio(reference_arr, test_arr):
 
 
 def prd(reference_arr, test_arr):
+    """Returns the percentage root mean square difference
+
+    Args:
+        reference_arr (jax.numpy.ndarray): Reference signal (can be ND array)
+        test_arr (jax.numpy.ndarray): Test signal (can be ND array)
+
+    Returns:
+        (float): PRD measure
+    """
     reference_arr, test_arr = promote_arg_dtypes(reference_arr, test_arr)
     error = reference_arr - test_arr
     err_energy = jnp.abs(jnp.vdot(error, error))
     ref_energy = jnp.abs(jnp.vdot(reference_arr, reference_arr))
     PRD = jnp.sqrt(err_energy/ref_energy)
-    return PRD
+    return PRD * 100
 
