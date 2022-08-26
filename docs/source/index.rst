@@ -19,4 +19,5 @@ API Docs
    standard
    data
    dsp
+   compression
    util
