@@ -21,6 +21,37 @@ from bitarray import bitarray
 from bitarray.util import int2ba, ba2int
 import numpy as np
 
+
+def encode_uint_arr_fl(input_arr, bits_per_sample: int):
+    """Encodes an array of unsigned integers to a bit array using a fixed number of bits per sample
+    """
+    a = bitarray()
+    max_val = (1 << bits_per_sample) - 1
+    # make sure that the values are clipped
+    input_arr = np.clip(input_arr, 0, max_val)
+    for value in input_arr:
+        value = int(value)
+        a.extend(int2ba(value, bits_per_sample))
+    return a
+
+def decode_uint_arr_fl(input_bit_arr : bitarray, bits_per_sample: int):
+    """Decodes an array of unsigned integers from a bit array using a fixed number of bits per sample
+    """
+    a = input_bit_arr
+    # number of bits
+    nbits = len(a)
+    # number of samples
+    n = nbits // bits_per_sample
+    output = np.empty(n, dtype=np.int)
+    idx = 0
+    for i in range(n):
+        # read the value
+        value = ba2int(a[idx:idx+bits_per_sample])
+        idx += bits_per_sample
+        output[i] = value
+    return output
+
+
 def encode_int_arr_sgn_mag_fl(input_arr, bits_per_sample: int):
     """Encodes an array of integers to a bit array using a sign bit and a fixed number of bits per sample for magnitude
     """

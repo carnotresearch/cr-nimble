@@ -106,7 +106,7 @@ def decode_binary_arr(input_bit_arr : bitarray):
         for i in range(run):
             result.append(b)
         b = 1 - b
-    return result
+    return np.array(result)
 
 
 def binary_compression_ratio(input_arr, output_arr, bits_per_sample=1):

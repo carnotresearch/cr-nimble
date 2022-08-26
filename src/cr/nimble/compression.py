@@ -27,6 +27,8 @@ from cr.nimble._src.compression.binary_arrs import (
 )
 
 from cr.nimble._src.compression.fixed_length import (
+    encode_uint_arr_fl,
+    decode_uint_arr_fl,
     encode_int_arr_sgn_mag_fl,
     decode_int_arr_sgn_mag_fl
 )
@@ -34,4 +36,14 @@ from cr.nimble._src.compression.fixed_length import (
 from cr.nimble._src.compression.run_length import (
     count_runs_values,
     expand_runs_values
+)
+
+from cr.nimble._src.compression.bits import (
+    float_to_int,
+    int_to_float,
+    int_to_bitarray,
+    read_int_from_bitarray,
+    float_to_bitarray,
+    bitarray_to_float,
+    read_float_from_bitarray
 )
