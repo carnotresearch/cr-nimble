@@ -112,8 +112,8 @@ def energy_threshold(signal, fraction):
 
     Returns:
         (jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:
-            * A binary mask of the indices to be kept
             * Signal after thresholding
+            * A binary mask of the indices to be kept
 
     Note:
         This function doesn't change the length of signal and can be JIT compiled
@@ -140,6 +140,6 @@ def energy_threshold(signal, fraction):
     idx2 = jnp.arange(n)
     mask = jnp.where(idx2 <= index, 1, 0)
     # reshuffle the mask
-    mask2 = mask.at[idx].set(mask)
-    signal = signal * mask2
-    return mask2, signal
+    mask = mask.at[idx].set(mask)
+    signal = signal * mask
+    return signal, mask
