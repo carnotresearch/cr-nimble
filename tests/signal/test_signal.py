@@ -193,7 +193,7 @@ def test_largest_indices_by():
 
 def test_normalize():
     x = jnp.arange(10) * 1.
-    y = normalize(x)
+    y, mu, sigma = scale_0_mean_1_var(x)
     assert_almost_equal(jnp.mean(y), 0)
     assert_almost_equal(jnp.var(y), 1.)
 

@@ -18,7 +18,7 @@ import jax.numpy as jnp
 from jax import jit
 
 
-def normalize(data, axis=-1):
+def scale_0_mean_1_var(data, axis=-1):
     """Normalizes a data vector (data - mu) / sigma 
 
     Args:
@@ -38,7 +38,7 @@ def normalize(data, axis=-1):
     data = data / sigma
     return data, mu, sigma
 
-normalize_jit = jit(normalize, static_argnums=(1,))
+scale_0_mean_1_var_jit = jit(scale_0_mean_1_var, static_argnums=(1,))
 
 
 def scale_to_0_1(x):

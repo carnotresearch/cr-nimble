@@ -49,8 +49,8 @@ from cr.nimble._src.dsp.scaling import (
 
     scale_to_0_1,
     # statistical normalization of data
-    normalize,
-    normalize_jit,
+    scale_0_mean_1_var,
+    scale_0_mean_1_var_jit,
 )
 
 # Quantization
