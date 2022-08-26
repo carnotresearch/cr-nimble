@@ -26,13 +26,17 @@ def normalize(data, axis=-1):
         axis (int): For nd arrays, the axis along which the data normalization will be done
 
     Returns:
-        (jax.numpy.ndarray): Normalized data vector/array
+        (jax.numpy.ndarray, jax.numpy.ndarray, jax.numpy.ndarray): A tuple comprising of:
+            * Normalized data vector/array
+            * Mean value(s)
+            * Standard deviation value(s)
     """
     mu = jnp.mean(data, axis)
     data = data - mu
     variance = jnp.var(data, axis)
-    data = data / jnp.sqrt(variance)
-    return data
+    sigma = jnp.sqrt(variance)
+    data = data / sigma
+    return data, mu, sigma
 
 normalize_jit = jit(normalize, static_argnums=(1,))
 
@@ -44,13 +48,28 @@ def scale_to_0_1(x):
         x (jax.numpy.ndarray): A signal to be scaled
 
     Returns:
-        (float, float, jax.numpy.ndarray): A tuple comprising of:
+        (jax.numpy.ndarray, float, float): A tuple comprising of:
+            * Scaled signal
             * The amount of shift
             * The scale factor
-            * Scaled signal
     """
     shift = jnp.min(x)
     x = x - shift
     scale = jnp.max(x)
     x = x / scale
-    return shift, scale, x
+    return x, shift, scale
+
+def descale_from_0_1(x, shift, scale):
+    """Reverses the scaling of a signal from the range of 0 and 1
+
+    Args:
+        x (jax.numpy.ndarray): A signal to be scaled
+        shift (float): The amount of shift
+        scale (float): The scale factor
+
+    Returns:
+        jax.numpy.ndarray: Descaled signal
+    """
+    x = x * scale
+    x = x + shift
+    return x
