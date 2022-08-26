@@ -30,3 +30,8 @@ from cr.nimble._src.compression.fixed_length import (
     encode_int_arr_sgn_mag_fl,
     decode_int_arr_sgn_mag_fl
 )
+
+from cr.nimble._src.compression.run_length import (
+    count_runs_values,
+    expand_runs_values
+)
