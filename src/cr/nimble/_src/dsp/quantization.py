@@ -35,3 +35,19 @@ def quantize_1(x, n):
     # type conversion from float to int
     x = x.astype(int)
     return x
+
+
+def inv_quantize_1(x, n):
+    """Inverse quantizes a signal from n bits
+
+    Args:
+        x (jax.numpy.ndarray): A signal to be inverse quantized
+        n (int): number of bits for quantization
+
+    Returns:
+        (jax.numpy.ndarray): Quantized signal with integer values
+    """
+    # scaling
+    factor = 2**n-1
+    x = x // factor
+    return x

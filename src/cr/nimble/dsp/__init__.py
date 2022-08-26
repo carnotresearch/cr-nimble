@@ -56,6 +56,7 @@ from cr.nimble._src.dsp.scaling import (
 # Quantization
 from cr.nimble._src.dsp.quantization import (
     quantize_1,
+    inv_quantize_1,
 )
 
 
