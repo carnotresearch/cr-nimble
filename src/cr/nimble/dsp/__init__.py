@@ -48,6 +48,7 @@ from cr.nimble._src.dsp.thresholding import (
 from cr.nimble._src.dsp.scaling import (
 
     scale_to_0_1,
+    descale_from_0_1,
     # statistical normalization of data
     scale_0_mean_1_var,
     scale_0_mean_1_var_jit,
