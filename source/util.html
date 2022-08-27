@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cr.nimble.promote_arg_dtypes" href="_autosummary/cr.nimble.promote_arg_dtypes.html" />
-    <link rel="prev" title="cr.nimble.compression.binary_space_saving_ratio" href="_autosummary/cr.nimble.compression.binary_space_saving_ratio.html" />
+    <link rel="prev" title="cr.nimble.data.three_subspaces_at_angle_jit" href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -62,16 +62,10 @@
 <li class="toctree-l2"><a class="reference internal" href="vector.html">Vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metrics.html">Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subspaces.html">Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="affine.html">Affine Spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html">Linear Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dsp.html">Digital Signal Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compression.html">Data Compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Utilities</a></li>
 </ul>
 </li>
@@ -84,7 +78,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.compression.binary_space_saving_ratio.html" title="previous chapter">cr.nimble.compression.binary_space_saving_ratio</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.data.three_subspaces_at_angle_jit.html" title="previous chapter">cr.nimble.data.three_subspaces_at_angle_jit</a></li>
       <li>Next: <a href="_autosummary/cr.nimble.promote_arg_dtypes.html" title="next chapter">cr.nimble.promote_arg_dtypes</a></li>
   </ul></li>
   </ul></li>
@@ -122,6 +116,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#data-type-management" id="id1">Data Type Management</a></p></li>
 <li><p><a class="reference internal" href="#system-information" id="id2">System Information</a></p></li>
+<li><p><a class="reference internal" href="#d-geometry" id="id3">2D Geometry</a></p></li>
 </ul>
 </div>
 <section id="data-type-management">
@@ -172,6 +167,42 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.nbytes_live_buffers.html#cr.nimble.nbytes_live_buffers" title="cr.nimble.nbytes_live_buffers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nbytes_live_buffers</span></code></a>()</p></td>
 <td><p>Returns the number of bytes consumed by the live buffers</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d-geometry">
+<h2><a class="toc-backref" href="#id3">2D Geometry</a><a class="headerlink" href="#d-geometry" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Points and Vectors</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.point2d.html#cr.nimble.point2d" title="cr.nimble.point2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point2d</span></code></a>(x, y)</p></td>
+<td><p>A point in 2D vector space</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.vec2d.html#cr.nimble.vec2d" title="cr.nimble.vec2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vec2d</span></code></a>(x, y)</p></td>
+<td><p>A vector in 2D vector space</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Transformations</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.rotate2d_cw.html#cr.nimble.rotate2d_cw" title="cr.nimble.rotate2d_cw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate2d_cw</span></code></a>(theta)</p></td>
+<td><p>Construct an operator that rotates a 2D vector by angle :math:` heta` clock-wise</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.rotate2d_ccw.html#cr.nimble.rotate2d_ccw" title="cr.nimble.rotate2d_ccw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate2d_ccw</span></code></a>(theta)</p></td>
+<td><p>Construct an operator that rotates a 2D vector by angle :math:` heta` counter-clock-wise</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.reflect2d.html#cr.nimble.reflect2d" title="cr.nimble.reflect2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reflect2d</span></code></a>(theta)</p></td>
+<td><p>Construct an operator that reflects a 2D vector across a line defined at angle :math:`  heta/2`</p></td>
 </tr>
 </tbody>
 </table>

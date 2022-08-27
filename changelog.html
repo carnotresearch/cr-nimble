@@ -60,9 +60,10 @@
 <li class="toctree-l1"><a class="reference internal" href="zzzreference.html">References</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Change Log</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#unreleased">Unreleased</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.4 - 2022-08-17</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.1.1 - 2021-12-07</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">0.1.0 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.3.0 - 2022-08-27</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.2.4 - 2022-08-17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.1.1 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">0.1.0 - 2021-12-07</a></li>
 </ul>
 </li>
 </ul>
@@ -109,22 +110,63 @@
 <li><p>The format of this log is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p></li>
 </ul>
 <section id="unreleased">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.2.4...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.3.0...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/latest/">Documentation</a></p>
 </section>
 <section id="id1">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.1...v0.2.4">0.2.4</a> - 2022-08-17<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.2.4/">Documentation</a></p>
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.2.4...v0.3.0">0.3.0</a> - 2022-08-27<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.3.0/">Documentation</a></p>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<p>Data Compression</p>
+<ul class="simple">
+<li><p>Binary data encoding/decoding</p></li>
+<li><p>Run length encoding/decoding</p></li>
+<li><p>Fixed length encoding/decoding</p></li>
+</ul>
+<p>Digital Signal Processing</p>
+<ul class="simple">
+<li><p>Scaling functions</p></li>
+<li><p>Quantized</p></li>
+<li><p>Energy fraction based thresholding</p></li>
+</ul>
+<p>Metrics</p>
+<ul class="simple">
+<li><p>Percentage root mean square difference</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Statistical normalization renamed with changes in return type</p></li>
+<li><p>Digital signal processing related functions moved under
+<code class="docutils literal notranslate"><span class="pre">cr.nimble.dsp</span></code></p></li>
+</ul>
+</section>
+<section id="improved">
+<h3>Improved<a class="headerlink" href="#improved" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Documentation improved</p></li>
+<li><p>API organization improved</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.1...v0.2.4">0.2.4</a> - 2022-08-17<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.2.4/">Documentation</a></p>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Digital signal processing utilities moved from cr-sparse to cr-nimble</p></li>
 <li><p>Moved discrete number related functions from cr-sparse.</p></li>
 <li><p>Some sparse vector and matrix processing functionality moved from cr-sparse.</p></li>
 </ul>
 </section>
-<section id="removed">
-<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h3>Removed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Unnecessary <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files removed.</p></li>
 </ul>
@@ -137,24 +179,24 @@
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>distance, matrix, ndarray, metrics, modules were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
 <li><p>some more vector functions were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
 </ul>
 </section>
-<section id="improved">
-<h3>Improved<a class="headerlink" href="#improved" title="Permalink to this headline">¶</a></h3>
+<section id="id7">
+<h3>Improved<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>All unit tests were moved to 64-bit floating point data.</p></li>
 </ul>
 </section>
 </section>
-<section id="id4">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<section id="id8">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>Initial release by refactoring code from <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code>.</p>
 </section>
 </section>

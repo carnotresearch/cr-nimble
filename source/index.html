@@ -62,16 +62,10 @@
 <li class="toctree-l2"><a class="reference internal" href="vector.html">Vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matrix.html">Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metrics.html">Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linear_systems.html">Linear Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orth.html">Orthogonalization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subspaces.html">Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="affine.html">Affine Spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="geom2d.html">2D Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard.html">Standard Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html">Linear Algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dsp.html">Digital Signal Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compression.html">Data Compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Test Data Generation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="util.html">Utilities</a></li>
 </ul>
 </li>
@@ -146,43 +140,13 @@
 <li class="toctree-l2"><a class="reference internal" href="metrics.html#snr">SNR</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="linear_systems.html">Linear Systems</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linear_systems.html#triangular-systems">Triangular Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linear_systems.html#special-dense-linear-systems">Special Dense Linear Systems</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="orth.html">Orthogonalization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="orth.html#householder-reflections">Householder Reflections</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="svdpack.html">Singular Value Decomposition</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="svdpack.html#fundamental-subspaces">Fundamental Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="svdpack.html#svd-for-bidiagonal-matrices">SVD for Bidiagonal Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="svdpack.html#truncated-svd">Truncated SVD</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="subspaces.html">Subspaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="subspaces.html#projection">Projection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="subspaces.html#principal-angles">Principal Angles</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="affine.html">Affine Spaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="affine.html#homogeneous-coordinate-system">Homogeneous Coordinate System</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="geom2d.html">2D Geometry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="geom2d.html#points-and-vectors">Points and Vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="geom2d.html#transformations">Transformations</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="standard.html">Standard Matrices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="standard.html#random-matrices">Random matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard.html#special-matrices">Special matrices</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data.html">Test Data Generation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data.html#random-keys">Random Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#random-subspaces">Random Subspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="la.html">Linear Algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="la.html#linear-systems">Linear Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html#singular-value-decomposition">Singular Value Decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html#orthogonalization">Orthogonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html#subspaces">Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html#affine-spaces">Affine Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="la.html#standard-matrices">Standard Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dsp.html">Digital Signal Processing</a><ul>
@@ -213,9 +177,15 @@
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/cr.nimble.compression.binary_space_saving_ratio.html">cr.nimble.compression.binary_space_saving_ratio</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Test Data Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#random-keys">Random Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#random-subspaces">Random Subspaces</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="util.html">Utilities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="util.html#data-type-management">Data Type Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="util.html#system-information">System Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="util.html#d-geometry">2D Geometry</a></li>
 </ul>
 </li>
 </ul>

@@ -10,14 +10,8 @@ API Docs
    vector
    matrix
    metrics
-   linear_systems
-   orth
-   svdpack
-   subspaces
-   affine
-   geom2d
-   standard
-   data
+   la
    dsp
    compression
+   data
    util
