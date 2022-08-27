@@ -1,6 +1,11 @@
 CR-Nimble
 =====================================
-Fast linear algebra and signal processing utilities with JAX
+
+CR-Nimble consists of fast linear algebra
+and signal processing routines.
+Most of the routines have been implemented using
+Google JAX. Thus, they can be easily run on
+a variety of hardware (CPU, GPU, TPU).
 
 
 .. toctree::

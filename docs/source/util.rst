@@ -36,3 +36,25 @@ System Information
 
 
 
+2D Geometry
+----------------------------
+
+.. currentmodule:: cr.nimble
+
+.. rubric:: Points and Vectors
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    point2d
+    vec2d
+
+.. rubric:: Transformations
+
+.. autosummary::
+    :toctree: _autosummary
+
+    rotate2d_cw
+    rotate2d_ccw
+    reflect2d

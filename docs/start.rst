@@ -27,7 +27,3 @@ Directly from our GITHUB repository:
 .. code:: shell
 
     python -m pip install git+https://github.com/carnotresearch/cr-nimble.git
-
-
-Examples
-----------------
