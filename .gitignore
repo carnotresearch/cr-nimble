@@ -160,3 +160,5 @@ docs/gallery/
 # airspeed velocity benchmark results
 .asv/*
 paper/paper.pdf
+
+*.html
