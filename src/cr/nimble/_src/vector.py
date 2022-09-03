@@ -107,6 +107,17 @@ def is_nondecreasing_vec(x):
     """
     return jnp.all(jnp.diff(x) >= 0)
 
+def has_equal_values_vec(x):
+    """Returns if x is a vector with equal values
+    
+    Args:
+        x (jax.numpy.ndarray): A JAX array.
+
+    Returns:
+        True if x is a non-decreasing vector.
+    """
+    return jnp.all(x == x[0])
+
 
 def to_row_vec(x):
     """Converts a line vector to a row vector
@@ -354,7 +365,7 @@ def num_largest_coeffs_for_energy_percent(a, p):
         p (float): percentage of energy
     """
     # compute energies
-    a = a ** 2
+    a = jnp.conj(a) * a
     # sort in descending order
     a = jnp.sort(a)[::-1]
     # total energy
