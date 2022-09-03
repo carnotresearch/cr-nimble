@@ -146,3 +146,41 @@ def prd(reference_arr, test_arr):
     PRD = jnp.sqrt(err_energy/ref_energy)
     return PRD * 100
 
+percent_rms_diff = prd
+
+
+def percent_space_saving(original_bits, compressed_bits):
+    """Returns the space saving ratio as percentage 
+    """
+    return 100. * (original_bits - compressed_bits) / original_bits
+
+def compression_ratio(original_bits, compressed_bits):
+    """ Returns the compression ratio as n x factor
+    """
+    return original_bits / compressed_bits
+
+
+def prd_to_snr(prd):
+    """ Converts the PRD value to SNR value
+    """
+    return - 20 * jnp.log10(prd/100)
+
+
+def cr_to_pss(cr):
+    """Converts compression ratio to percentage space savings
+    """
+    # invert it
+    cr =  1. / cr
+    # subtract original bits
+    ss = 1 - cr
+    # convert to percentage
+    pss = 100 * ss
+    return pss
+
+def pss_to_cr(pss):
+    """Converts percentage space savings to compression ratio
+    """
+    ss = pss / 100
+    cr = 1 - ss
+    cr = 1. / cr
+    return cr
