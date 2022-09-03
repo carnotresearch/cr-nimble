@@ -19,7 +19,10 @@ Error
     root_mean_squared
     root_mse
     normalized_root_mse
-    prd
+    percent_rms_diff
+    percent_space_saving
+    compression_ratio
+    prd_to_snr
 
 
 SNR

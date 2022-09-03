@@ -90,10 +90,3 @@ Pairwise Distances
   pdist_linf_rw
   pdist_linf_cw
 
-
-Sparse Matrices
--------------------------
-
-Following functions analyze, transform, or construct representation matrices
-which are known to be sparse.
-
