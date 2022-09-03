@@ -24,7 +24,7 @@ Predicates
     has_unitary_columns
     has_unitary_rows
 
-Matrix multiplication
+Matrix Multiplication
 ----------------------------
 
 .. autosummary::
@@ -33,8 +33,10 @@ Matrix multiplication
     AH_v
     mat_transpose
     mat_hermitian
+    diag_premultiply
+    diag_postmultiply
 
-Matrix parts
+Matrix Parts
 ------------------------
 
 .. autosummary::
@@ -44,6 +46,18 @@ Matrix parts
     off_diagonal_min
     off_diagonal_max
     off_diagonal_mean
+    block_diag
+
+
+Matrix Operations
+--------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    set_diagonal
+    add_to_diagonal
+
 
 
 

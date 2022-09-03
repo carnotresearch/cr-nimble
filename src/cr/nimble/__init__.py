@@ -115,7 +115,9 @@ from cr.nimble._src.matrix import (
     abs_max_idx_cw,
     abs_max_idx_rw,
     diag_premultiply,
-    diag_postmultiply
+    diag_postmultiply,
+    block_diag,
+    block_diag_jit
 )
 
 

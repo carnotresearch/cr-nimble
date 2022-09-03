@@ -308,3 +308,25 @@ def diag_postmultiply(A, d):
     """Compute A @ D where D is a diagonal matrix with entries from vector d
     """
     return jnp.multiply(A, d)
+
+
+def block_diag(A, b):
+    """Extracts the block diagonal from the given matrix 
+
+    Args:
+        A (jax.numpy.ndarray): A 2D matrix
+        b (int) : The size of each block
+
+    Returns:
+        An array of diagonal blocks: 3D array of shape m x b x b
+        where m is the number of blocks
+
+    Note:
+        b is a static argument
+    """
+    n = A.shape[0]
+    nb = n // b
+    starts = [i*b for i in range(nb)]
+    return jnp.array([A[s:s+b,s:s+b] for s in starts])
+
+block_diag_jit = jit(block_diag, static_argnums=(1,))
