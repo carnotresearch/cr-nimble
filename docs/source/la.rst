@@ -175,3 +175,27 @@ Standard Matrices
 
     pascal
     pascal_jit
+
+
+
+Toeplitz Matrices
+-------------------------
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    toeplitz_mat
+    toeplitz_mult
+
+
+Circulant Matrices
+-------------------------
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    circulant_mat
+    circulant_mult
+
