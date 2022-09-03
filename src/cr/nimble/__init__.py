@@ -62,6 +62,7 @@ from cr.nimble._src.vector import (
     is_decreasing_vec,
     is_nonincreasing_vec,
     is_nondecreasing_vec,
+    has_equal_values_vec,
     is_row_vec,
     is_col_vec,
     to_row_vec,
@@ -178,7 +179,13 @@ from cr.nimble._src.metrics import (
     normalized_root_mse,
     peak_signal_noise_ratio,
     signal_noise_ratio,
-    prd
+    percent_rms_diff,
+    prd,
+    compression_ratio,
+    percent_space_saving,
+    prd_to_snr,
+    cr_to_pss,
+    pss_to_cr
 )
 
 from cr.nimble._src.ndarray import (
@@ -262,6 +269,12 @@ from cr.nimble._src.standard_matrices import (
     pascal_jit
 )
 
+from cr.nimble._src.toeplitz import (
+    toeplitz_mat,
+    toeplitz_mult,
+    circulant_mat,
+    circulant_mult
+)
 
 ########################################
 # Similarity
@@ -273,6 +286,14 @@ from cr.nimble._src.similarity import (
     eps_neighborhood_sim
 )
 
+########################################
+# From numpy array to latex
+########################################
+
+
+from cr.nimble._src.latex import (
+    to_tex_matrix
+)
 
 ########################################
 # Miscellaneous stuff
