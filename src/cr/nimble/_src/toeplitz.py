@@ -21,6 +21,8 @@ def toeplitz_mat(c, r):
 
 
     """
+    c = jnp.asarray(c)
+    r = jnp.asarray(r)
     m = len(c)
     n = len(r)
     # assert c[0] == r[0]
