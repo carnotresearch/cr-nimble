@@ -115,6 +115,8 @@ from cr.nimble._src.signalcomparison import (
 
 # Noise
 from cr.nimble._src.noise import (
+    awgn_at_snr_ms,
+    awgn_at_snr_std,
     awgn_at_snr
 )
 

@@ -19,8 +19,8 @@ from jax import random, jit
 from cr.nimble import promote_arg_dtypes
 from cr.nimble import arr_l2norm_sqr
 
-def awgn_at_snr(key, signal, snr):
-    """Generates noise for the signal at the specified SNR
+def awgn_at_snr_ms(key, signal, snr):
+    """Generates noise for the signal at the specified SNR based on signal energy
     """
     signal = jnp.asarray(signal)
     signal = promote_arg_dtypes(signal)
@@ -32,3 +32,21 @@ def awgn_at_snr(key, signal, snr):
     sigma = 10**(noise_mean_energy_db/20)
     noise = sigma * random.normal(key, signal.shape)
     return noise
+
+
+def awgn_at_snr_std(key, signal, snr):
+    """Generates noise for the signal at the specified SNR based on std ratio
+
+    Note:
+        Signal is expected to be zero mean
+    """
+    signal = jnp.asarray(signal)
+    signal = promote_arg_dtypes(signal)
+    sigma_s = jnp.std(signal)
+    sigma_n = sigma_s*10**(-snr/20)
+    noise = sigma_n * random.normal(key, signal.shape)
+    return noise
+
+
+awgn_at_snr = awgn_at_snr_ms
+

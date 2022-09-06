@@ -132,7 +132,8 @@ Artificial Noise
 .. autosummary::
   :toctree: _autosummary
 
-  awgn_at_snr
+  awgn_at_snr_ms
+  awgn_at_snr_std
 
 
 Synthetic Signals
