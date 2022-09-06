@@ -47,6 +47,7 @@ Matrix Parts
     off_diagonal_max
     off_diagonal_mean
     block_diag
+    mat_column_blocks
 
 
 Matrix Operations

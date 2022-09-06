@@ -117,7 +117,8 @@ from cr.nimble._src.matrix import (
     diag_premultiply,
     diag_postmultiply,
     block_diag,
-    block_diag_jit
+    block_diag_jit,
+    mat_column_blocks
 )
 
 

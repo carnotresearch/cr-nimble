@@ -330,3 +330,23 @@ def block_diag(A, b):
     return jnp.array([A[s:s+b,s:s+b] for s in starts])
 
 block_diag_jit = jit(block_diag, static_argnums=(1,))
+
+
+def mat_column_blocks(A, n_blocks):
+    """Splits the columns of a matrix into blocks and returns a 3D array
+
+    Args:
+        A (jax.numpy.ndarray): A 2D matrix
+        n_blocks (int) : The number of blocks
+
+
+    Returns:
+        An array of matrices where each matrix is a block of columns
+
+    Note:
+        n_blocks is a static argument.
+        The number of columns in A must be a multiple of n_blocks
+    """
+    m, n = A.shape
+    blocks = A.swapaxes(0, 1).reshape(n_blocks, -1, m).swapaxes(1,2)
+    return blocks
