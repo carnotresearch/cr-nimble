@@ -180,6 +180,7 @@ from cr.nimble._src.metrics import (
     root_mse,
     normalization_factor,
     normalized_root_mse,
+    normalized_mse,
     peak_signal_noise_ratio,
     signal_noise_ratio,
     percent_rms_diff,

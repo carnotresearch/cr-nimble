@@ -77,14 +77,34 @@ def normalized_root_mse(reference_arr, test_arr, normalization='euclidean'):
     """
     rmse = root_mse(reference_arr, test_arr)
     denom = normalization_factor(reference_arr, normalization)
-    # make sure that denom is non-zero
+    # make sure that denominator is non-zero
     eps = jnp.finfo(float).eps
     denom = denom + eps
     return rmse / denom
 
+
+def normalized_mse(reference_arr, test_arr):
+    """Returns the normalized mean square error between two arrays
+    """
+    # check shape compatibility
+    check_shapes_are_equal(reference_arr, test_arr)
+    # promote to same inexact type (real or complex)
+    reference_arr, test_arr = promote_arg_dtypes(reference_arr, test_arr)
+    diff = reference_arr - test_arr
+    # We need to handle both real and complex cases
+    numer = jnp.sum(jnp.conj(diff) * diff)
+    denom = jnp.sum(jnp.conj(reference_arr) * reference_arr)
+    # make sure that values are real
+    numer = jnp.abs(numer)
+    denom = jnp.abs(denom)
+    # make sure that denominator is non-zero
+    eps = jnp.finfo(float).eps
+    denom = denom + eps
+    return numer / denom
+
 @jit
 def peak_signal_noise_ratio(reference_arr, test_arr):
-    """Returns the Peak Signal to Noie Ratio between two arrays 
+    """Returns the Peak Signal to Noise Ratio between two arrays 
     """
     min_val, max_val = dtype_ranges[reference_arr.dtype]
     data_min = jnp.min(reference_arr)
