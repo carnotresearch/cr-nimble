@@ -1,0 +1,6 @@
+﻿cr.nimble.toeplitz\_mat
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: toeplitz_mat

@@ -1,0 +1,6 @@
+﻿cr.nimble.percent\_rms\_diff
+============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: percent_rms_diff

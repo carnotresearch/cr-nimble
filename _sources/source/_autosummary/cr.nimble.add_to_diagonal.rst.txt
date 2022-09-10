@@ -1,0 +1,6 @@
+﻿cr.nimble.add\_to\_diagonal
+===========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: add_to_diagonal

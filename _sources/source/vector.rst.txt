@@ -23,6 +23,7 @@ Predicates
     is_decreasing_vec
     is_nonincreasing_vec
     is_nondecreasing_vec
+    has_equal_values_vec
 
 Unary Operations
 ----------------------------------
@@ -41,7 +42,6 @@ Unary Operations
     vec_rotate_right_n
     vec_shift_left_n
     vec_rotate_left_n 
-    vec_unit_jit
     vec_repeat_at_end
     vec_repeat_at_start
     vec_centered

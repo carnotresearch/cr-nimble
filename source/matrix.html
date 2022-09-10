@@ -117,11 +117,11 @@
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#predicates" id="id1">Predicates</a></p></li>
-<li><p><a class="reference internal" href="#matrix-multiplication" id="id2">Matrix multiplication</a></p></li>
-<li><p><a class="reference internal" href="#matrix-parts" id="id3">Matrix parts</a></p></li>
-<li><p><a class="reference internal" href="#row-wise-and-column-wise-norms" id="id4">Row wise and column wise norms</a></p></li>
-<li><p><a class="reference internal" href="#pairwise-distances" id="id5">Pairwise Distances</a></p></li>
-<li><p><a class="reference internal" href="#sparse-matrices" id="id6">Sparse Matrices</a></p></li>
+<li><p><a class="reference internal" href="#matrix-multiplication" id="id2">Matrix Multiplication</a></p></li>
+<li><p><a class="reference internal" href="#matrix-parts" id="id3">Matrix Parts</a></p></li>
+<li><p><a class="reference internal" href="#matrix-operations" id="id4">Matrix Operations</a></p></li>
+<li><p><a class="reference internal" href="#row-wise-and-column-wise-norms" id="id5">Row wise and column wise norms</a></p></li>
+<li><p><a class="reference internal" href="#pairwise-distances" id="id6">Pairwise Distances</a></p></li>
 </ul>
 </div>
 <section id="predicates">
@@ -163,7 +163,7 @@
 </table>
 </section>
 <section id="matrix-multiplication">
-<h2><a class="toc-backref" href="#id2">Matrix multiplication</a><a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Matrix Multiplication</a><a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -179,11 +179,17 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.mat_hermitian.html#cr.nimble.mat_hermitian" title="cr.nimble.mat_hermitian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mat_hermitian</span></code></a>(a)</p></td>
 <td><p>Returns the conjugate transpose of an array of matrices</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.diag_premultiply.html#cr.nimble.diag_premultiply" title="cr.nimble.diag_premultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diag_premultiply</span></code></a>(d, A)</p></td>
+<td><p>Compute D &#64; A where D is a diagonal matrix with entries from vector d</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.diag_postmultiply.html#cr.nimble.diag_postmultiply" title="cr.nimble.diag_postmultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diag_postmultiply</span></code></a>(A, d)</p></td>
+<td><p>Compute A &#64; D where D is a diagonal matrix with entries from vector d</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="matrix-parts">
-<h2><a class="toc-backref" href="#id3">Matrix parts</a><a class="headerlink" href="#matrix-parts" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Matrix Parts</a><a class="headerlink" href="#matrix-parts" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -202,11 +208,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.off_diagonal_mean.html#cr.nimble.off_diagonal_mean" title="cr.nimble.off_diagonal_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">off_diagonal_mean</span></code></a>(A)</p></td>
 <td><p>Returns the maximum of the off diagonal elements</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.block_diag.html#cr.nimble.block_diag" title="cr.nimble.block_diag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">block_diag</span></code></a>(A, b)</p></td>
+<td><p>Extracts the block diagonal from the given matrix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.mat_column_blocks.html#cr.nimble.mat_column_blocks" title="cr.nimble.mat_column_blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mat_column_blocks</span></code></a>(A, n_blocks)</p></td>
+<td><p>Splits the columns of a matrix into blocks and returns a 3D array</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="matrix-operations">
+<h2><a class="toc-backref" href="#id4">Matrix Operations</a><a class="headerlink" href="#matrix-operations" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.set_diagonal.html#cr.nimble.set_diagonal" title="cr.nimble.set_diagonal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_diagonal</span></code></a>(A, value)</p></td>
+<td><p>Sets the diagonal elements to a specific value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.add_to_diagonal.html#cr.nimble.add_to_diagonal" title="cr.nimble.add_to_diagonal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_diagonal</span></code></a>(A, value)</p></td>
+<td><p>Add a specific value to the diagonal elements</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="row-wise-and-column-wise-norms">
-<h2><a class="toc-backref" href="#id4">Row wise and column wise norms</a><a class="headerlink" href="#row-wise-and-column-wise-norms" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Row wise and column wise norms</a><a class="headerlink" href="#row-wise-and-column-wise-norms" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -253,7 +282,7 @@
 </table>
 </section>
 <section id="pairwise-distances">
-<h2><a class="toc-backref" href="#id5">Pairwise Distances</a><a class="headerlink" href="#pairwise-distances" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Pairwise Distances</a><a class="headerlink" href="#pairwise-distances" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -310,11 +339,6 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="sparse-matrices">
-<h2><a class="toc-backref" href="#id6">Sparse Matrices</a><a class="headerlink" href="#sparse-matrices" title="Permalink to this headline">¶</a></h2>
-<p>Following functions analyze, transform, or construct representation matrices
-which are known to be sparse.</p>
 </section>
 </section>
 

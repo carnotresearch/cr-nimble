@@ -1,0 +1,6 @@
+﻿cr.nimble.prd\_to\_snr
+======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: prd_to_snr

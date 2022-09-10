@@ -1,0 +1,6 @@
+﻿cr.nimble.percent\_space\_saving
+================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: percent_space_saving

@@ -1,0 +1,6 @@
+﻿cr.nimble.toeplitz\_mult
+========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: toeplitz_mult

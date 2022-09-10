@@ -1,0 +1,6 @@
+﻿cr.nimble.has\_equal\_values\_vec
+=================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: has_equal_values_vec

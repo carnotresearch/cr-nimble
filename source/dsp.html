@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cr.nimble.dsp.energy" href="_autosummary/cr.nimble.dsp.energy.html" />
-    <link rel="prev" title="cr.nimble.pascal_jit" href="_autosummary/cr.nimble.pascal_jit.html" />
+    <link rel="prev" title="cr.nimble.circulant_mult" href="_autosummary/cr.nimble.circulant_mult.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -78,7 +78,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">API Docs</a><ul>
-      <li>Previous: <a href="_autosummary/cr.nimble.pascal_jit.html" title="previous chapter">cr.nimble.pascal_jit</a></li>
+      <li>Previous: <a href="_autosummary/cr.nimble.circulant_mult.html" title="previous chapter">cr.nimble.circulant_mult</a></li>
       <li>Next: <a href="_autosummary/cr.nimble.dsp.energy.html" title="next chapter">cr.nimble.dsp.energy</a></li>
   </ul></li>
   </ul></li>
@@ -331,8 +331,11 @@ collections of sparse signals organized as matrices.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.awgn_at_snr.html#cr.nimble.dsp.awgn_at_snr" title="cr.nimble.dsp.awgn_at_snr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">awgn_at_snr</span></code></a>(key, signal, snr)</p></td>
-<td><p>Generates noise for the signal at the specified SNR</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.awgn_at_snr_ms.html#cr.nimble.dsp.awgn_at_snr_ms" title="cr.nimble.dsp.awgn_at_snr_ms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">awgn_at_snr_ms</span></code></a>(key, signal, snr)</p></td>
+<td><p>Generates noise for the signal at the specified SNR based on signal energy</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/cr.nimble.dsp.awgn_at_snr_std.html#cr.nimble.dsp.awgn_at_snr_std" title="cr.nimble.dsp.awgn_at_snr_std"><code class="xref py py-obj docutils literal notranslate"><span class="pre">awgn_at_snr_std</span></code></a>(key, signal, snr)</p></td>
+<td><p>Generates noise for the signal at the specified SNR based on std ratio</p></td>
 </tr>
 </tbody>
 </table>

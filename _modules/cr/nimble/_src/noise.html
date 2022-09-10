@@ -116,8 +116,8 @@
 <span class="kn">from</span> <span class="nn">cr.nimble</span> <span class="kn">import</span> <span class="n">promote_arg_dtypes</span>
 <span class="kn">from</span> <span class="nn">cr.nimble</span> <span class="kn">import</span> <span class="n">arr_l2norm_sqr</span>
 
-<div class="viewcode-block" id="awgn_at_snr"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.dsp.awgn_at_snr.html#cr.nimble.dsp.awgn_at_snr">[docs]</a><span class="k">def</span> <span class="nf">awgn_at_snr</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">snr</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Generates noise for the signal at the specified SNR</span>
+<div class="viewcode-block" id="awgn_at_snr_ms"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.dsp.awgn_at_snr_ms.html#cr.nimble.dsp.awgn_at_snr_ms">[docs]</a><span class="k">def</span> <span class="nf">awgn_at_snr_ms</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">snr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generates noise for the signal at the specified SNR based on signal energy</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">signal</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
     <span class="n">signal</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
@@ -129,6 +129,24 @@
     <span class="n">sigma</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">noise_mean_energy_db</span><span class="o">/</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">noise</span> <span class="o">=</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">noise</span></div>
+
+
+<div class="viewcode-block" id="awgn_at_snr_std"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.dsp.awgn_at_snr_std.html#cr.nimble.dsp.awgn_at_snr_std">[docs]</a><span class="k">def</span> <span class="nf">awgn_at_snr_std</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">snr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generates noise for the signal at the specified SNR based on std ratio</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        Signal is expected to be zero mean</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">signal</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">sigma_s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">sigma_n</span> <span class="o">=</span> <span class="n">sigma_s</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">snr</span><span class="o">/</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">noise</span> <span class="o">=</span> <span class="n">sigma_n</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">noise</span></div>
+
+
+<span class="n">awgn_at_snr</span> <span class="o">=</span> <span class="n">awgn_at_snr_ms</span>
+
 </pre></div>
 
           </div>

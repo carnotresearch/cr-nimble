@@ -1,0 +1,6 @@
+﻿cr.nimble.normalized\_mse
+=========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: normalized_mse

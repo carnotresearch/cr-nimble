@@ -1,0 +1,6 @@
+﻿cr.nimble.block\_diag
+=====================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: block_diag

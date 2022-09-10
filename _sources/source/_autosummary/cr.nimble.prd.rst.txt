@@ -1,6 +1,0 @@
-﻿cr.nimble.prd
-=============
-
-.. currentmodule:: cr.nimble
-
-.. autofunction:: prd

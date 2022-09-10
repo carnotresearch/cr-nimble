@@ -1,0 +1,6 @@
+﻿cr.nimble.circulant\_mat
+========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: circulant_mat

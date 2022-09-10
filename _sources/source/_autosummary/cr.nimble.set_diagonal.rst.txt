@@ -1,0 +1,6 @@
+﻿cr.nimble.set\_diagonal
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: set_diagonal

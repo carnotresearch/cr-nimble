@@ -204,6 +204,17 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="has_equal_values_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.has_equal_values_vec.html#cr.nimble.has_equal_values_vec">[docs]</a><span class="k">def</span> <span class="nf">has_equal_values_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns if x is a vector with equal values</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (jax.numpy.ndarray): A JAX array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if x is a non-decreasing vector.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
+
 
 <div class="viewcode-block" id="to_row_vec"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.to_row_vec.html#cr.nimble.to_row_vec">[docs]</a><span class="k">def</span> <span class="nf">to_row_vec</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Converts a line vector to a row vector</span>
@@ -451,7 +462,7 @@
 <span class="sd">        p (float): percentage of energy</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># compute energies</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">a</span>
     <span class="c1"># sort in descending order</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="c1"># total energy</span>

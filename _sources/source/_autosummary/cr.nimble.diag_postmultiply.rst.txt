@@ -1,0 +1,6 @@
+﻿cr.nimble.diag\_postmultiply
+============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: diag_postmultiply

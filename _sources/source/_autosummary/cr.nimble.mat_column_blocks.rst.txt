@@ -1,0 +1,6 @@
+﻿cr.nimble.mat\_column\_blocks
+=============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: mat_column_blocks

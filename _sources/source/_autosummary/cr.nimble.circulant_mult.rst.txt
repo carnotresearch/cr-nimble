@@ -1,0 +1,6 @@
+﻿cr.nimble.circulant\_mult
+=========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: circulant_mult

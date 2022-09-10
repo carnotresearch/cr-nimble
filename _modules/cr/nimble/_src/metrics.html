@@ -174,14 +174,34 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">rmse</span> <span class="o">=</span> <span class="n">root_mse</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">)</span>
     <span class="n">denom</span> <span class="o">=</span> <span class="n">normalization_factor</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">normalization</span><span class="p">)</span>
-    <span class="c1"># make sure that denom is non-zero</span>
+    <span class="c1"># make sure that denominator is non-zero</span>
     <span class="n">eps</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
     <span class="n">denom</span> <span class="o">=</span> <span class="n">denom</span> <span class="o">+</span> <span class="n">eps</span>
     <span class="k">return</span> <span class="n">rmse</span> <span class="o">/</span> <span class="n">denom</span></div>
 
+
+<div class="viewcode-block" id="normalized_mse"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalized_mse.html#cr.nimble.normalized_mse">[docs]</a><span class="k">def</span> <span class="nf">normalized_mse</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the normalized mean square error between two arrays</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># check shape compatibility</span>
+    <span class="n">check_shapes_are_equal</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">)</span>
+    <span class="c1"># promote to same inexact type (real or complex)</span>
+    <span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">)</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">reference_arr</span> <span class="o">-</span> <span class="n">test_arr</span>
+    <span class="c1"># We need to handle both real and complex cases</span>
+    <span class="n">numer</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">*</span> <span class="n">diff</span><span class="p">)</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">)</span> <span class="o">*</span> <span class="n">reference_arr</span><span class="p">)</span>
+    <span class="c1"># make sure that values are real</span>
+    <span class="n">numer</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">numer</span><span class="p">)</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">denom</span><span class="p">)</span>
+    <span class="c1"># make sure that denominator is non-zero</span>
+    <span class="n">eps</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">denom</span> <span class="o">+</span> <span class="n">eps</span>
+    <span class="k">return</span> <span class="n">numer</span> <span class="o">/</span> <span class="n">denom</span></div>
+
 <div class="viewcode-block" id="peak_signal_noise_ratio"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.peak_signal_noise_ratio.html#cr.nimble.peak_signal_noise_ratio">[docs]</a><span class="nd">@jit</span>
 <span class="k">def</span> <span class="nf">peak_signal_noise_ratio</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the Peak Signal to Noie Ratio between two arrays </span>
+    <span class="sd">&quot;&quot;&quot;Returns the Peak Signal to Noise Ratio between two arrays </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span> <span class="o">=</span> <span class="n">dtype_ranges</span><span class="p">[</span><span class="n">reference_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span>
     <span class="n">data_min</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">)</span>
@@ -226,7 +246,7 @@
 
 
 
-<div class="viewcode-block" id="prd"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.prd.html#cr.nimble.prd">[docs]</a><span class="k">def</span> <span class="nf">prd</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">prd</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">test_arr</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the percentage root mean square difference</span>
 
 <span class="sd">    Args:</span>
@@ -241,8 +261,46 @@
     <span class="n">err_energy</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">error</span><span class="p">))</span>
     <span class="n">ref_energy</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">reference_arr</span><span class="p">,</span> <span class="n">reference_arr</span><span class="p">))</span>
     <span class="n">PRD</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">err_energy</span><span class="o">/</span><span class="n">ref_energy</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">PRD</span> <span class="o">*</span> <span class="mi">100</span></div>
+    <span class="k">return</span> <span class="n">PRD</span> <span class="o">*</span> <span class="mi">100</span>
 
+<span class="n">percent_rms_diff</span> <span class="o">=</span> <span class="n">prd</span>
+
+
+<div class="viewcode-block" id="percent_space_saving"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.percent_space_saving.html#cr.nimble.percent_space_saving">[docs]</a><span class="k">def</span> <span class="nf">percent_space_saving</span><span class="p">(</span><span class="n">original_bits</span><span class="p">,</span> <span class="n">compressed_bits</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the space saving ratio as percentage </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">100.</span> <span class="o">*</span> <span class="p">(</span><span class="n">original_bits</span> <span class="o">-</span> <span class="n">compressed_bits</span><span class="p">)</span> <span class="o">/</span> <span class="n">original_bits</span></div>
+
+<div class="viewcode-block" id="compression_ratio"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.compression_ratio.html#cr.nimble.compression_ratio">[docs]</a><span class="k">def</span> <span class="nf">compression_ratio</span><span class="p">(</span><span class="n">original_bits</span><span class="p">,</span> <span class="n">compressed_bits</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Returns the compression ratio as n x factor</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">original_bits</span> <span class="o">/</span> <span class="n">compressed_bits</span></div>
+
+
+<div class="viewcode-block" id="prd_to_snr"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.prd_to_snr.html#cr.nimble.prd_to_snr">[docs]</a><span class="k">def</span> <span class="nf">prd_to_snr</span><span class="p">(</span><span class="n">prd</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Converts the PRD value to SNR value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="o">-</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">jnp</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">prd</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">cr_to_pss</span><span class="p">(</span><span class="n">cr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts compression ratio to percentage space savings</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># invert it</span>
+    <span class="n">cr</span> <span class="o">=</span>  <span class="mf">1.</span> <span class="o">/</span> <span class="n">cr</span>
+    <span class="c1"># subtract original bits</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">cr</span>
+    <span class="c1"># convert to percentage</span>
+    <span class="n">pss</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">ss</span>
+    <span class="k">return</span> <span class="n">pss</span>
+
+<span class="k">def</span> <span class="nf">pss_to_cr</span><span class="p">(</span><span class="n">pss</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts percentage space savings to compression ratio</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">pss</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">cr</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">ss</span>
+    <span class="n">cr</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">cr</span>
+    <span class="k">return</span> <span class="n">cr</span>
 </pre></div>
 
           </div>

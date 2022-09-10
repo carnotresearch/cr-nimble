@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.awgn\_at\_snr\_ms
+===============================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: awgn_at_snr_ms

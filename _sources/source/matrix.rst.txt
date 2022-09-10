@@ -24,7 +24,7 @@ Predicates
     has_unitary_columns
     has_unitary_rows
 
-Matrix multiplication
+Matrix Multiplication
 ----------------------------
 
 .. autosummary::
@@ -33,8 +33,10 @@ Matrix multiplication
     AH_v
     mat_transpose
     mat_hermitian
+    diag_premultiply
+    diag_postmultiply
 
-Matrix parts
+Matrix Parts
 ------------------------
 
 .. autosummary::
@@ -44,6 +46,19 @@ Matrix parts
     off_diagonal_min
     off_diagonal_max
     off_diagonal_mean
+    block_diag
+    mat_column_blocks
+
+
+Matrix Operations
+--------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    set_diagonal
+    add_to_diagonal
+
 
 
 
@@ -89,11 +104,4 @@ Pairwise Distances
   pairwise_linf_distances_cw
   pdist_linf_rw
   pdist_linf_cw
-
-
-Sparse Matrices
--------------------------
-
-Following functions analyze, transform, or construct representation matrices
-which are known to be sparse.
 
