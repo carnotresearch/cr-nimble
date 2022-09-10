@@ -10,6 +10,47 @@ All notable changes to this project will be documented in this file.
 [Documentation](https://cr-nimble.readthedocs.io/en/latest/)
 
 
+## [0.3.1] - 2022-09-10
+
+[Documentation](https://cr-nimble.readthedocs.io/en/v0.3.1/)
+
+### Added
+
+Metrics
+
+- normalized_mse
+- percent_rms_diff
+- compression_ratio
+- cr_to_pss
+- pss_to_cr
+
+Noise
+
+- awgn_at_snr_std
+
+Matrices
+
+- mat_column_blocks
+- block_diag
+
+Vectors
+
+- has_equal_values_vec
+
+Special matrices
+
+- toeplitz_mat
+- toeplitz_mult
+- circulant_mat
+- circulant_mult
+
+
+Misc
+
+- to_tex_matrix
+
+
+
 ## [0.3.0] - 2022-08-27
 
 [Documentation](https://cr-nimble.readthedocs.io/en/v0.3.0/)
@@ -17,16 +58,19 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 Data Compression
+
 - Binary data encoding/decoding
 - Run length encoding/decoding
 - Fixed length encoding/decoding
 
 Digital Signal Processing
+
 - Scaling functions
 - Quantized
 - Energy fraction based thresholding
 
 Metrics
+
 - Percentage root mean square difference
 
 ### Removed
@@ -81,7 +125,8 @@ Metrics
 Initial release by refactoring code from `cr-nimble`.
 
 
-[Unreleased]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.1...HEAD
+[0.3.0]: https://github.com/carnotresearch/cr-nimble/compare/0.3.0...v0.3.1
 [0.3.0]: https://github.com/carnotresearch/cr-nimble/compare/0.2.4...v0.3.0
 [0.2.4]: https://github.com/carnotresearch/cr-nimble/compare/0.1.1...v0.2.4
 [0.1.1]: https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1
