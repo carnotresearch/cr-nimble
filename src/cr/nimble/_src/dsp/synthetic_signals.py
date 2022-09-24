@@ -238,3 +238,13 @@ def gaussian_pulse(fs, T, b, fc=1000, bw=0.5, bwr=-6, retquad=False, retenv=Fals
         else:
             return t, real_part
 
+
+def picket_fence(n, dtype=int):
+    """Generates a picket fence signal
+
+    Args:
+        n (int): Length of signal
+    """
+    n2 = int(math.sqrt(n))
+    z = jnp.zeros(n, dtype=dtype)
+    return z.at[:n:n2].set(1)
