@@ -65,6 +65,16 @@ Norm
     normalize_linf
 
 
+Circular Buffer
+-------------------------
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    cbuf_push_left
+    cbuf_push_right
+
 
 Miscellaneous
 -------------------------

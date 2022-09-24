@@ -406,3 +406,29 @@ def vec_to_windows(x, wlen):
     return jnp.reshape(x[:s], (m, wlen)).T
 
 vec_to_windows_jit = jit(vec_to_windows, static_argnums=(1,))
+
+
+
+def cbuf_push_left(buf, val):
+    """Left shift the contents of the vector
+
+    Args:
+        buf (jax.numpy.ndarray): A circular buffer
+        val: A value to be pushed in the buffer from left
+
+    Returns:
+        jax.numpy.ndarray: modified buffer
+    """
+    return buf.at[1:].set(buf[:-1]).at[0].set(val)
+
+def cbuf_push_right(buf, val):
+    """Left shift the contents of the vector
+
+    Args:
+        buf (jax.numpy.ndarray): A circular buffer
+        val: A value to be pushed in the buffer from left
+
+    Returns:
+        jax.numpy.ndarray: modified buffer
+    """
+    return buf.at[:-1].set(buf[1:]).at[-1].set(val)

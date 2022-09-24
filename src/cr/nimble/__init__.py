@@ -93,6 +93,11 @@ from cr.nimble._src.vector import (
     num_largest_coeffs_for_energy_percent
 )
 
+from cr.nimble._src.vector import (
+    cbuf_push_left,
+    cbuf_push_right
+)
+
 from cr.nimble._src.matrix import (
     AH_v,
     mat_transpose,
