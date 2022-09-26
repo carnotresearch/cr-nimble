@@ -2,7 +2,7 @@
 Utility functions for working with vectors
 """
 
-from jax import jit, lax
+from jax import jit, lax, vmap
 import jax.numpy as jnp
 
 from .util import promote_arg_dtypes
@@ -380,6 +380,17 @@ def num_largest_coeffs_for_energy_percent(a, p):
     index =  jnp.argmax(cmf >= q)
     return index + 1
 
+
+def vec_swap_entries(x, i, j):
+    """Swaps two entries in a vector
+    """
+    xi = x[i]
+    xj = x[j]
+    x = x.at[i].set(xj)
+    x = x.at[j].set(xi)
+    return x
+
+
 ########################################################
 #  Sliding Windows
 ########################################################
@@ -408,6 +419,9 @@ def vec_to_windows(x, wlen):
 vec_to_windows_jit = jit(vec_to_windows, static_argnums=(1,))
 
 
+########################################################
+#  Circular Buffer
+########################################################
 
 def cbuf_push_left(buf, val):
     """Left shift the contents of the vector
@@ -432,3 +446,117 @@ def cbuf_push_right(buf, val):
         jax.numpy.ndarray: modified buffer
     """
     return buf.at[:-1].set(buf[1:]).at[-1].set(val)
+
+
+########################################################
+#  Heap
+########################################################
+
+
+def is_min_heap(x):
+    """ Checks if x is a min heap
+    """
+    n = len(x)
+    idx = jnp.arange(1, n, dtype=int)
+    parents = (idx-1) // 2
+    return jnp.all(x[parents] <= x[1:])
+
+def is_max_heap(x):
+    """ Checks if x is a max heap
+    """
+    n = len(x)
+    idx = jnp.arange(1, n, dtype=int)
+    parents = (idx-1) // 2
+    return jnp.all(x[parents] >= x[1:])
+
+def left_child_idx(idx):
+    """Returns the index of the left child
+    """
+    return (idx << 1) + 1
+
+def right_child_idx(idx):
+    """Returns the index of the right child
+    """
+    return (idx + 1) << 1
+
+def parent_idx(idx):
+    """Returns the parent index for an index
+    """
+    return (idx - 1) >> 1
+
+def build_max_heap(x):
+    """Converts x into a max heap
+    """
+    def cond_func(state):
+        x,c,p = state
+        return jnp.logical_and(x[c] > x[p], c > 0)
+
+    def body_func(state):
+        x,c,p = state
+        xc = x[c]
+        xp = x[p]
+        x = x.at[c].set(xp)
+        x = x.at[p].set(xc)
+        c = p
+        p = (p - 1) >> 1
+        return x, c, p
+
+    def main_body(i, x):
+        # parent index
+        p = (i - 1) >> 1
+        # heapify
+        x, _, _ = lax.while_loop(cond_func, body_func, (x, i, p))
+        return x
+
+    return lax.fori_loop(1, len(x), main_body, x)
+
+
+
+def largest_plr(x, idx):
+    """Return the index of the largest value between a
+    parent and its children
+    """
+    l = (idx << 1) + 1
+    r = (idx + 1) << 1
+    largest = jnp.where(x[idx] < x[l], l, idx)
+    largest = jnp.where(x[largest] < x[r], r, largest)
+    return largest
+
+def heapify_subtree(x, idx):
+    """Heapifies a subtree starting from a given node
+    """
+    n = len(x)
+    n2 = n >> 1
+
+    def body_func(state):
+        x, idx, _ = state
+        largest = largest_plr(x, idx)
+        change = largest != idx
+        x = lax.cond(change,
+            lambda x: vec_swap_entries(x, largest, idx),
+            lambda x: x,
+            x)
+        return x, largest, change
+
+    def cond_func(state):
+        x, idx, change = state
+        return jnp.logical_and(idx < n2, change)
+
+    state = x, idx, True
+    state = lax.while_loop(cond_func, body_func, state)
+    x, idx, change = state
+    return x
+
+
+def delete_top_from_max_heap(x):
+    """Removes the top element from a max heap retaining its heap structure
+    """
+    last = x[-1]
+    x = x.at[0].set(last)[:-1]
+    return heapify_subtree(x, 0)
+
+
+def build_max_heap2(x, w=20):
+    x2 = jnp.reshape(x, (-1, w))
+    x2 = vmap(build_max_heap)(x2)
+    return jnp.ravel(x2)

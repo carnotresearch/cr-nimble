@@ -87,10 +87,23 @@ from cr.nimble._src.vector import (
     vec_to_windows,
     vec_to_windows_jit,
     vec_mag_desc,
+    vec_swap_entries,
     vec_to_pmf,
     vec_to_cmf,
     cmf_find_quantile_index,
     num_largest_coeffs_for_energy_percent
+)
+
+from cr.nimble._src.vector import (
+    is_min_heap,
+    is_max_heap,
+    left_child_idx,
+    right_child_idx,
+    parent_idx,
+    build_max_heap,
+    largest_plr,
+    heapify_subtree,
+    delete_top_from_max_heap
 )
 
 from cr.nimble._src.vector import (

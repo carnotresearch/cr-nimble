@@ -49,6 +49,7 @@ Unary Operations
     vec_repeat_at_end_jit
     vec_repeat_at_start_jit
     vec_centered_jit
+    vec_swap_entries
 
 Norm
 ----------------------------------
@@ -74,6 +75,24 @@ Circular Buffer
 
     cbuf_push_left
     cbuf_push_right
+
+
+Binary Heap
+-------------------------
+
+
+.. autosummary::
+    :toctree: _autosummary
+
+    is_min_heap
+    is_max_heap
+    left_child_idx
+    right_child_idx
+    parent_idx
+    build_max_heap
+    largest_plr
+    heapify_subtree
+    delete_top_from_max_heap
 
 
 Miscellaneous
