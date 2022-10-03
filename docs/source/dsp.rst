@@ -151,6 +151,9 @@ Synthetic Signals
     chirp
     chirp_centered
     gaussian_pulse
+    picket_fence
+    heavi_sine
+    bumps
 
 
 .. currentmodule:: cr.nimble.dsp

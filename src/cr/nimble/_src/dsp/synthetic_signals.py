@@ -14,6 +14,8 @@
 
 import math
 import jax.numpy as jnp
+from jax import lax
+
 
 def time_values(fs, T, initial_time=0, endpoint=False):
     """Returns a sequence of time values sampled at a specific frequency for a specific duration 
@@ -248,3 +250,39 @@ def picket_fence(n, dtype=int):
     n2 = int(math.sqrt(n))
     z = jnp.zeros(n, dtype=dtype)
     return z.at[:n:n2].set(1)
+
+
+def heavi_sine(n=512):
+    """Returns a HeaviSine signal as proposed by Donoho et al. in Wavelab
+
+    Args:
+        n (int): Length of signal
+
+    Returns:
+        A tuple comprising (i) an array of time values in seconds and (ii) an array of signal values
+    """
+    t = jnp.arange(1, n+1) / n
+    y = 4*jnp.sin(4*jnp.pi*t)
+    y = y - jnp.sign(t - .3) - jnp.sign(.72 - t)
+    return t, y
+
+
+def bumps(n=512):
+    """Returns a bumps signal as proposed by Donoho et al. in Wavelab
+
+    Args:
+        n (int): Length of signal
+
+    Returns:
+        A tuple comprising (i) an array of time values in seconds and (ii) an array of signal values
+    """
+    t = jnp.arange(1, n+1) / n
+    pos = jnp.array([.1, .13, .15, .23, .25, .40, .44, .65,  .76, .78, .81])
+    hgt = jnp.array([ 4,  5,   3,   4,  5,  4.2, 2.1, 4.3,  3.1, 5.1, 4.2])
+    wth = jnp.array([.005, .005, .006, .01, .01, .03, .01, .01,  .005, .008, .005])
+
+    def update(j, y):
+        return y + hgt[j]/( 1 + jnp.abs((t - pos[j])/wth[j]))**4
+
+    y = lax.fori_loop(0, len(pos), update, jnp.zeros(n))
+    return t, y
