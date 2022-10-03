@@ -154,6 +154,19 @@ Synthetic Signals
     picket_fence
     heavi_sine
     bumps
+    blocks
+    doppler
+    ramp
+    cusp
+    sing
+    hi_sine
+    lo_sine
+    lin_chirp
+    two_chirp
+    quad_chirp
+    mish_mash
+    werner_sorrows
+    leopold
 
 
 .. currentmodule:: cr.nimble.dsp
