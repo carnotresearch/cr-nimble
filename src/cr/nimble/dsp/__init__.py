@@ -19,6 +19,11 @@ Signal Processing Utilities
 # pylint: disable=W0611
 
 
+from cr.nimble._src.dsp.util import (
+    sliding_windows_rw,
+    sliding_windows_cw
+)
+
 from cr.nimble._src.dsp.convolution import (
     # convolution
     vec_convolve,

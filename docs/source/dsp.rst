@@ -74,6 +74,17 @@ Interpolation
 
 
 
+Windowing
+-------------------------------
+
+.. autosummary::
+    :toctree: _autosummary
+
+    sliding_windows_rw
+    sliding_windows_cw
+
+
+
 Sparse Signals
 ------------------------------------
 

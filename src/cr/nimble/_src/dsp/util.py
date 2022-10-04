@@ -12,3 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import jax
+import jax.numpy as jnp
+from jax import jit
+
+def sliding_windows_rw(x, wlen, overlap):
+    """Converts a signal into sliding windows (per row) with the specified overlap
+    """
+    step = wlen - overlap
+    starts = jnp.arange(0, len(x) - wlen + 1, step)
+    block = jnp.arange(wlen)
+    idx = starts[:, None] + block[None, :]
+    return x[idx]
+
+def sliding_windows_cw(x, wlen, overlap):
+    """Converts a signal into sliding windows (per column) with the specified overlap
+    """
+    return sliding_windows_rw(x, wlen, overlap).T
