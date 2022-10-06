@@ -180,7 +180,7 @@ def build_signal_from_indices_and_values(length, indices, values):
     Returns:
         (jax.numpy.ndarray): Resulting sparse signal such that x[indices] == values 
     """
-    x = jnp.zeros(length)
+    x = jnp.zeros(length, dtype=values.dtype)
     indices = jnp.asarray(indices)
     values = jnp.asarray(values)
     return x.at[indices].set(values)
