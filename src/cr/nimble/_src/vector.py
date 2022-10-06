@@ -375,7 +375,7 @@ def num_largest_coeffs_for_energy_percent(a, p):
     # convert to a cmf
     cmf = jnp.cumsum(a)
     # the quantile value
-    q = p / 100.
+    q = (p - 1e-10) / 100
     # find the index
     index =  jnp.argmax(cmf >= q)
     return index + 1
