@@ -27,3 +27,11 @@ Directly from our GITHUB repository:
 .. code:: shell
 
     python -m pip install git+https://github.com/carnotresearch/cr-nimble.git
+
+.. note::
+
+    If you are on Windows, JAX is not yet officially supported.
+    However, you can install an unofficial JAX build for windows
+    from https://github.com/cloudhan/jax-windows-builder.
+    This works quite well for development purposes.
+

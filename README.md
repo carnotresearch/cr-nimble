@@ -21,6 +21,9 @@ Installation
 python -m pip install cr-nimble
 ```
 
+For Windows, you can use unofficial JAX builds
+from [here](https://github.com/cloudhan/jax-windows-builder).
+
 Import
 
 ```{python}
