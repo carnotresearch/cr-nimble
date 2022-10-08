@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.sing
+==========================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: sing

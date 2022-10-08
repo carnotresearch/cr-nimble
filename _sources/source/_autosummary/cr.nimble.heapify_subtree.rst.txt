@@ -1,0 +1,6 @@
+﻿cr.nimble.heapify\_subtree
+==========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: heapify_subtree

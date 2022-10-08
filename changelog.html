@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -60,11 +60,12 @@
 <li class="toctree-l1"><a class="reference internal" href="zzzreference.html">References</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Change Log</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#unreleased">Unreleased</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">[0.3.1] - 2022-09-10</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.3.0 - 2022-08-27</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">0.2.4 - 2022-08-17</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">0.1.1 - 2021-12-07</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id10">0.1.0 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.3.2 - 2022-10-08</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.3.1 - 2022-09-10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.3.0 - 2022-08-27</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">0.2.4 - 2022-08-17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">0.1.1 - 2021-12-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">0.1.0 - 2021-12-07</a></li>
 </ul>
 </li>
 </ul>
@@ -111,14 +112,60 @@
 <li><p>The format of this log is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p></li>
 </ul>
 <section id="unreleased">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.3.1...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.3.2...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/latest/">Documentation</a></p>
 </section>
 <section id="id1">
-<h2>[0.3.1] - 2022-09-10<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.3.1/">Documentation</a></p>
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.3.1...v0.3.2">0.3.2</a> - 2022-10-08<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.3.2/">Documentation</a></p>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<p>Vectors:</p>
+<ul class="simple">
+<li><p>Circular buffers</p></li>
+<li><p>Binary heap</p></li>
+</ul>
+<p>DSP</p>
+<ul class="simple">
+<li><p>sliding_windows</p></li>
+</ul>
+<p>Synthetic Signals</p>
+<ul class="simple">
+<li><p>picket_fence</p></li>
+<li><p>heavi_sine</p></li>
+<li><p>bumps</p></li>
+<li><p>blocks</p></li>
+<li><p>doppler</p></li>
+<li><p>ramp</p></li>
+<li><p>cusp</p></li>
+<li><p>sing</p></li>
+<li><p>hi_sine</p></li>
+<li><p>lo_sine</p></li>
+<li><p>lin_chirp</p></li>
+<li><p>two_chirp</p></li>
+<li><p>quad_chirp</p></li>
+<li><p>mish_mash</p></li>
+<li><p>werner_sorrows</p></li>
+<li><p>leopold</p></li>
+</ul>
+<p>Miscellaneous</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cr.sparse.io</span></code> moved to <code class="docutils literal notranslate"><span class="pre">cr.nimble.io</span></code></p></li>
+</ul>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Handling of complex signals in <code class="docutils literal notranslate"><span class="pre">build_signal_from_indices_and_values</span></code></p></li>
+<li><p>Handling of 100 percentile in <code class="docutils literal notranslate"><span class="pre">num_largest_coeffs_for_energy_percent</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.3.0...v0.3.1">0.3.1</a> - 2022-09-10<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.3.1/">Documentation</a></p>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Metrics</p>
 <ul class="simple">
 <li><p>normalized_mse</p></li>
@@ -153,11 +200,11 @@
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.3.0...v0.3.1">0.3.0</a> - 2022-08-27<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id4">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.2.4...v0.3.0">0.3.0</a> - 2022-08-27<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.3.0/">Documentation</a></p>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>Data Compression</p>
 <ul class="simple">
 <li><p>Binary data encoding/decoding</p></li>
@@ -194,19 +241,19 @@
 </ul>
 </section>
 </section>
-<section id="id4">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.1...v0.2.4">0.2.4</a> - 2022-08-17<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<section id="id6">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.1.1...v0.2.4">0.2.4</a> - 2022-08-17<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://cr-nimble.readthedocs.io/en/v0.2.4/">Documentation</a></p>
-<section id="id5">
-<h3>Added<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<section id="id7">
+<h3>Added<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Digital signal processing utilities moved from cr-sparse to cr-nimble</p></li>
 <li><p>Moved discrete number related functions from cr-sparse.</p></li>
 <li><p>Some sparse vector and matrix processing functionality moved from cr-sparse.</p></li>
 </ul>
 </section>
-<section id="id6">
-<h3>Removed<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<section id="id8">
+<h3>Removed<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Unnecessary <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files removed.</p></li>
 </ul>
@@ -219,24 +266,24 @@
 </ul>
 </section>
 </section>
-<section id="id7">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<section id="id8">
-<h3>Added<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<section id="id9">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/compare/v0.1.0...v0.1.1">0.1.1</a> - 2021-12-07<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<section id="id10">
+<h3>Added<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>distance, matrix, ndarray, metrics, modules were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
 <li><p>some more vector functions were moved from <code class="docutils literal notranslate"><span class="pre">cr-sparse</span></code> to <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code></p></li>
 </ul>
 </section>
-<section id="id9">
-<h3>Improved<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<section id="id11">
+<h3>Improved<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>All unit tests were moved to 64-bit floating point data.</p></li>
 </ul>
 </section>
 </section>
-<section id="id10">
-<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<section id="id12">
+<h2><a class="reference external" href="https://github.com/carnotresearch/cr-nimble/releases/tag/v0.1.0">0.1.0</a> - 2021-12-07<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <p>Initial release by refactoring code from <code class="docutils literal notranslate"><span class="pre">cr-nimble</span></code>.</p>
 </section>
 </section>

@@ -1,0 +1,6 @@
+﻿cr.nimble.right\_child\_idx
+===========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: right_child_idx

@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.doppler
+=============================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: doppler

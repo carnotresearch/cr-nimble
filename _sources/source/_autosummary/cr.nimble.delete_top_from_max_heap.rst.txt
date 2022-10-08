@@ -1,0 +1,6 @@
+﻿cr.nimble.delete\_top\_from\_max\_heap
+======================================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: delete_top_from_max_heap

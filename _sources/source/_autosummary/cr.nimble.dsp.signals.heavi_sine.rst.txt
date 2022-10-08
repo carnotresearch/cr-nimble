@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.heavi\_sine
+=================================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: heavi_sine

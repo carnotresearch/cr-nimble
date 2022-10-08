@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.sliding\_windows\_cw
+==================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: sliding_windows_cw

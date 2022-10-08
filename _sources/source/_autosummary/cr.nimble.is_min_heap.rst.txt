@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_min\_heap
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_min_heap

@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.lin\_chirp
+================================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: lin_chirp

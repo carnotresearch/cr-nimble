@@ -1,0 +1,6 @@
+﻿cr.nimble.is\_max\_heap
+=======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: is_max_heap

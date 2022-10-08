@@ -1,0 +1,6 @@
+﻿cr.nimble.cbuf\_push\_right
+===========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: cbuf_push_right

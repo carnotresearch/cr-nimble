@@ -1,0 +1,6 @@
+﻿cr.nimble.largest\_plr
+======================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: largest_plr

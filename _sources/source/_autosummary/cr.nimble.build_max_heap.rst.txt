@@ -1,0 +1,6 @@
+﻿cr.nimble.build\_max\_heap
+==========================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: build_max_heap

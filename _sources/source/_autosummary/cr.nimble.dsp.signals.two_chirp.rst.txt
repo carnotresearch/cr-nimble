@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.two\_chirp
+================================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: two_chirp

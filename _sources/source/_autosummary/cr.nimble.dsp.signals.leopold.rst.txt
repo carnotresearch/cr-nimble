@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.leopold
+=============================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: leopold

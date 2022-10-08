@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.signals.cusp
+==========================
+
+.. currentmodule:: cr.nimble.dsp.signals
+
+.. autofunction:: cusp

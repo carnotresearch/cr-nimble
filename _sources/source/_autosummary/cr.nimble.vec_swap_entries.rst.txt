@@ -1,0 +1,6 @@
+﻿cr.nimble.vec\_swap\_entries
+============================
+
+.. currentmodule:: cr.nimble
+
+.. autofunction:: vec_swap_entries
