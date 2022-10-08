@@ -10,6 +10,51 @@ All notable changes to this project will be documented in this file.
 [Documentation](https://cr-nimble.readthedocs.io/en/latest/)
 
 
+## [0.3.2] - 2022-10-08
+
+[Documentation](https://cr-nimble.readthedocs.io/en/v0.3.2/)
+
+### Added
+
+Vectors:
+
+- Circular buffers
+- Binary heap
+
+DSP
+
+- sliding_windows
+
+Synthetic Signals
+
+- picket_fence
+- heavi_sine
+- bumps
+- blocks
+- doppler
+- ramp
+- cusp
+- sing
+- hi_sine
+- lo_sine
+- lin_chirp
+- two_chirp
+- quad_chirp
+- mish_mash
+- werner_sorrows
+- leopold
+
+
+Miscellaneous
+
+- `cr.sparse.io` moved to `cr.nimble.io`
+
+
+### Fixed
+
+- Handling of complex signals in `build_signal_from_indices_and_values`
+- Handling of 100 percentile in `num_largest_coeffs_for_energy_percent`
+
 ## [0.3.1] - 2022-09-10
 
 [Documentation](https://cr-nimble.readthedocs.io/en/v0.3.1/)
@@ -125,7 +170,8 @@ Metrics
 Initial release by refactoring code from `cr-nimble`.
 
 
-[Unreleased]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/carnotresearch/cr-nimble/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/carnotresearch/cr-nimble/compare/v0.2.4...v0.3.0
 [0.2.4]: https://github.com/carnotresearch/cr-nimble/compare/v0.1.1...v0.2.4
