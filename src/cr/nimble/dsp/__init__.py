@@ -47,6 +47,15 @@ from cr.nimble._src.dsp.thresholding import (
     hard_threshold_by,
     largest_indices_by,
     energy_threshold,
+    # thresholding as per :cite:`chen2014irregular`
+    hard_threshold_tau,
+    soft_threshold_tau,
+    half_threshold_tau,
+    hard_threshold_percentile,
+    soft_threshold_percentile,
+    half_threshold_percentile,
+    gamma_to_tau_half_threshold,
+    gamma_to_tau_hard_threshold,
 )
 
 # Scaling

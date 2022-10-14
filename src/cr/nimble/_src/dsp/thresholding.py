@@ -12,9 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+
+"""
+There are slightly varying approaches to thresholding.
+
+Thresholding operators as defined in the paper: 
+
+.. [1] Chen, Y., Chen, K., Shi, P., Wang, Y., “Irregular seismic
+       data reconstruction using a percentile-half-thresholding algorithm”,
+       Journal of Geophysics and Engineering, vol. 11. 2014.       
+"""
+
+
 import jax
 import jax.numpy as jnp
 from jax import jit
+from cr.nimble import promote_arg_dtypes
 
 def hard_threshold(x, K):
     """Returns the indices and corresponding values of largest K non-zero entries in a vector x
@@ -143,3 +157,84 @@ def energy_threshold(signal, fraction):
     mask = mask.at[idx].set(mask)
     signal = signal * mask
     return signal, mask
+
+
+#############################################################################
+#
+# Thresholding operators as defined in the paper: 
+#
+# .. [1] Chen, Y., Chen, K., Shi, P., Wang, Y., “Irregular seismic
+#       data reconstruction using a percentile-half-thresholding algorithm”,
+#       Journal of Geophysics and Engineering, vol. 11. 2014.       
+#
+#############################################################################
+
+
+def hard_threshold_tau(x, tau):
+    """Hard thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    # The terms that will remain non-zero after thresholding
+    gamma = jnp.sqrt(2*tau)
+    nonzero = jnp.abs(x) > gamma
+    return nonzero * x
+
+def soft_threshold_tau(x, tau):
+    """Soft thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    if jnp.iscomplexobj(x):
+        return jnp.maximum(jnp.abs(x) - tau, 0.) * jnp.exp(1j * jnp.angle(x))
+    else:
+        return jnp.maximum(0, x - tau) + jnp.minimum(0, x + tau)
+
+def half_threshold_tau(x, tau):
+    r"""Half thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    gamma = (54 ** (1. / 3.) / 4.) * tau ** (2. / 3.)
+    nonzero = jnp.abs(x) >= gamma
+    # the arc-cos term Eq 10 from paper
+    phi = 2. / 3. * jnp.arccos((tau / 8.) * (jnp.abs(x) / 3.) ** (-1.5))
+    # the half thresholded values for terms above gamma Eq 10
+    x = 2./3. * x * (1 + jnp.cos(2. * jnp.pi / 3. - phi))
+    # combine zero and non-zero terms
+    return jnp.where(nonzero, x, jnp.zeros_like(x))
+
+
+def hard_threshold_percentile(x, perc):
+    """Percentile hard thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    # desired gamma
+    gamma = jnp.percentile(jnp.abs(x), perc)
+    # convert gamma to tau
+    tau = 0.5 * gamma ** 2
+    return hard_threshold_tau(x, tau)
+
+def soft_threshold_percentile(x, perc):
+    """Percentile soft thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    # desired gamma and tau are same
+    tau = jnp.percentile(jnp.abs(x), perc)
+    return soft_threshold_tau(x, tau)
+
+def half_threshold_percentile(x, perc):
+    """Percentile half thresholding as per :cite:`chen2014irregular`
+    """
+    x = promote_arg_dtypes(x)
+    gamma = jnp.percentile(jnp.abs(x), perc)
+    # convert gamma to tau
+    tau = (4. / 54 ** (1. / 3.) * gamma) ** 1.5
+    return half_threshold_tau(x, tau)
+
+def gamma_to_tau_half_threshold(gamma):
+    """Converts gamma to tau for half thresholding as per :cite:`chen2014irregular`
+    """
+    return (4. / 54 ** (1. / 3.) * gamma) ** 1.5
+
+def gamma_to_tau_hard_threshold(gamma):
+    """Converts gamma to tau for hard thresholding as per :cite:`chen2014irregular`
+    """
+    return  0.5 * gamma ** 2
