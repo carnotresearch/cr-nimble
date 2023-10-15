@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.soft\_threshold\_tau
+==================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: soft_threshold_tau

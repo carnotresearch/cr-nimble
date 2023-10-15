@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.gamma\_to\_tau\_hard\_threshold
+=============================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: gamma_to_tau_hard_threshold

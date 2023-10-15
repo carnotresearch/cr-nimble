@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.soft\_threshold\_percentile
+=========================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: soft_threshold_percentile

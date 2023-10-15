@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.half\_threshold\_tau
+==================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: half_threshold_tau

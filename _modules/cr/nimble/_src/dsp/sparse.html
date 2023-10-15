@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../../../../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom.css" />
     <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
@@ -117,7 +117,7 @@
 
 
 <div class="viewcode-block" id="randomize_rows"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.randomize_rows.html#cr.nimble.dsp.randomize_rows">[docs]</a><span class="k">def</span> <span class="nf">randomize_rows</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Randomizes the rows in X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Randomizes the rows in X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        key: a PRNG key used as the random key.</span>
@@ -132,7 +132,7 @@
     <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="p">:]</span></div>
 
 <div class="viewcode-block" id="randomize_cols"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.randomize_cols.html#cr.nimble.dsp.randomize_cols">[docs]</a><span class="k">def</span> <span class="nf">randomize_cols</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Randomizes the columns in X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Randomizes the columns in X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        key: a PRNG key used as the random key.</span>
@@ -149,7 +149,7 @@
 
 
 <div class="viewcode-block" id="largest_indices"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.largest_indices.html#cr.nimble.dsp.largest_indices">[docs]</a><span class="k">def</span> <span class="nf">largest_indices</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries in x by magnitude</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries in x by magnitude</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        x (jax.numpy.ndarray): An data vector/point</span>
@@ -163,7 +163,7 @@
     <span class="k">return</span> <span class="n">indices</span><span class="p">[:</span><span class="o">-</span><span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="largest_indices_rw"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.largest_indices_rw.html#cr.nimble.dsp.largest_indices_rw">[docs]</a><span class="k">def</span> <span class="nf">largest_indices_rw</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries by magnitude in each row of X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries by magnitude in each row of X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (S,N) data matrix with data points in rows</span>
@@ -176,7 +176,7 @@
     <span class="k">return</span> <span class="n">indices</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="largest_indices_cw"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.largest_indices_cw.html#cr.nimble.dsp.largest_indices_cw">[docs]</a><span class="k">def</span> <span class="nf">largest_indices_cw</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries by magnitude in each column of X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the indices of K largest entries by magnitude in each column of X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (N,S) data matrix with data points in columns</span>
@@ -189,7 +189,7 @@
     <span class="k">return</span> <span class="n">indices</span><span class="p">[:</span><span class="o">-</span><span class="n">K</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span></div>
 
 <div class="viewcode-block" id="take_along_rows"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.take_along_rows.html#cr.nimble.dsp.take_along_rows">[docs]</a><span class="k">def</span> <span class="nf">take_along_rows</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Picks K entries from each row of X specified by indices matrix</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Picks K entries from each row of X specified by indices matrix</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (S,N) data matrix with data points in rows</span>
@@ -201,7 +201,7 @@
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">take_along_axis</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="take_along_cols"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.take_along_cols.html#cr.nimble.dsp.take_along_cols">[docs]</a><span class="k">def</span> <span class="nf">take_along_cols</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Picks K entries from each column of X specified by indices matrix</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Picks K entries from each column of X specified by indices matrix</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (N,S) data matrix with data points in columns</span>
@@ -214,7 +214,7 @@
 
 
 <div class="viewcode-block" id="sparse_approximation"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.sparse_approximation.html#cr.nimble.dsp.sparse_approximation">[docs]</a><span class="k">def</span> <span class="nf">sparse_approximation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in a vector x</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in a vector x</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        x (jax.numpy.ndarray): An data vector/point</span>
@@ -231,7 +231,7 @@
     
 <div class="viewcode-block" id="sparse_approximation_cw"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.sparse_approximation_cw.html#cr.nimble.dsp.sparse_approximation_cw">[docs]</a><span class="k">def</span> <span class="nf">sparse_approximation_cw</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
     <span class="c1">#return jax.vmap(sparse_approximation, in_axes=(1, None), out_axes=1)(X, K)</span>
-    <span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in each column of X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in each column of X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (N,S) data matrix with data points in columns</span>
@@ -249,7 +249,7 @@
     <span class="k">return</span> <span class="n">X</span></div>
 
 <div class="viewcode-block" id="sparse_approximation_rw"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.sparse_approximation_rw.html#cr.nimble.dsp.sparse_approximation_rw">[docs]</a><span class="k">def</span> <span class="nf">sparse_approximation_rw</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in each row of X</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Keeps only largest K non-zero entries by magnitude in each row of X</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        X (jax.numpy.ndarray): An (S,N) data matrix with data points in rows</span>
@@ -267,7 +267,7 @@
     <span class="k">return</span> <span class="n">X</span></div>
 
 <div class="viewcode-block" id="build_signal_from_indices_and_values"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.build_signal_from_indices_and_values.html#cr.nimble.dsp.build_signal_from_indices_and_values">[docs]</a><span class="k">def</span> <span class="nf">build_signal_from_indices_and_values</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Builds a sparse signal from its non-zero entries (specified by their indices and values)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Builds a sparse signal from its non-zero entries (specified by their indices and values)</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        length (int): Length of the sparse signal</span>
@@ -284,7 +284,7 @@
 
 
 <div class="viewcode-block" id="nonzero_values"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.nonzero_values.html#cr.nimble.dsp.nonzero_values">[docs]</a><span class="k">def</span> <span class="nf">nonzero_values</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the values of non-zero entries in x</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the values of non-zero entries in x</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        x (jax.numpy.ndarray): A sparse signal</span>
@@ -299,7 +299,7 @@
     <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="nonzero_indices"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.nonzero_indices.html#cr.nimble.dsp.nonzero_indices">[docs]</a><span class="k">def</span> <span class="nf">nonzero_indices</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the indices of non-zero entries in x</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the indices of non-zero entries in x</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        x (jax.numpy.ndarray): A sparse signal</span>
@@ -317,7 +317,7 @@
 
 
 <div class="viewcode-block" id="support"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.dsp.support.html#cr.nimble.dsp.support">[docs]</a><span class="k">def</span> <span class="nf">support</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the indices of non-zero entries in x</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the indices of non-zero entries in x</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        x (jax.numpy.ndarray): A sparse signal</span>
@@ -348,7 +348,7 @@
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
     </div>
 

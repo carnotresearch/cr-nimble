@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../../../../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom.css" />
     <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
@@ -120,7 +120,7 @@
 
 
 <span class="k">def</span> <span class="nf">encode_uint_arr_fl</span><span class="p">(</span><span class="n">input_arr</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Encodes an array of unsigned integers to a bit array using a fixed number of bits per sample</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Encodes an array of unsigned integers to a bit array using a fixed number of bits per sample</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">bitarray</span><span class="p">()</span>
     <span class="n">max_val</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bits_per_sample</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -132,7 +132,7 @@
     <span class="k">return</span> <span class="n">a</span>
 
 <span class="k">def</span> <span class="nf">decode_uint_arr_fl</span><span class="p">(</span><span class="n">input_bit_arr</span> <span class="p">:</span> <span class="n">bitarray</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Decodes an array of unsigned integers from a bit array using a fixed number of bits per sample</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Decodes an array of unsigned integers from a bit array using a fixed number of bits per sample</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">input_bit_arr</span>
     <span class="c1"># number of bits</span>
@@ -150,7 +150,7 @@
 
 
 <div class="viewcode-block" id="encode_int_arr_sgn_mag_fl"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.compression.encode_int_arr_sgn_mag_fl.html#cr.nimble.compression.encode_int_arr_sgn_mag_fl">[docs]</a><span class="k">def</span> <span class="nf">encode_int_arr_sgn_mag_fl</span><span class="p">(</span><span class="n">input_arr</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Encodes an array of integers to a bit array using a sign bit and a fixed number of bits per sample for magnitude</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Encodes an array of integers to a bit array using a sign bit and a fixed number of bits per sample for magnitude</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">bitarray</span><span class="p">()</span>
     <span class="n">max_val</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bits_per_sample</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -165,7 +165,7 @@
 
 
 <div class="viewcode-block" id="decode_int_arr_sgn_mag_fl"><a class="viewcode-back" href="../../../../../source/_autosummary/cr.nimble.compression.decode_int_arr_sgn_mag_fl.html#cr.nimble.compression.decode_int_arr_sgn_mag_fl">[docs]</a><span class="k">def</span> <span class="nf">decode_int_arr_sgn_mag_fl</span><span class="p">(</span><span class="n">input_bit_arr</span> <span class="p">:</span> <span class="n">bitarray</span><span class="p">,</span> <span class="n">bits_per_sample</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Decodes an array of integers from a bit array using a sign bit and a fixed number of bits per sample for magnitude</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Decodes an array of integers from a bit array using a sign bit and a fixed number of bits per sample for magnitude</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">input_bit_arr</span>
     <span class="c1"># number of bits</span>
@@ -199,7 +199,7 @@
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
     </div>
 

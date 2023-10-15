@@ -1,0 +1,6 @@
+﻿cr.nimble.dsp.half\_threshold\_percentile
+=========================================
+
+.. currentmodule:: cr.nimble.dsp
+
+.. autofunction:: half_threshold_percentile

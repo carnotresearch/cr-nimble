@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css" />
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
@@ -127,75 +127,75 @@
 <span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="n">promote_arg_dtypes</span>
 
 <div class="viewcode-block" id="norm_l1"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norm_l1.html#cr.nimble.norm_l1">[docs]</a><span class="k">def</span> <span class="nf">norm_l1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_1 norm of a vector</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="sqr_norm_l2"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.sqr_norm_l2.html#cr.nimble.sqr_norm_l2">[docs]</a><span class="k">def</span> <span class="nf">sqr_norm_l2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the squared l_2 norm of a vector</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">x</span></div>
 
 <div class="viewcode-block" id="norm_l2"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norm_l2.html#cr.nimble.norm_l2">[docs]</a><span class="k">def</span> <span class="nf">norm_l2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_2 norm of a vector</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">x</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="norm_linf"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norm_linf.html#cr.nimble.norm_linf">[docs]</a><span class="k">def</span> <span class="nf">norm_linf</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_inf norm of a vector</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="norms_l1_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_l1_cw.html#cr.nimble.norms_l1_cw">[docs]</a><span class="k">def</span> <span class="nf">norms_l1_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_1 norm of each column of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="norms_l1_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_l1_rw.html#cr.nimble.norms_l1_rw">[docs]</a><span class="k">def</span> <span class="nf">norms_l1_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_1 norm of each row of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="norms_l2_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_l2_cw.html#cr.nimble.norms_l2_cw">[docs]</a><span class="k">def</span> <span class="nf">norms_l2_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_2 norm of each column of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="norms_l2_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_l2_rw.html#cr.nimble.norms_l2_rw">[docs]</a><span class="k">def</span> <span class="nf">norms_l2_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_2 norm of each row of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="norms_linf_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_linf_cw.html#cr.nimble.norms_linf_cw">[docs]</a><span class="k">def</span> <span class="nf">norms_linf_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_inf norm of each column of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="n">jnp</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="norms_linf_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.norms_linf_rw.html#cr.nimble.norms_linf_rw">[docs]</a><span class="k">def</span> <span class="nf">norms_linf_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_inf norm of each row of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="n">jnp</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="sqr_norms_l2_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.sqr_norms_l2_cw.html#cr.nimble.sqr_norms_l2_cw">[docs]</a><span class="k">def</span> <span class="nf">sqr_norms_l2_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the squared l_2 norm of each column of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="n">X</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="sqr_norms_l2_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.sqr_norms_l2_rw.html#cr.nimble.sqr_norms_l2_rw">[docs]</a><span class="k">def</span> <span class="nf">sqr_norms_l2_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes the l_2 norm of each row of a matrix</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="n">X</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
@@ -206,7 +206,7 @@
 <span class="c1">######################################</span>
 
 <div class="viewcode-block" id="normalize_l1"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l1.html#cr.nimble.normalize_l1">[docs]</a><span class="k">def</span> <span class="nf">normalize_l1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_1-norm</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_1-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">x2</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -214,14 +214,14 @@
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="normalize_l2"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l2.html#cr.nimble.normalize_l2">[docs]</a><span class="k">def</span> <span class="nf">normalize_l2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_2-norm</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_2-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">EPS</span>
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="normalize_linf"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_linf.html#cr.nimble.normalize_linf">[docs]</a><span class="k">def</span> <span class="nf">normalize_linf</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_inf-norm</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes a vector by its l_inf-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">+</span> <span class="n">EPS</span>
@@ -233,7 +233,7 @@
 
 
 <div class="viewcode-block" id="normalize_l1_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l1_cw.html#cr.nimble.normalize_l1_cw">[docs]</a><span class="k">def</span> <span class="nf">normalize_l1_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize each column of X per l_1-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -242,7 +242,7 @@
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">sums</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="normalize_l1_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l1_rw.html#cr.nimble.normalize_l1_rw">[docs]</a><span class="k">def</span> <span class="nf">normalize_l1_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize each row of X per l_1-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -254,7 +254,7 @@
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">sums</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="normalize_l2_cw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l2_cw.html#cr.nimble.normalize_l2_cw">[docs]</a><span class="k">def</span> <span class="nf">normalize_l2_cw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize each column of X per l_2-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -264,7 +264,7 @@
     <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">sums</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="normalize_l2_rw"><a class="viewcode-back" href="../../../../source/_autosummary/cr.nimble.normalize_l2_rw.html#cr.nimble.normalize_l2_rw">[docs]</a><span class="k">def</span> <span class="nf">normalize_l2_rw</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize each row of X per l_2-norm</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">promote_arg_dtypes</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -289,7 +289,7 @@
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
     </div>
 
