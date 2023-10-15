@@ -42,7 +42,7 @@ def decode_uint_arr_fl(input_bit_arr : bitarray, bits_per_sample: int):
     nbits = len(a)
     # number of samples
     n = nbits // bits_per_sample
-    output = np.empty(n, dtype=np.int)
+    output = np.empty(n, dtype=np.int32)
     idx = 0
     for i in range(n):
         # read the value
@@ -75,7 +75,7 @@ def decode_int_arr_sgn_mag_fl(input_bit_arr : bitarray, bits_per_sample: int):
     nbits = len(a)
     # number of samples
     n = nbits // (bits_per_sample + 1)
-    output = np.empty(n, dtype=np.int)
+    output = np.empty(n, dtype=np.int32)
     idx = 0
     for i in range(n):
         # read the sign bit
